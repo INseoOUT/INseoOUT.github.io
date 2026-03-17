@@ -1,0 +1,714 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>김인서</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2c484af7-d7a8-8069-8b9b-dcf7eccd9962" class="page sans"><header><h1 class="page-title" dir="auto">김인서</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><div id="2c484af7-d7a8-81c4-b281-eff069e58e5a" class="column-list"><div style="display:contents" dir="auto"><div id="2c484af7-d7a8-8102-b003-d7ce0e134112" style="width:37.5%" class="column"><div style="display:contents" dir="ltr"><figure id="2c484af7-d7a8-80dc-96e1-d52d1971fa67" class="image"><a href="image.png"><img style="width:288px" src="image.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="2c484af7-d7a8-81aa-888a-c2b28180b0ad" style="width:62.5%" class="column"><div style="display:contents" dir="ltr"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2d484af7-d7a8-8025-a29a-c663f30f13ac"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/user-circle_gray.svg"/></div><div style="width:100%"><strong>주소:</strong> 우정빌라 301, 상록구 성호로 8길, <div style="display:contents" dir="auto"><p id="2d484af7-d7a8-80bf-9603-e7bf7170deaf" class="">안산, 경기도</p></div><div style="display:contents" dir="auto"><p id="2d484af7-d7a8-8081-9e5f-fd2f1445cffb" class=""><strong>이메일:</strong> kim000806@naver.com</p></div><div style="display:contents" dir="auto"><p id="2d484af7-d7a8-802f-8601-de3319c730b0" class=""><strong>전화번호:</strong> +82) 10-3365-6402</p></div><div style="display:contents" dir="auto"><p id="2d484af7-d7a8-8016-84c8-fcfa058c90ce" class=""><strong>웹사이트:  .</strong></p></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2c484af7-d7a8-8125-854c-e80300b7cdd1"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/graduate_gray.svg"/></div><div style="width:100%"><strong>숭실대학교 IT대학 </strong><div style="display:contents" dir="auto"><p id="2d484af7-d7a8-80d7-adce-fc85572ac5a2" class=""><strong>소프트웨어학부 </strong></p></div><div style="display:contents" dir="auto"><p id="2c484af7-d7a8-8074-940e-ce53779f2477" class=""><strong>정보보호 및 소프트웨어 세부전공</strong></p></div><div style="display:contents" dir="auto"><p id="2c484af7-d7a8-809c-a6fb-c6ad7cb1e665" class=""><strong>2020.03. - 2026.08.</strong>(예정)</p></div><div style="display:contents" dir="auto"><p id="2c484af7-d7a8-81a8-9687-db7914905561" class="">4.0 / 4.5</p></div></div></figure></div></div></div></div></div><div style="display:contents" dir="ltr"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2c484af7-d7a8-8123-9269-f3aaf5c43619"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/bookmark_gray.svg"/></div><div style="width:100%">저는 분야를 가리지 않고 다양한 경험을 하는 것이 개발자로서 뿐만 아니라 인생에 있어 좋은 성장 동력이 된다고 생각합니다. 육체 노동 아르바이트부터 학원 강사 및 단기 과외, 창업 활동까지 다양한 경험을 했고, 이를 통해 다양한 관점에서 인생을 바라보고 성장할 수 있는, 그리고 성장하고자 하는 사람입니다.<br/><br/>저의 목표는 Software Engineer입니다. 단순하게 서비스를 개발하고 구현하는 것이 아닌, 의도와 맥락을 파악하고, 누군가의 꿈과 아이디어를 만들어내는 사람이 되고 싶습니다.</div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2d484af7-d7a8-801f-bf41-c0a7cfb3b960"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/graduate_gray.svg"/></div><div style="width:100%"><strong>Achievements</strong><div style="display:contents" dir="auto"><p id="2d484af7-d7a8-80b5-9486-df45a0ede225" class=""><strong>정보처리기사 </strong>(2025.12.)</p></div><div style="display:contents" dir="auto"><p id="2d484af7-d7a8-8058-98a1-f6bf0feb9bda" class=""><strong>TOPCIT Lv3 </strong>(2024.12.)</p></div><div style="display:contents" dir="auto"><p id="2d484af7-d7a8-80a1-bb89-f13347786a00" class=""><strong>자동차운전면허 보통 1종 </strong>(2019.02.)</p></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2c584af7-d7a8-80be-b99e-c32a5a3b3e85"><div style="font-size:1.5em"><img class="icon notion-static-icon" src="https://www.notion.so/icons/whale_gray.svg"/></div><div style="width:100%"><strong>Skills</strong><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-81f8-b550-d767e5708216" class="bulleted-list"><li style="list-style-type:disc"><strong>Project Management</strong>: Notion, Figma</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-8086-9e3f-ca2f5b151c54" class="bulleted-list"><li style="list-style-type:disc"><strong>Programming Languages</strong>: Python, Java/Kotlin, C/C++, GO</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-809f-9201-d7c24f19c7a7" class="bulleted-list"><li style="list-style-type:disc"><strong>Frameworks&amp;Libraries</strong>: fastAPI, Langchain/Langgraph</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-8097-a97a-cd868af85fe0" class="bulleted-list"><li style="list-style-type:disc"><strong>Tools&amp;Platforms</strong>: Git, AWS</li></ul></div><div style="display:contents" dir="auto"><ul id="2c584af7-d7a8-80d4-8ba8-ec3d0239fff2" class="bulleted-list"><li style="list-style-type:disc"><strong>Databases</strong>: DynamoDB, MySQL</li></ul></div></div></figure></div><div style="display:contents" dir="auto"><h2 id="2c484af7-d7a8-818e-bad6-ed848c073335" class="">경력</h2></div><div style="display:contents" dir="auto"><hr id="2c484af7-d7a8-811a-b538-ecc565a5c998"/></div><div style="display:contents" dir="auto"><blockquote id="2c484af7-d7a8-812d-8996-fba1108187ce" class=""><strong>Enois Lab 대표</strong> <mark class="highlight-gray">2025.12. ~</mark><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-815f-a260-e12b4fa88a41" class="bulleted-list"><li style="list-style-type:disc">프로젝트 관리 AI 자동화 SaaS, Sprintify</li></ul></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="2c484af7-d7a8-8187-9d89-c72c9fa60a28" class=""><strong>Belle&amp;Wise Studio Software Engineer </strong><mark class="highlight-gray">2025.04. ~ 2025.12.</mark><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-81d0-852a-f0a678e2d955" class="bulleted-list"><li style="list-style-type:disc">AI Agent, 서버리스 아키텍처 기반 서비스 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-81f8-9ac9-c74e651f962a" class="bulleted-list"><li style="list-style-type:disc">프로젝트 관리 환경 및 개발 문화 도입</li></ul></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="2c484af7-d7a8-81f2-b967-ef83cb8ac3fe" class=""><strong>숭실대학교 평생교육원 국가근로 </strong><mark class="highlight-gray">2024.01. ~ 2024.02.</mark><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-8182-a510-d5c515f85631" class="bulleted-list"><li style="list-style-type:disc">평생교육원 행정 처리 보조</li></ul></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="2c484af7-d7a8-81af-a0f7-ddeee98de063" class=""><strong>숭실대학교 입학사정관팀 국가근로 </strong><mark class="highlight-gray">2023.03. ~ 2023.08.</mark><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-81c8-8c4a-d8426f938451" class="bulleted-list"><li style="list-style-type:disc">입학사정관팀 행정 보조</li></ul></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="2c484af7-d7a8-80e7-a8d7-c10723f0e9f0" class=""><strong>김선희 어학원 고등반 수학 보조 강사 </strong><mark class="highlight-gray">2020.12. ~ 2021.03.</mark><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-8035-a9b1-c7a83c2af0cd" class="bulleted-list"><li style="list-style-type:disc">고등반 수학 보조 강사</li></ul></div></blockquote></div><div style="display:contents" dir="auto"><h2 id="2c484af7-d7a8-8027-8f01-df9abfa5b84a" class="">기타</h2></div><div style="display:contents" dir="auto"><hr id="2c484af7-d7a8-8061-a268-e1bb3c047390"/></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-809c-955c-d8f50e6c7d03" class="bulleted-list"><li style="list-style-type:disc">숭실대학교 슈퍼스타 창업경진대회 우수상 (2025.12.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2d484af7-d7a8-8000-b542-e7208c27045c" class="bulleted-list"><li style="list-style-type:disc">숭실대학교 Unithon 2025 참가 (2025.08.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-801b-8d85-f502f5105ea5" class="bulleted-list"><li style="list-style-type:disc">숭실대학교 IT 단기 어학연수 프로그램(CES 2025) 선발 및 참가 (2025.01.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2d484af7-d7a8-8021-b8ff-f1b1a34a9983" class="bulleted-list"><li style="list-style-type:disc">숭실대학교 IT 대학생 프로그래밍경진대회(ICPC) 참가 (2024.12.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2d484af7-d7a8-80bc-bfff-ee539f995a50" class="bulleted-list"><li style="list-style-type:disc">2024 창의적 종합설계 경진대회 학생 심사위원 (2024.11.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-80e3-825e-c80e52c484bd" class="bulleted-list"><li style="list-style-type:disc">해성문화재단 전액장학금 (2024.03.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-8007-8a88-e7b5ebb85e03" class="bulleted-list"><li style="list-style-type:disc">숭실대학교 백마성적우수장학금 (2024.03.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-8000-955a-faac772058df" class="bulleted-list"><li style="list-style-type:disc">캡스톤디자인 경진대회 학생 심사위원 참여 (2024.09. ~ 2024.12.)</li></ul></div><div style="display:contents" dir="auto"><ul id="2d484af7-d7a8-80e3-96fb-daf044a3b850" class="bulleted-list"><li style="list-style-type:disc">숭실대학교 게임제작 동아리, 겜마루 회원 (2023.12 ~ )</li></ul></div><div style="display:contents" dir="auto"><ul id="2d484af7-d7a8-8092-adc3-f919714e8eed" class="bulleted-list"><li style="list-style-type:disc">숭실대학교 캠퍼스투어 소프트웨어학부 멘토 (2023.07)</li></ul></div><div style="display:contents" dir="auto"><ul id="2c484af7-d7a8-8097-9f23-efbb55cf4eda" class="bulleted-list"><li style="list-style-type:disc">SW/DT SeSAC 경진대회 우수상 (2023.06.)</li></ul></div><div style="display:contents" dir="auto"><p id="30884af7-d7a8-80fd-bd31-ff0fb354b343" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
