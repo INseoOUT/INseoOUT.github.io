@@ -1,0 +1,753 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>anby 포트폴리오</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head>
+<body>
+<div style="padding:16px 24px;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;color:rgba(55,53,47,0.6);text-decoration:none;font-size:0.875rem;" onmouseover="this.style.color='rgb(55,53,47)'" onmouseout="this.style.color='rgba(55,53,47,0.6)'">
+    ← 이력서로 돌아가기
+  </a>
+</div>
+<article id="33384af7-d7a8-80a1-815e-e97d4fe8a85f" class="page sans"><header><h1 class="page-title" dir="auto">anby</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80b3-a5db-f968cd2cb272" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-803c-b50c-c925cf7e401d" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="33384af7-d7a8-8096-b3b7-dc3715548593" class="image"><a href="image.png"><img style="width:974.85791015625px" src="images/anby_image.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80a1-89e8-e2e21e4201ef" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="33384af7-d7a8-8015-a221-d2415db1bb2d" class="image"><a href="image%201.png"><img style="width:336px" src="images/anby_image_1.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80c7-86ff-db79ce1e34b2" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80fa-8b96-d9586399e8cf" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8085-9318-f6a726b09fcc" class="">서비스</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80bc-83ad-cdc718c73005" class=""><strong>통합 자원 관리 SaaS, anby</strong></p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-80a8-bb6d-f7ca36bffb54" class="">주요 기능</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8059-b4f0-f088261a0aa0" class=""><strong>통합 자원 관리</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8030-a3f5-c750059e9bdd" class="">유/무형의 개념을 자원으로 추상화하여 관리할 수 있는 대상으로 만들고, 이를 기반으로 서비스 사용자로 하여금 타임라인 예약, 웨이팅, 주문 등의 서비스로 이용할 수 있도록 통합 대시보드로 제공합니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8093-91b5-fac3eec5c3eb" class=""><strong>티켓 관리</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80dd-ae28-d73d38d6917b" class="">서비스 이용자의 예약, 웨이팅, 주문 등의 요청은 티켓 단위로 관리하며, 통합 대시보드를 통해 티켓을 확인할 수 있습니다.</p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8031-b5bc-e426216ea544" class="">서비스 설명</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8064-90e2-cd9035219646" class="">실제 교내 타 학과의 외주 프로젝트를 기초로, 예약, 웨이팅, 주문 등의 다양한 수요가 실제 세계에 존재합니다. 실제로 smkx 2025에서는  예약과 웨이팅이 동시에 이루어져야 하는 상황이지만 서로 다른 서비스들을 사용하는 불편함을 확인했습니다. 특히 주 타겟으로 삼은 교내 다양한 동아리와 과 학생회 등은 공간 대여 및 물품 대여 사업, 축제 주점 등 관리할 자원이 존재했으나 전산화되지 않는 상황이 다수여서 충분히 서비스의 대상이 될 수 있다고 판단했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8092-b8b8-c2b931aec059" class="">이에 동일한 자원을 두고 여러 서비스를 중복으로 사용해야 하는 불편함을 개선하고자 자원을 통합으로 관리하고, 예약, 웨이팅, 주문 등을 처리할 수 있는 서비스를 제공하여 이러한 불편함을 개선하고자 합니다.</p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-80e7-894e-df914e33e5b8" class="">프로젝트 기간</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-803b-a435-f8bd0f83d11e" class="">2025.02. - 2025.08. (7개월)</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80cb-bb85-e0f8a92df446" class="">2026.04. - 현재(외주 작업 중)</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80fb-bbdb-d38807d53659" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80d7-ac7c-f6c42bdb54e8" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-80b0-ae2c-e06b2ed006cc" class="">사용 기술 스택</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80bc-a961-ccf19f613d2d" class=""><strong>React + Typescript + NextJs</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-802b-9f78-ecf4f3eed067" class="bulleted-list"><li style="list-style-type:disc">엄격한 타입 관리를 통한 오류 발생 가능성 억제 + 빠른 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80f5-bd17-d9f7b69b54f7" class="bulleted-list"><li style="list-style-type:disc">AI 친화적인 구성</li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a1-aa59-d3849e5f1070" class=""><strong>Go</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80cf-bbfc-ecf4be93d713" class="bulleted-list"><li style="list-style-type:disc">람다 환경에서의 가벼운 런타임 + 빠른 속도</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80ca-83aa-cedb7442b2d1" class="bulleted-list"><li style="list-style-type:disc">엄격한 타입 제한을 통한 오류 발생 가능성 억제</li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8086-b4f4-d4904380cb81" class=""><strong>AWS</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8074-b31d-dc3483c1425f" class="bulleted-list"><li style="list-style-type:disc">람다 기반의 서버리스 아키텍처를 사용한 노코스트 서버 구축 목적</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80a1-ae48-f57156ab6fe5" class="bulleted-list"><li style="list-style-type:disc">auto scailing을 지원하는 람다를 통한 안정적인 서비스 운영 </li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8008-b7b3-eb9c70c95608" class=""><strong>DynamoDB</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8085-8310-edb86adbfcd9" class="bulleted-list"><li style="list-style-type:disc">AWS 관리형 서비스 + auto scailing에 이점</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8047-b511-d9c6e486717e" class="bulleted-list"><li style="list-style-type:disc">다른 RDS 대비 프리티어 혜택을 통한 유지 비용 낮음</li></ul></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8026-9a3b-c02e428a0ef3" class="">구현 및 기여 내용</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-800a-94fb-dd7c28f9365c" class="">Backend</p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-801d-bad4-d7943dd8746a" class="bulleted-list"><li style="list-style-type:disc">관리자 대시보드 RESTful API 엔드포인트 설계 및 기능 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8099-a310-d5ffd1de18d2" class="bulleted-list"><li style="list-style-type:disc">대규모 트래픽 처리를 고려한 티켓 도메인 데이터 구조 및 DynamoDB 스키마 설계</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-806f-961b-e70f846168c5" class="bulleted-list"><li style="list-style-type:disc">DynamoDB 조건부 업데이트와 낙관적 락 기능을 사용 티켓 중복 예약 방지 및 동시성 제어</li></ul></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8066-9c0e-cf4270087514" class="">팀원</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-809a-be29-dee7b1273718" class="">프론트 1인</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8011-a0dc-d0c7903fae5c" class="">관리자 BE 1인</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8077-bb0a-f5a225f2e0a2" class="">클라이언트 BE 1인</p></div></div></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-803c-80d6-cfd76f85ed12" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-805a-84f4-d3901f0afe8d" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-800b-bdf6-f86d94feab4b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80fd-b166-c73c35a7159d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8023-8347-f5a91cd468c3" class="">
+</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8047-9e6f-dd29d25e11d2" class="">
+</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8045-a88a-ce019ba36287" class="">
+</p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-80a7-93ac-d9576fc4df59" class=""><strong>시스템 아키텍처</strong></h3></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8010-a81b-f0c70e742f1b" style="width:50.000000000000014%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8095-91a0-dc3b3cb03edc" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="ltr"><figure id="33384af7-d7a8-8060-9879-f3669dc8ac37" class="image"><a href="image%202.png"><img style="width:1008px" src="images/anby_image_2.png"/></a></figure></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-803a-bb80-c83f42ea8b0f" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80c2-a9cc-ffbff327f71f" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80b8-a22d-d26ce604c4de" class=""><strong>사용자 인증/인가</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80d4-aff2-ebece4f1e2fc" class="">AWS API Gateway에서 Lambda auhorizer를 사용하여 JWT 토큰을 발급 및 검증하여 관리자 API에 대한 인증/인가를 구현했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-807d-b239-f0e0fd90883b" class=""><strong>람다 기반 서버리스 아키텍처</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8038-a39d-ea16b3699cb6" class="">x86 프로세서 기반보다 arm 프로세서 기반 람다가 동일 퍼포먼스 대비 20% 저렴한 점을 확인하여 arm 프로세서 기반 람다에 Go 기반 서버 코드를 올려 서버리스 서버를 구축했습니다. </p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-803e-9744-dddb306a9fa3" class=""><strong>SQS를 사용한 안정적인 데이터 처리</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8047-bcfe-c7d041f17e4f" class="">람다에서 타임아웃/DB 과부화 등의 상황 발생 시 데이터가 유실될 수 있는 문제점을 SQS를 사용하여 해결하고자 했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a5-b58f-ded6e26f9a43" class="">FIFO SQS를 설정하고 메시지가 순차적으로 잘 처리될 수 있도록 보장했습니다.</p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8036-b83b-c1b49567eba1" class="">DynamoDB 주요 구성</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8009-bd20-e699f62c521c" class="">ticket은 서비스 별로 상태 변화가 잦게 있기 때문에 각 테이블을 분리하여 사용하도록 했습니다. </p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80e3-b95a-fb2f54e93539" class="">resource 테이블에 자원의 모든 내용을 담아 관리할 수 있도록 하였습니다. </p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80ca-95d8-eac6fbe17fc9" class="">project 테이블을 통해 독립된 주문, 예약, 웨이팅 테이블들을 복합적으로 관리 및 처리할 수 있도록 연동 관계를 설정할 수 있게 하였습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8078-a27f-e70f9c851e18" class="">Cognito를 사용하여 사용자의 로그인/회원가입을 처리하되, 서버 요청에 대한 보안 처리를 위해 users 테이블에 사용자 정보를 저장하고 관리합니다. </p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80df-ae2f-fc4b17cd434d" class=""><strong>resources - </strong>자원을 관리할 테이블</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-8045-a0f8-e2578f53caa6" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80ae-9eff-f40248f68f07"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:113.32101440429688px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:113.31817626953125px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:214.32101440429688px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-803c-88f3-f21a366a64f4"><td id="OEJR" class="" style="width:113.32101440429688px">PK</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">projectID#resourceID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80da-a00b-fdc7d10e7361"><td id="OEJR" class="" style="width:113.32101440429688px">SK</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">자원 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-808e-9d18-fe260675a3d0"><td id="OEJR" class="" style="width:113.32101440429688px">name</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">자원 이름</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-805e-976b-c25f53490871"><td id="OEJR" class="" style="width:113.32101440429688px">type</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">MENU | OPTION | CATEGORY | RESERVATIONTARGET</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-806d-9ab6-d1a95fd3a101"><td id="OEJR" class="" style="width:113.32101440429688px">field</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">자원에 필요한 정보를 직렬화</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8037-a187-c978e8912e6d"><td id="OEJR" class="" style="width:113.32101440429688px">imageURI</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">presignedURI</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8012-a984-ed1c4cdebeba"><td id="OEJR" class="" style="width:113.32101440429688px">state</td><td id="Q^un" class="" style="width:113.31817626953125px">bool</td><td id="]w\R" class="" style="width:214.32101440429688px">자원 사용 가능 여부</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8003-ad6f-c996721082ea"><td id="OEJR" class="" style="width:113.32101440429688px">capacity</td><td id="Q^un" class="" style="width:113.31817626953125px">int</td><td id="]w\R" class="" style="width:214.32101440429688px">자원 수량</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8076-a4ee-dbe8ca99def8"><td id="OEJR" class="" style="width:113.32101440429688px">used</td><td id="Q^un" class="" style="width:113.31817626953125px">int</td><td id="]w\R" class="" style="width:214.32101440429688px">사용된 자원량</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80c5-8c0d-c589520d61af"><td id="OEJR" class="" style="width:113.32101440429688px">createdAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80a0-9b64-eee870fd5ca2"><td id="OEJR" class="" style="width:113.32101440429688px">updatedAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">업데이트 시각</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8084-935c-eddeb6d73a00" class=""><strong>projects - </strong>프로젝트 정보를 관리할 테이블</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80ed-ba10-ea8523171db7" class="">프로젝트 정보<br/><em>프로젝트 연동 관계</em></p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-80f0-85f3-fb7afa31304c" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-802d-abb5-ff9f4179070c"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:113.32101440429688px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:113.31817626953125px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:214.32101440429688px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80f1-8607-db6097ad8611"><td id="OEJR" class="" style="width:113.32101440429688px">PK</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">userID#projectID<br/><em>parentProjectID</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8026-8148-f814d93abe8b"><td id="OEJR" class="" style="width:113.32101440429688px">SK</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">INFO<br/><em>childProjectID</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8027-acfd-f279c953dae8"><td id="OEJR" class="" style="width:113.32101440429688px">name</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">프로젝트 이름</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8028-b57b-f16b6b08a506"><td id="OEJR" class="" style="width:113.32101440429688px">type</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">RESERVATION | ORDER | WAITING<br/><em>META</em></td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-802d-ba3b-dbb5db8c1fa4"><td id="OEJR" class="" style="width:113.32101440429688px">field</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">프로젝트에 사용되는 정보 직렬화</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8086-87e9-ddcc7b56bc8f"><td id="OEJR" class="" style="width:113.32101440429688px">imageURI</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">presignedURI</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80f6-a851-e195849c0eb3"><td id="OEJR" class="" style="width:113.32101440429688px">state</td><td id="Q^un" class="" style="width:113.31817626953125px">bool</td><td id="]w\R" class="" style="width:214.32101440429688px">프로젝트 활성 여부</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-800f-9818-c0bd7e349409"><td id="OEJR" class="" style="width:113.32101440429688px">createdAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8026-ae23-f39647026ec1"><td id="OEJR" class="" style="width:113.32101440429688px">updatedAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">업데이트 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8007-8288-c55e8d712b7a"><td id="OEJR" class="" style="width:113.32101440429688px">GSI_meta</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">복합 프로젝트 검색을 위한 GSI</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80bc-849e-d091b6d518ac" class=""><strong>users - </strong>사용자 정보를 관리할 테이블</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-80ca-8dad-e14b337e3e0b" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8031-9a9a-ef3b7f98e559"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:113.32101440429688px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:113.31817626953125px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:214.32101440429688px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8063-a555-cf334abc31e6"><td id="OEJR" class="" style="width:113.32101440429688px">email(PK)</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">사용자 email</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-805a-a707-c473c061b741"><td id="OEJR" class="" style="width:113.32101440429688px">userID</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">사용자 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8007-b0c2-d31edd81c085"><td id="OEJR" class="" style="width:113.32101440429688px">username</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">사용자 이름</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80c6-8985-f21db49363e0"><td id="OEJR" class="" style="width:113.32101440429688px">createdAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8093-86cf-f09f94ca65a5"><td id="OEJR" class="" style="width:113.32101440429688px">updatedAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">업데이트 시각</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8052-afbb-e014485a3de0" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-806d-8800-fa9b0006df5c" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80c8-a0eb-cbb165915e3a" class=""><strong>waiting_tickets - </strong>웨이팅 티켓</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-806d-8f17-dd0362749c2a" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8093-b6df-de06adbdbd70"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:107.28408813476562px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:115.30397033691406px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:217.31248474121094px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-808d-a2aa-ce5ef5b4cb9d"><td id="OEJR" class="" style="width:107.28408813476562px">PK</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">프로젝트 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80ad-8f03-f7a6f4d52485"><td id="OEJR" class="" style="width:107.28408813476562px">SK</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80ab-bd57-d316fcee95c5"><td id="OEJR" class="" style="width:107.28408813476562px">requester</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">요청자 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-805b-9608-c30540d4ee28"><td id="OEJR" class="" style="width:107.28408813476562px">data</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">요청자 정보를 직렬화</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8047-8ddf-c5c10e7a1fe0"><td id="OEJR" class="" style="width:107.28408813476562px">requestedTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80d8-b5ae-f941105bb7d0"><td id="OEJR" class="" style="width:107.28408813476562px">startTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 유효 시작 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8099-8c7f-f4fd07dd7329"><td id="OEJR" class="" style="width:107.28408813476562px">endTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 유효 종료 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80e9-8eca-f5669d722b22"><td id="OEJR" class="" style="width:107.28408813476562px">expiredTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 파기 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80bc-b703-cb0c81495cbd"><td id="OEJR" class="" style="width:107.28408813476562px">state</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">PENDING | ACQUIRE | RELEASED</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-806e-8bc6-f1525ab1f8e6"><td id="OEJR" class="" style="width:107.28408813476562px">memo</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">요청 사항</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8015-b0e2-db85e22119a3" class=""><strong>order_tickets - </strong>주문 티켓</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-80ee-b56d-fff47d68f0b5" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8079-bf7a-cb7af5859529"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:107.28408813476562px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:115.30397033691406px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:217.31248474121094px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-809b-b0ab-e8a9c613cf31"><td id="OEJR" class="" style="width:107.28408813476562px">PK</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">프로젝트 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80b1-b8a3-d14a659ca7c9"><td id="OEJR" class="" style="width:107.28408813476562px">SK</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-808b-b01e-dd0aebf0b951"><td id="OEJR" class="" style="width:107.28408813476562px">requester</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">요청자 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80a9-8df9-d4c79823034b"><td id="OEJR" class="" style="width:107.28408813476562px">data</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">요청자 정보를 직렬화</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80ee-a41a-fb7d2576d8bb"><td id="OEJR" class="" style="width:107.28408813476562px">requestedTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80f9-a4ec-c4a729d03dce"><td id="OEJR" class="" style="width:107.28408813476562px">startTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 유효 시작 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80b5-8d52-e57ce6ae75c4"><td id="OEJR" class="" style="width:107.28408813476562px">endTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 유효 종료 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80e7-bb32-c36b5ef06172"><td id="OEJR" class="" style="width:107.28408813476562px">expiredTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 파기 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80b6-bb09-eba235886eb2"><td id="OEJR" class="" style="width:107.28408813476562px">state</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">PENDING | ACQUIRE | RELEASED</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80fb-bd55-fd97be969ce9"><td id="OEJR" class="" style="width:107.28408813476562px">memo</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">주문 요청 사항</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-808e-8d99-f03ff686c56f"><td id="OEJR" class="" style="width:107.28408813476562px">OSI</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">유효 주문 처리를 위한 인증 키</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80ac-bd2b-f44baf8f6b00" class=""><strong>reservation_tickets - </strong>예약 티켓</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-8042-9c55-d54b3394792e" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8084-8dd5-dc823152cce9"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:107.28408813476562px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:115.30397033691406px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:217.31248474121094px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-800a-a5b0-ec701f7fcfc4"><td id="OEJR" class="" style="width:107.28408813476562px">PK</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">프로젝트 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8075-bc64-d2734da98813"><td id="OEJR" class="" style="width:107.28408813476562px">SK</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80d4-908f-efdab73caa06"><td id="OEJR" class="" style="width:107.28408813476562px">requester</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">요청자 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8055-a0b5-d70d241bef34"><td id="OEJR" class="" style="width:107.28408813476562px">data</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">요청자 정보를 직렬화</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8083-bed0-f606274a9b2f"><td id="OEJR" class="" style="width:107.28408813476562px">requestedTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80de-a1de-e79e491b2b58"><td id="OEJR" class="" style="width:107.28408813476562px">startTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 유효 시작 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8016-8439-f53c74f1289c"><td id="OEJR" class="" style="width:107.28408813476562px">endTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 유효 종료 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8046-a31b-c7f8ef28e991"><td id="OEJR" class="" style="width:107.28408813476562px">expiredTime</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">티켓 파기 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80cd-8104-e8277425fed1"><td id="OEJR" class="" style="width:107.28408813476562px">state</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">PENDING | ACQUIRE | RELEASED</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80d4-80ef-dc6f0407ffce"><td id="OEJR" class="" style="width:107.28408813476562px">memo</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">주문 요청 사항</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8084-a4da-c321fdc70a4b" class=""><strong>teams - </strong>팀 관리를 위한 테이블</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-80fe-b27c-cf8cbe3370c9" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80f3-9be8-eaae76319f69"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:113.32101440429688px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:113.31817626953125px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:214.32101440429688px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-801b-a08b-c52fa7ca09f9"><td id="OEJR" class="" style="width:113.32101440429688px">PK</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">teamID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8097-a013-e3f30c2a68f4"><td id="OEJR" class="" style="width:113.32101440429688px">SK</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">INFO<br/>MEMEBER#userID<br/>PROJECT#projectID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8041-ab58-edd5a2fddc65"><td id="OEJR" class="" style="width:113.32101440429688px">createdAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-801e-8e58-c941ec3d1f4e"><td id="OEJR" class="" style="width:113.32101440429688px">updatedAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">업데이트 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-806d-9c75-cfd9a056ba7e"><td id="OEJR" class="" style="width:113.32101440429688px">name </td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">팀 이름<br/>사용자 이름<br/>프로젝트 이름</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80ae-8a83-f4e349f1facc"><td id="OEJR" class="" style="width:113.32101440429688px">owner</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">프로젝트 오너 userID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80c8-a580-c8d8ea50fb54"><td id="OEJR" class="" style="width:113.32101440429688px">type</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">-<br/>owner | admin | member<br/>RESERVATION | ORDER | WAITING</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-807f-8492-cda181c19eca"><td id="OEJR" class="" style="width:113.32101440429688px">GSI_team</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">_<br/>userID<br/>-</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-803f-a754-c382b0255a87"><td id="OEJR" class="" style="width:113.32101440429688px">GSI_project</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">-<br/>-<br/>projectID</td></tr></div></tbody></table></div></div></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-800e-b1e5-c14365214229" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8006-85ed-e4461860a147" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8016-9638-cc3a19db0fe3" class="">프로젝트 수행 중 부딪힌 문제</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-803e-b48d-f00021489b11" class=""><strong>중복 예약 문제</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-809e-ab15-fc30e7b97e07" class="">예약과 같이 단일 자원에 대해 여러 번의 쓰기 요청이 입력되는 경우, 예약 중복 혹은 예약 덮어쓰기가 진행되는 문제가 발생했습니다. dynamodb는 이러한 문제를 해결하기 위한 기술적 장치가 존재하지 않기 때문에 낙관적 락, 혹은 비관적 락 방식으로 문제를 해결하고자 고민했고, 몇 번의 인터뷰와 예상 시나리오를 가정하여 테스트한 결과 통합 자원 관리 특성 상 동일 자원에 대해 동시적으로 100번 이상의 중복 요청이 들어오진 않는다는 점을 확인하고, 100 단위의 버저닝 방식을 사용한 낙관적 락 방식으로 해당 문제를 해결했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-801b-aa7e-c8ddbb4e75b7" class="">
+</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80d3-aa01-fab7a2b838b2" class=""><strong>grafana를 통합 운영 모니터링 구축</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8054-beca-c4ffca8c81bd" class="">AWS 클라우드 환경으로 모든 서비스를 구축했으며, cloudwatch를 통해 운영 오버헤드 없이 모니터링 환경을 쉽게 구성할 수 있었지만, alartm을 여러 개 생성 시 추가 비용이 발생하는 문제가 있었습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8070-87c9-c27fac383424" class="">Cloudwatch의 메트릭을 받아 람다에서의 함수 실행시간, ddb 오류 발생 여부 등을 시각화하는 대시보드를 구축했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80ab-9d08-dc0e494fb48e" class="">threshold 이상의 값이 발생 시 실시간으로 개발 팀 discord 채널로 경고 문구를 보내도록 webhook 기반 알림 설정을 하였습니다.</p></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-802b-b329-e75d0a851dd2" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80ea-88cd-c162cb6af1e1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-800f-96f3-dc1dd2b72639" class=""><strong>비용 효율 최적화</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8055-b67a-dde3a1aed1ef" class="">람다의 컴퓨팅 파워 구성은 메모리 용량을 기준으로 합니다. 메모리 구성을 크게 잡으면 빠르지만 비용이 비효율적이고, 낮게 잡으면 실행 시간이 길어져 비효율이 발생했습니다. </p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80f7-99db-eae667e6926d" class="">비용 효율을 최적화하기 위해 AWS lambda Power Tuning 오픈소스를 사용해 실제 사용할 더미 데이터셋을 만들고 메모리 구성 별 테스트를 실행했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8088-8de5-eb75006490ed" class="">테스트 결과 256MB와 512MB 메모리 구성을 사용한 경우 실행 시간이 동일하게 가장 짧게 나타났으나 실행 비용 면에서 256MB 구성이 실행 시간 당 0.0000005$ 저렴하게 사용할 수 있다는 점을 확인했습니다.</p></div></div></div></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body></html>

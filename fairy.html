@@ -1,0 +1,747 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>fairy 포트폴리오</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head>
+<body>
+<div style="padding:16px 24px;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,sans-serif;">
+  <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;color:rgba(55,53,47,0.6);text-decoration:none;font-size:0.875rem;" onmouseover="this.style.color='rgb(55,53,47)'" onmouseout="this.style.color='rgba(55,53,47,0.6)'">
+    ← 이력서로 돌아가기
+  </a>
+</div>
+<article id="2f584af7-d7a8-8043-aa29-f4ec105d8e51" class="page sans"><header><h1 class="page-title" dir="auto">fairy</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-804b-aa57-c6a54298418a" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8070-9910-db75d7c6a1d8" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="33384af7-d7a8-80b8-8219-ddbf5d052bcd" class="image"><a href="image.png"><img style="width:709.984375px" src="images/fairy_image.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-802a-9db8-c0e54555a617" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="33384af7-d7a8-8078-9a38-cea453edf562" class="image"><a href="image%201.png"><img style="width:912px" src="images/fairy_image_1.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8011-b736-c572f464a9ba" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8012-a310-e96ebbf6a60f" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8018-b6db-d985625da66b" class="">서비스</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80f6-ac62-c087abd92ded" class=""><strong>여행 일정 생성 과정에 피로함을 느끼는 사람들을 위한<br/>여행 일정 AI 플래너 서비스, fairy</strong></p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-80f8-91b9-c294831aee7c" class="">주요 기능</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8091-8a02-f220478c6ca1" class=""><strong>여행 일정 생성</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a9-a169-cc6edb4e9a27" class="">목적지, 기간, 인원, 교통편, 기호 등의 여행 기본 정보를 입력으로 받아 기상, 교통, 숙소, 엔터테인먼트, 음식점, 카페 등의 정보를 수집하고 여행 일정 포맷에 맞춰 조합하여 사용자가 희망하는 여행 일정 계획을 제안합니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a7-b87b-d82fff523ef2" class=""><strong>장소 추천</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8082-9e1b-dfea4b91aa49" class="">사용자의 질문을 입력으로 받아 음식점, 숙소, 카페 등의 장소를 추천해줍니다.</p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-80c0-8516-c400ae794839" class="">서비스 설명</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80af-8cae-e77ef52969f2" class="">AX/DX 전환이 더딘 여행 산업 분야에서, 여행에 필요한 정보 수집 과정이 매우 불편하며 시간을 많이 소모한다는 문제점을 AI Agent를 통해 자동화하여 해결하고자 한 서비스입니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80ba-a6e2-d9fb9205fbcb" class="">사용자는 가고자 하는 여행지와 인원 등 여행에 필요한 정보를 입력하면 AI Agent를 사용하여 숙박, 엔터테인먼트, 음식점, 카페 등의 정보를 수집하여 여행 기획을 작성하여 전달합니다. </p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8083-bc0c-ec27f27c7877" class="">프로젝트 기간</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8088-b4f6-cd64d8c9638e" class="">2025.09. - 2025.12. (3개월)</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-808c-89b5-d522e0ef9f42" class="">2025.04. ~ (리펙토링)</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80f6-9a54-e9bdfc9569aa" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80ae-890c-cbda935c39e3" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8076-82c5-d5369574b1d7" class="">사용 기술 스택</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a7-94ae-f0281e2cc265" class=""><strong>React + Typescript + Vite</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80db-ae24-de6d714ed0af" class="bulleted-list"><li style="list-style-type:disc">엄격한 타입 관리를 통한 오류 발생 가능성 억제 + 빠른 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8011-abd8-c91256d946b9" class="bulleted-list"><li style="list-style-type:disc">AI 친화적인 구성</li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8084-9d4d-c1199c3a116e" class=""><strong>Python + FastAPI + LangChain/LangGraph</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8050-ace5-fcfb61885f5b" class="bulleted-list"><li style="list-style-type:disc">비선형적 LLM Chain 구조를 사용한 에이전트 구축</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8066-be06-c4703d7b00eb" class="bulleted-list"><li style="list-style-type:disc">빠른 개발과 비동기 처리에 용이</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-807d-a874-f66809a5785a" class="bulleted-list"><li style="list-style-type:disc">AI 친화적인 구성</li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80ec-a67d-fb55b2f07386" class=""><strong>AWS</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-802d-a8b5-f2e75e375ec1" class="bulleted-list"><li style="list-style-type:disc">AWS 프리티어를 사용한 서버 운영 비용 최소화 목적</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8052-8991-e77bfd09c045" class="bulleted-list"><li style="list-style-type:disc">다양한 클라우드 서비스를 제공하여 람다, ECR 등을 쉽고 저비용으로 사용 가능 </li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80f9-9759-d0d7bc59db8a" class=""><strong>DynamoDB</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80e3-b124-e488acabba90" class="bulleted-list"><li style="list-style-type:disc">AI 서비스 중 변경 사항에 대해 스키마 변경 없이 유연하게 대응</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80d9-89df-cd65f7f46008" class="bulleted-list"><li style="list-style-type:disc">AWS 관리형 서비스 + auto scailing에 이점</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80ed-a0b0-c70039c98f3c" class="bulleted-list"><li style="list-style-type:disc">다른 RDS 대비 프리티어 혜택을 통한 유지 비용 낮음</li></ul></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8056-b7e9-f76a8b70c58e" class="">구현 및 기여 내용</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8059-aba2-c44b0f55f821" class=""><strong>infra</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-807f-9922-fb18ffe5bcad" class="bulleted-list"><li style="list-style-type:disc">AWS 인프라 아키텍처 설계 및 구성</li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8031-9956-f8274e4af640" class=""><strong>AI Engineer</strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-8002-9ce8-e3d7b2b19758" class="bulleted-list"><li style="list-style-type:disc">Agent 시스템 설계 및 구현</li></ul></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80fe-bbc3-df6940dd4cc3" class=""><strong>Backend </strong></p></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80b5-8661-d1c87d9e8cbb" class="bulleted-list"><li style="list-style-type:disc">CI/CD 파이프라인 구축</li></ul></div><div style="display:contents" dir="auto"><ul id="33384af7-d7a8-80d5-b087-c1a0150e5d76" class="bulleted-list"><li style="list-style-type:disc">AWS DynamoDB 스키마 설계 및 구현</li></ul></div></div></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80cd-a64b-dc15f3e24397" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-801b-994b-d1d1dc9dfd2e" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-803a-9908-ff174bd7eb10" class=""><strong>시스템 아키텍처</strong></h3></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80c9-bf97-f912fc861dba" style="width:50.000000000000014%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-808c-b4cf-d2b1921257f1" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="ltr"><figure id="33384af7-d7a8-8061-a792-ee34c2dcb2d4" class="image"><a href="image%202.png"><img style="width:1008px" src="images/fairy_image_2.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="33384af7-d7a8-8041-884e-c38ee603696d" class="image"><a href="image%203.png"><img style="width:1008px" src="images/fairy_image_3.png"/></a></figure></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80f1-b48d-f4ae9fe9ba26" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80aa-ba19-fb4cb79faebd" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-807f-8335-fc882bcc7f81" class=""><strong>사용자 인증/인가</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-809f-ace9-c1e49028224d" class="">AWS Cognito를 사용하여 사용자를 등록 및 관리하며 Cognito로 발급된 JWT 토큰을 사용하여 사용자 인증이 필요한 경우에 대한 인증/인가를 구현했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80fc-ab92-f6760cd8e599" class=""><strong>람다가 아닌 EC2</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a1-a25b-df8dbbf59ef4" class="">최초에는 가격적으로 유지 비용이 압도적으로 유리한 람다로 구성하려 했으나 테스트 중 람다의 무상태 특성과 실행 시간 제한 조건에 부딪혔습니다.  그래프 실행 중 state를 메모리에 유지할 수 없는 람다보단 EC2로 서버를 띄워 이러한 문제가 발생하지 않도록 했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8052-bbe8-cc18b8ebf15b" class=""><strong>github Actions와 Docker image를 사용한 CI/CD 파이프라인 구축</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-803c-b605-c09462482e88" class="">K-PaaS 공모전에도 참가하여 Kubernetes 환경과 AWS EC2 환경에서 동시에 운영할 수 있도록 관리의 부담을 줄이기 위해 docker image로 관리하도록 하고 EC2로의 CI/CD를 구축했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8093-af68-d27d6453402b" class=""><strong>Subgraph를 활용한 Multi-Agent Hierarchical Team 패턴 구현</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80e5-97ae-fb4e8695ba3a" class="">사용자의 입력 내용에 따라 입력 요청을 범주화하고 main supervisor가 범주에 맞는 서브 그래프로 라우팅하도록 하여 사용자의 질문 패턴에 맞는 서브 그래프가 실행되도록 처리했습니다. </p></div><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-80fa-9011-f3202ec74678" class="">DynamoDB 주요 구성</h3></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-808a-b582-e65c31b74e7d" class=""><strong>sessions - </strong>채팅 세션을 저장할 테이블</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-806d-ba44-dd9c590fe932" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8054-b4b5-d20911601c87"><th id="yNcK" class="simple-table-header-color simple-table-header" style="width:114.30113220214844px">속성</th><th id="P^Ev" class="simple-table-header-color simple-table-header" style="width:114.28692626953125px">type</th><th id="l@&gt;B" class="simple-table-header-color simple-table-header" style="width:211.2613525390625px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80b3-b20e-d19ed1a37dd8"><td id="yNcK" class="" style="width:114.30113220214844px">sessionID(PK)</td><td id="P^Ev" class="" style="width:114.28692626953125px">string</td><td id="l@&gt;B" class="" style="width:211.2613525390625px">채팅 세션 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8023-9be3-ce0be7d9d329"><td id="yNcK" class="" style="width:114.30113220214844px">title</td><td id="P^Ev" class="" style="width:114.28692626953125px">string</td><td id="l@&gt;B" class="" style="width:211.2613525390625px">AI로 요약한  채팅 세션 제목</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8092-839b-ccca13c66cfe"><td id="yNcK" class="" style="width:114.30113220214844px">createdAt</td><td id="P^Ev" class="" style="width:114.28692626953125px">datetime</td><td id="l@&gt;B" class="" style="width:211.2613525390625px">세션 생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-808a-8326-e037f60eadee"><td id="yNcK" class="" style="width:114.30113220214844px">updatedAt</td><td id="P^Ev" class="" style="width:114.28692626953125px">datetime</td><td id="l@&gt;B" class="" style="width:211.2613525390625px">세션 업데이트 시각</td></tr></div></tbody></table></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8006-a7df-d8e31819bbf9" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-804b-bd80-cead3f690e79" class=""><strong>chats - </strong>채팅 내용을 저장할 테이블</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-8006-b4f8-d8a4712eeecf" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80eb-969b-f48e6404e5f5"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:107.28408813476562px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:115.30397033691406px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:217.31248474121094px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8025-baa8-e6e594553994"><td id="OEJR" class="" style="width:107.28408813476562px">chatID(PK)</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">챗 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-808f-9c9b-dd976529bf5a"><td id="OEJR" class="" style="width:107.28408813476562px">sessionID(SK)</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">세션 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8039-80c0-e9e45ca573c8"><td id="OEJR" class="" style="width:107.28408813476562px">content</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">챗 내용</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-807c-bd5f-c458bac794de"><td id="OEJR" class="" style="width:107.28408813476562px">role</td><td id="Q^un" class="" style="width:115.30397033691406px">string</td><td id="]w\R" class="" style="width:217.31248474121094px">USER | AI</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8042-9dfd-ca1ad5c7f85d"><td id="OEJR" class="" style="width:107.28408813476562px">timestamp</td><td id="Q^un" class="" style="width:115.30397033691406px">datetime</td><td id="]w\R" class="" style="width:217.31248474121094px">챗 생성 시각</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80fc-b487-cb26f5147584" class=""><strong>itinerary - </strong>생성된 여행 일정을 저장할 테이블</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-80db-a54c-f07056f15f18" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80a4-b87e-c63ef46d64c7"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:109.3125px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:116.3125px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:214.32101440429688px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80db-8113-cff3d8fcb4a5"><td id="OEJR" class="" style="width:109.3125px">itineraryID(PK)</td><td id="Q^un" class="" style="width:116.3125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">여행 일정 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-809b-ba2f-f758daf49d5b"><td id="OEJR" class="" style="width:109.3125px">userID(SK)</td><td id="Q^un" class="" style="width:116.3125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">생성한 사용자</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-807e-80fa-e44806c8761f"><td id="OEJR" class="" style="width:109.3125px">sessionID</td><td id="Q^un" class="" style="width:116.3125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">세션 ID</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-801b-a741-dbfc5569490d"><td id="OEJR" class="" style="width:109.3125px">content</td><td id="Q^un" class="" style="width:116.3125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">md 형식의 일정 계획</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8098-8a8e-eaf3a5af28bd"><td id="OEJR" class="" style="width:109.3125px">timestamp</td><td id="Q^un" class="" style="width:116.3125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">생성 시각</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8066-85b8-da4614b50827" class=""><strong>users - </strong>사용자 정보를 관리할 테이블</p></div><div style="display:contents" dir="ltr"><table id="33384af7-d7a8-801b-90a8-e118bf0276e6" class="simple-table"><thead class="simple-table-header"><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8092-87cb-ce0ba54b5163"><th id="OEJR" class="simple-table-header-color simple-table-header" style="width:113.32101440429688px">속성</th><th id="Q^un" class="simple-table-header-color simple-table-header" style="width:113.31817626953125px">type</th><th id="]w\R" class="simple-table-header-color simple-table-header" style="width:214.32101440429688px">설명</th></tr></div></thead><tbody><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-802a-9215-fcff4cf856d8"><td id="OEJR" class="" style="width:113.32101440429688px">email(PK)</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">사용자 email</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-8085-afb7-dece596c2c6f"><td id="OEJR" class="" style="width:113.32101440429688px">username</td><td id="Q^un" class="" style="width:113.31817626953125px">string</td><td id="]w\R" class="" style="width:214.32101440429688px">사용자 이름</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-80d4-ab09-ee24c61beb4b"><td id="OEJR" class="" style="width:113.32101440429688px">createdAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">생성 시각</td></tr></div><div style="display:contents" dir="ltr"><tr id="33384af7-d7a8-805c-a3ef-d2f9b12329bd"><td id="OEJR" class="" style="width:113.32101440429688px">updatedAt</td><td id="Q^un" class="" style="width:113.31817626953125px">datetime</td><td id="]w\R" class="" style="width:214.32101440429688px">업데이트 시각</td></tr></div></tbody></table></div></div></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8011-b7cf-fa2215f13cf9" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80aa-a85d-ca0792ea1ba7" style="width:50%" class="column"><div style="display:contents" dir="auto"><h3 id="33384af7-d7a8-8085-b16f-ebdd35f1c6b0" class="">프로젝트 수행 중 부딪힌 문제</h3></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8064-ae91-cf227dec1189" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8084-9277-f67501a26c90" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8063-98f2-c2cf47226815" class="column-list"><div style="display:contents" dir="auto"><div id="33384af7-d7a8-8070-a45b-c0fef5d2a7be" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8018-8be5-ef7249e652ab" class=""><strong>크롤링 실패로 인한 데이터 확보 실패</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a1-82e7-f7042f10a68c" class="">여행 정보 수집을 위해 크롤링 기반 데이터 수집을 설계했으나, WAF과 동적 스크립팅 기술로 크롤링을 차단하고 있는 서비스들의 보안 정책을 간과하여 설계가 무너졌습니다. AI와 크롤링 봇의 확산으로 인해 주요 여행 플랫폼들이 데이터 무단 유출 방지를 강화하고 있다는 점을 사전에 충분히 검토하지 못한 것이 원인이었습니다.<br/></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-801e-9a28-e638ee1099cf" class="">Tavily 엔진을 사용하여 키워드 기반 검색으로 정보를 수집하고, 그 중 장소 이름 등을 추출하여 추가 웹 검색을 통해 장소 오브젝트를 생성하는 방식으로 전환했습니다. 단순 LLM 웹 검색 기반 에이전트의 정보 정확도 40% 대비 Tavily 기반 검색 프로세스 도입 후 58%로, 약 20초의 실행 시간 증가와 정보 정확도 18% 향상을 trade-off로 수용했습니다.<br/></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8026-a139-d7e4e2b65410" class="">근본적인 해결을 위해서는 네이버 지도, 카카오맵, 트립어드바이저, 정부 오픈 API 서비스 등 신뢰할 수 있는 플랫폼의 공식 API 연동 또는 자체 데이터 수집 파이프라인 구축이 필요하며, 이를 통해 데이터 정확도를 58% 그 이상으로 개선할 수 있을 것으로 예상합니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8049-b570-e4b0d57d7220" class=""><strong>DynamoDB batch 쓰기 한도 초과 이슈와 SQS 도입</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8009-ae35-c8099a7a7e73" class="">단위 테스트 환경에서는 발생하지 않던 문제로, 실제 서비스 형태의 통합 테스트에서 채팅 기록이 DynamoDB batch 쓰기 한도인 25건을 초과하는 경우 DB 저장에 실패하는 문제를 확인했습니다. 단위 테스트와 통합 테스트 환경의 데이터 규모 차이를 사전에 고려하지 못한 것이 원인이었습니다.<br/></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8031-8616-e29d2760ec3c" class="">DB 저장 시점을 그래프 종료 시점으로 일원화하고, SQS를 도입하여 채팅 기록을 최대 25건 단위로 분할하여 큐에 전달한 뒤 Lambda가 순차적으로 처리하도록 구성하여 쓰기 실패 시에도 메시지가 큐에 보존되어 데이터 누락을 방지하도록 조치했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8088-b75b-c22739c7091c" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="33384af7-d7a8-80c2-9cfa-fc01f904c2d1" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8019-b393-f315371003c3" class=""><strong>Agent 그래프의 실행 시간 개선</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8008-920d-db12fde47ac7" class="">초기 설계에서 메인 관리자 노드가 작업 계획과 각 노드의 지시 사항을 생성하여 위임하는 단일 그래프 구조로 구현했으나, 2박 3일 기준 여행 일정 생성에 평균 약 3분이 소요되어 기대 수준을 초과했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8083-bac3-c0f601723081" class=""><br/>LangSmith와 자체 구축한 그래프 state 스냅샷 추적을 통해 병목 지점을 분석한 결과, 실제 작업 흐름이 &quot;데이터 수집 → 여행 일정 생성 → 포매팅&quot; 순서로 진행되고 있었으며 데이터 수집 단계에서 API 호출이 동기적으로 이루어져 idle 시간이 대부분을 차지하고 있음을 확인했습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80a5-aacf-e253374096de" class=""><br/>이에 두 가지를 병행하여 개선하고자 했습니다. <br/>첫째, 단일 그래프에서 서브그래프 기반 계층 구조로 전환하여 메인 관리자 노드의 작업 지시 사항 생성 과정을 제거해 추론 시간을 단축했습니다. 둘째, 데이터 수집 단계의 API 호출을 동기에서 비동기로 전환하여 날씨, 음식점, 카페, 숙소, 엔터테인먼트, 교통 정보를 병렬로 수집하도록 재구성했습니다. 결과적으로 수집 시간을 60% 이상 단축하여 평균 2분 23초로 기존보다 약 30초 단축하여 개선할 수 있었습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-8010-ad4d-c16c04ac062a" class=""><strong>섣부른 라이브러리 도입의 실패</strong></p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-80d1-8736-fac05d7634a4" class="">JSON 형태로 여행 일정을 출력하여 프론트엔드에서 interactive한 일정 수정 경험을 제공하는 방향으로 설계했습니다. 하지만 답변 생성 중 빈 화면이 노출되는 UX 문제가 있었습니다. 이를 해결하고자 live-streaming을 지원하는 assistant-ui 라이브러리를 도입했으나 해당 라이브러리가 JSON 형식의 최종 출력을 지원하지 않아 기존 설계와 충돌이 발생했습니다. 기존 설계와 신규 라이브러리의 호환성을 사전에 충분히 검토하지 않은 채 도입을 결정한 것이 원인이었습니다.</p></div><div style="display:contents" dir="auto"><p id="33384af7-d7a8-800a-bc9b-e8cced04b03b" class=""><br/>결과적으로 5주치 작업량을 재작성해야 했고, streaming은 지원하되 interactive한 일정 수정 UX는 구현하지 못한 채 마무리되었습니다.<br/><br/>이 경험을 통해 새로운 기술 도입 전 기존 데이터 흐름과의 호환성을 먼저 검증하는 것을 기준으로 삼게 되었습니다. 향후에는 assistant-ui 라이브러리를 걷어내고 LangChain/LangGraph에서 지원하는 기능으로 메시지 streaming과 JSON 출력을 동시에 처리할 수 있는 구조로 개선할 계획입니다. </p></div></div></div></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body></html>
