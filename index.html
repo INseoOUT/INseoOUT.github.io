@@ -285,10 +285,10 @@
       </div>
       <div class="contact-grid">
         <div class="ci"><span class="lbl">생년월일</span><span>2000.08.06</span></div>
-        <div class="ci"><span class="lbl">Mobile</span><span>+82 10-3365-6402</span></div>
-        <div class="ci"><span class="lbl">Email</span><a href="mailto:kim000806@naver.com">kim000806@naver.com</a></div>
+        <div class="ci"><span class="lbl">Mobile</span><span id="ci-phone"></span></div>
+        <div class="ci"><span class="lbl">Email</span><a id="ci-email" href="#"></a></div>
         <div class="ci"><span class="lbl">GitHub</span><a href="https://github.com/INseoOUT" target="_blank">INseoOUT</a></div>
-        <div class="ci" style="grid-column:span 2"><span class="lbl">주소</span><span>우정빌라 301, 상록구 성호로 8길, 안산, 경기도</span></div>
+        <div class="ci" style="grid-column:span 2"><span class="lbl">주소</span><span>안산, 경기도</span></div>
       </div>
       <div class="edu-card">
         <div class="school">숭실대학교 IT대학 소프트웨어학부</div>
@@ -444,5 +444,15 @@
   </div>
 
 </div>
+<script>
+  (function() {
+    var p = atob('KzgyIDEwLTMzNjUtNjQwMg==');
+    var e = atob('a2ltMDAwODA2QG5hdmVyLmNvbQ==');
+    document.getElementById('ci-phone').textContent = p;
+    var a = document.getElementById('ci-email');
+    a.textContent = e;
+    a.href = 'mailto:' + e;
+  })();
+</script>
 </body>
 </html>
