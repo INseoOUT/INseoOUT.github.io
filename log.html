@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inseout.log — 김인서의 학습 로그</title>
+  <meta name="description" content="만들면서 배운 것의 기록 — 학습 로그, TIL, 회고. 옵시디언 공부 노트도 공개할 예정입니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="inseout.log — 김인서의 학습 로그" />
+  <meta property="og:description" content="만들면서 배운 것의 기록 — 학습 로그, TIL, 회고." />
+  <meta property="og:url" content="https://inseout.github.io/log.html" />
+  <meta property="og:image" content="https://inseout.github.io/images/inseo_image.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2320c997'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23063f31'%3Ein%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #ffffff; --bg-alt: #f8f9fa; --surface: #ffffff;
+      --border: #e9ecef; --border-strong: #dee2e6;
+      --text: #212529; --muted: #495057; --subtle: #868e96;
+      --accent: #20c997; --accent-text: #099268;
+      --accent-soft: rgba(32,201,151,0.10);
+      --radius: 10px; --radius-sm: 6px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      --mono: 'Geist Mono', ui-monospace, Consolas, monospace;
+    }
+    html[data-theme="dark"] {
+      --bg: #121212; --bg-alt: #1a1a1a; --surface: #1e1e1e;
+      --border: #2a2a2a; --border-strong: #383838;
+      --text: #ececec; --muted: #b5b5b5; --subtle: #7e7e7e;
+      --accent: #20c997; --accent-text: #3ddcb0;
+      --accent-soft: rgba(32,201,151,0.13);
+      --shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    a { color: inherit; text-decoration: none; }
+    .mono { font-family: var(--mono); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+    /* ===== TOP BAR ===== */
+    .topbar { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
+    .topbar-in { max-width: 880px; margin: 0 auto; padding: 13px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; letter-spacing: -0.02em; }
+    .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { font-size: 13.5px; font-weight: 600; color: var(--subtle); padding: 7px 12px; border-radius: var(--radius-sm); transition: color 0.15s, background 0.15s; }
+    .nav-link:hover { color: var(--text); background: var(--bg-alt); }
+    .nav-link.on { color: var(--accent-text); background: var(--accent-soft); }
+    .nav-cta { font-size: 13px; font-weight: 700; padding: 8px 15px; border-radius: var(--radius-sm); background: var(--accent); color: #063f31; transition: filter 0.15s, transform 0.15s; }
+    .nav-cta:hover { filter: brightness(1.05); transform: translateY(-1px); }
+    .theme-btn { width: 33px; height: 33px; border: 1px solid var(--border); border-radius: 50%; background: var(--surface); color: var(--muted); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+    .theme-btn:hover { border-color: var(--border-strong); color: var(--text); }
+
+    /* ===== LAYOUT ===== */
+    .col { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 42px 0 6px; }
+    .masthead { padding: 50px 0 0; }
+    .masthead .logo-line { font-family: var(--mono); font-size: 25px; font-weight: 700; letter-spacing: -0.02em; }
+    .masthead .logo-line .g { color: var(--accent-text); }
+    .masthead .sub { color: var(--subtle); font-size: 14px; margin-top: 6px; max-width: 560px; }
+    .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+    .sec-head h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+    .sec-count { font-family: var(--mono); font-size: 12px; color: var(--accent-text); font-weight: 600; }
+    .sec-sub { color: var(--subtle); font-size: 13.5px; margin-bottom: 22px; max-width: 620px; }
+
+    /* ===== 빈 상태 ===== */
+    .empty {
+      border: 1px solid var(--border); border-radius: 14px; background: var(--surface);
+      box-shadow: var(--shadow); padding: 34px 30px; text-align: center;
+    }
+    .empty .e-ico { width: 44px; height: 44px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-text); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .empty .e-t { font-size: 16.5px; font-weight: 800; letter-spacing: -0.01em; }
+    .empty .e-d { font-size: 13.5px; color: var(--muted); margin-top: 6px; max-width: 440px; margin-inline: auto; }
+
+    /* ===== 공부 중 리스트 ===== */
+    .study-list { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
+    .study-row {
+      display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+      padding: 15px 18px; border-bottom: 1px solid var(--border);
+      font-size: 13.5px; transition: background 0.15s;
+    }
+    .study-row:last-child { border-bottom: none; }
+    a.study-row:hover { background: var(--bg-alt); }
+    .study-row .d { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; align-self: center; }
+    .study-row .nm { font-weight: 700; font-size: 13.5px; }
+    .study-row .ds { color: var(--muted); flex: 1; min-width: 220px; }
+    .study-row .st { font-family: var(--mono); font-size: 10.5px; color: var(--subtle); }
+
+    /* ===== Obsidian 예고 ===== */
+    .garden-teaser {
+      border: 1.5px dashed var(--border-strong); border-radius: 14px;
+      padding: 30px 28px; display: grid; grid-template-columns: minmax(0,1fr) 264px; gap: 24px; align-items: center;
+    }
+    .gt-t { font-size: 16.5px; font-weight: 800; letter-spacing: -0.01em; }
+    .gt-badge {
+      display: inline-flex; align-items: center; gap: 7px; margin-bottom: 10px;
+      font-family: var(--mono); font-size: 11px; font-weight: 600;
+      color: var(--accent-text); background: var(--accent-soft);
+      border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+      border-radius: 99px; padding: 3px 11px;
+    }
+    .gt-d { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+    .gt-d strong { color: var(--text); }
+    .graph-box { position: relative; }
+    .graph-cap { position: absolute; bottom: 6px; left: 0; right: 0; text-align: center; font-family: var(--mono); font-size: 10px; color: var(--subtle); }
+    .gnode { transition: transform 0.15s; transform-box: fill-box; transform-origin: center; cursor: default; }
+    .gnode:hover { transform: scale(1.25); }
+    .gedge { stroke: var(--border-strong); stroke-width: 1; }
+    .gdot { fill: var(--accent); opacity: 0.85; }
+    .gdot.dim { fill: var(--subtle); opacity: 0.5; }
+    .glabel { font-family: var(--mono); font-size: 8.5px; fill: var(--subtle); }
+
+    footer { margin-top: 60px; border-top: 1px solid var(--border); }
+    .foot-in { max-width: 880px; margin: 0 auto; padding: 26px 20px 44px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--subtle); }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .foot-links a:hover { color: var(--text); }
+
+    @media (max-width: 720px) {
+      .garden-teaser { grid-template-columns: 1fr; }
+      .graph-box { justify-self: center; }
+      .nav-hide-sm { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="index.html"><span class="dot"></span>김인서</a>
+      <nav class="nav-links" aria-label="주 메뉴">
+        <a class="nav-link" href="index.html">프로필</a>
+        <a class="nav-link on" href="log.html">학습 로그</a>
+        <a class="nav-link" href="projects.html">프로젝트</a>
+        <a class="nav-link nav-hide-sm" href="resume.html">이력서</a>
+        <a class="nav-cta" href="index.html#contact">연락하기</a>
+        <button class="theme-btn" id="themeBtn" aria-label="테마 전환">🌙</button>
+      </nav>
+    </div>
+  </div>
+
+  <div class="col">
+
+    <header class="masthead">
+      <div class="logo-line">inseout<span class="g">.log</span></div>
+      <p class="sub">만들면서 배운 것의 기록 — 학습 로그, TIL, 회고. 공부한 흔적을 이곳에 차례로 쌓아갑니다.</p>
+    </header>
+
+    <!-- 글 -->
+    <section>
+      <div class="sec-head"><h2>글</h2><span class="sec-count">학습 로그 · TIL · 회고</span></div>
+      <div class="empty">
+        <span class="e-ico" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16.5V4.5C4 3.7 4.7 3 5.5 3h9c.8 0 1.5.7 1.5 1.5v12l-3.5-2-3 2-3-2L4 16.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7.5 7h5M7.5 10h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </span>
+        <div class="e-t">첫 글을 준비하고 있어요</div>
+        <p class="e-d">멀티 에이전트 재설계, 서버리스 비용 최적화, 도구 개발기 — 직접 만들며 배운 것들을 곧 이 자리에서 읽으실 수 있어요.</p>
+      </div>
+    </section>
+
+    <!-- 지금 공부하는 것 -->
+    <section>
+      <div class="sec-head"><h2>지금 공부하는 것</h2><span class="sec-count">2026.07 기준</span></div>
+      <p class="sec-sub">글보다 먼저, 무엇을 파고 있는지부터 공개합니다.</p>
+      <div class="study-list">
+        <a class="study-row" href="https://github.com/INseoOUT/agent-lab" target="_blank" rel="noopener">
+          <span class="d"></span><span class="nm">에이전트 프레임워크</span>
+          <span class="ds">hermes를 뜯어보며 그래프형 에이전트와 비교 — agent-lab에서 실험 중</span>
+          <span class="st">agent-lab ↗</span>
+        </a>
+        <a class="study-row" href="projects.html">
+          <span class="d"></span><span class="nm">멀티 에이전트 설계</span>
+          <span class="ds">LangGraph Subgraph 라우팅, 비동기 병렬 수집 — fairy 재설계에서 검증</span>
+          <span class="st">fairy →</span>
+        </a>
+        <a class="study-row" href="projects.html">
+          <span class="d"></span><span class="nm">서버리스 비용 최적화</span>
+          <span class="ds">ARM(Graviton) Lambda 전환, DynamoDB 낙관적 락 — anby 운영에서 검증</span>
+          <span class="st">anby →</span>
+        </a>
+        <a class="study-row" href="https://github.com/INseoOUT/agent-lab" target="_blank" rel="noopener">
+          <span class="d"></span><span class="nm">일상 자동화</span>
+          <span class="ds">게임 일일 출석 봇 — 매일 새벽 스스로 돌아가는 중</span>
+          <span class="st">agent-lab ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Obsidian 예고 -->
+    <section>
+      <div class="sec-head"><h2>공부 트리</h2></div>
+      <div class="garden-teaser">
+        <div>
+          <span class="gt-badge">Obsidian vault → Quartz · 준비 중</span>
+          <div class="gt-t">노트 트리와 그래프뷰가 들어올 자리</div>
+          <p class="gt-d">옵시디언 공부 노트의 공개 폴더를 <strong>Quartz</strong>로 빌드해 이곳에 연결합니다. 연결되면 노트 트리·위키링크·백링크·<strong>그래프뷰</strong>를 그대로 탐색할 수 있어요.</p>
+        </div>
+        <div class="graph-box" aria-hidden="true">
+          <svg width="264" height="190" viewBox="0 0 264 190">
+            <line class="gedge" x1="132" y1="88" x2="62" y2="46"/>
+            <line class="gedge" x1="132" y1="88" x2="196" y2="40"/>
+            <line class="gedge" x1="132" y1="88" x2="210" y2="120"/>
+            <line class="gedge" x1="132" y1="88" x2="70" y2="140"/>
+            <line class="gedge" x1="62" y1="46" x2="30" y2="88"/>
+            <line class="gedge" x1="196" y1="40" x2="236" y2="76"/>
+            <line class="gedge" x1="210" y1="120" x2="236" y2="76"/>
+            <line class="gedge" x1="70" y1="140" x2="118" y2="162"/>
+            <line class="gedge" x1="196" y1="40" x2="132" y2="24"/>
+            <g class="gnode"><circle class="gdot" cx="132" cy="88" r="9"/><text class="glabel" x="132" y="106" text-anchor="middle">agents</text></g>
+            <g class="gnode"><circle class="gdot" cx="62" cy="46" r="6"/><text class="glabel" x="62" y="34" text-anchor="middle">hermes</text></g>
+            <g class="gnode"><circle class="gdot" cx="196" cy="40" r="7"/><text class="glabel" x="196" y="28" text-anchor="middle">langgraph</text></g>
+            <g class="gnode"><circle class="gdot" cx="210" cy="120" r="6"/><text class="glabel" x="210" y="138" text-anchor="middle">fairy</text></g>
+            <g class="gnode"><circle class="gdot dim" cx="70" cy="140" r="6"/><text class="glabel" x="70" y="158" text-anchor="middle">infra</text></g>
+            <g class="gnode"><circle class="gdot dim" cx="30" cy="88" r="4.5"/><text class="glabel" x="30" y="76" text-anchor="middle">mcp</text></g>
+            <g class="gnode"><circle class="gdot dim" cx="236" cy="76" r="4.5"/><text class="glabel" x="236" y="62" text-anchor="middle">subgraph</text></g>
+            <g class="gnode"><circle class="gdot dim" cx="118" cy="162" r="4.5"/><text class="glabel" x="118" y="180" text-anchor="middle">aws</text></g>
+            <g class="gnode"><circle class="gdot dim" cx="132" cy="24" r="4.5"/><text class="glabel" x="132" y="14" text-anchor="middle">router</text></g>
+          </svg>
+          <div class="graph-cap">공부 주제 맵 · 연동 시 실제 노트 그래프로</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-in">
+      <span>© 2026 김인서 · inseout<span style="color:var(--accent-text);">.log</span></span>
+      <div class="foot-links">
+        <a href="index.html">프로필</a>
+        <a href="projects.html">프로젝트</a>
+        <a href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">맨 위로 ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle (persisted)
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('themeBtn');
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      apply(theme);
+      btn.addEventListener('click', function () {
+        theme = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+        apply(theme);
+        localStorage.setItem('theme', theme);
+      });
+      function apply(t) {
+        root.setAttribute('data-theme', t);
+        btn.textContent = (t === 'dark') ? '☀️' : '🌙';
+      }
+    })();
+  </script>
+</body>
+</html>
