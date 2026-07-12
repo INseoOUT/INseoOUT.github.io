@@ -6,11 +6,29 @@
       <description>Last 10 notes on inseout.garden</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Architecture</title>
+    <link>https://rapidseo.me/garden/architecture/</link>
+    <guid>https://rapidseo.me/garden/architecture/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sun, 12 Jul 2026 13:13:26 GMT</pubDate>
+  </item><item>
+    <title>Networking</title>
+    <link>https://rapidseo.me/garden/networking/</link>
+    <guid>https://rapidseo.me/garden/networking/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sun, 12 Jul 2026 13:13:26 GMT</pubDate>
+  </item><item>
     <title>태그 목록</title>
     <link>https://rapidseo.me/garden/tags/</link>
     <guid>https://rapidseo.me/garden/tags/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 12 Jul 2026 13:07:58 GMT</pubDate>
+    <pubDate>Sun, 12 Jul 2026 13:13:26 GMT</pubDate>
+  </item><item>
+    <title>공부 트리</title>
+    <link>https://rapidseo.me/garden/</link>
+    <guid>https://rapidseo.me/garden/</guid>
+    <description><![CDATA[ 만들면서 공부한 것들을 옵시디언 노트 그대로 공개합니다. 노트는 서로 위키링크로 이어져 있어요 — 오른쪽 그래프에서 아무 점이나 눌러 돌아다니거나, 왼쪽 탐색기에서 골라 읽으세요. 파트 AI Agent 🌱 — 지금 채워가는 중. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 13:08:04 GMT</pubDate>
   </item><item>
     <title>AI Agent</title>
     <link>https://rapidseo.me/garden/ai-agent/</link>
@@ -47,24 +65,6 @@
     <guid>https://rapidseo.me/garden/ai-agent/multi-agent-system</guid>
     <description><![CDATA[  Multi Agent System이란 🌱 채워가는 중 — fairy를 단일 에이전트에서 멀티 에이전트 계층 구조로 재설계했던 경험이 출발점 하나의 큰 에이전트 대신 역할이 나뉜 여러 에이전트를 엮어 문제를 푸는 구조. ]]></description>
     <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
-  </item><item>
-    <title>Tool Use</title>
-    <link>https://rapidseo.me/garden/ai-agent/tool-use</link>
-    <guid>https://rapidseo.me/garden/ai-agent/tool-use</guid>
-    <description><![CDATA[  Tool Use란 🌱 채워가는 중 LLM이 외부 세계와 상호작용하는 손 — 함수 콜링, 도구 스키마, 결과 해석. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
-  </item><item>
-    <title>공부 트리</title>
-    <link>https://rapidseo.me/garden/</link>
-    <guid>https://rapidseo.me/garden/</guid>
-    <description><![CDATA[ 만들면서 공부한 것들을 옵시디언 노트 그대로 공개합니다. 노트는 서로 위키링크로 이어져 있어요 — 오른쪽 그래프에서 아무 점이나 눌러 돌아다니거나, 왼쪽 탐색기에서 골라 읽으세요. 파트 AI Agent 🌱 — 지금 채워가는 중. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
-  </item><item>
-    <title>2025-2 SSU CloudTrack 중간 고사 대체 과제</title>
-    <link>https://rapidseo.me/garden/2025-2-ssu-cloudtrack-%EC%A4%91%EA%B0%84-%EA%B3%A0%EC%82%AC-%EB%8C%80%EC%B2%B4-%EA%B3%BC%EC%A0%9C</link>
-    <guid>https://rapidseo.me/garden/2025-2-ssu-cloudtrack-%EC%A4%91%EA%B0%84-%EA%B3%A0%EC%82%AC-%EB%8C%80%EC%B2%B4-%EA%B3%BC%EC%A0%9C</guid>
-    <description><![CDATA[  특징 : 이미지가 대부분을 차지하는 실습 내용은 필요한 개념 혹은 흐름만 작성 Obsidian 특징의 문서 연결성을 활용 Github, Jekyll 활용 및 Netlify에 호스팅 link : 2025-ssu-cloudtrack-midterm-report.netlify.app/2025-2-ssu-cloudtrack-%EC%A4%91%EA%B0%84-%EA%B3%A0%EC%82%AC-%EB%8C%80%EC%B2%B4-%EA%B3%BC%EC%A0%9C Table Of Contents Cloud Cloud Model Cloud Nati... ]]></description>
-    <pubDate>Sun, 12 Jul 2026 11:04:01 GMT</pubDate>
   </item>
     </channel>
   </rss>

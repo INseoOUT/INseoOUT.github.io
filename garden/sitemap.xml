@@ -23,120 +23,126 @@
     <loc>https://rapidseo.me/garden/ai-agent/tool-use</loc>
     <lastmod>2026-07-12T12:48:17.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/amazon-web-service</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/architecture/art-of-scalability</loc>
+    <lastmod>2025-11-04T13:26:08.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/art-of-scalability</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/architecture/micro-service-architecture</loc>
+    <lastmod>2025-11-04T13:31:12.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/cncf</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/architecture/scalability</loc>
+    <lastmod>2025-11-04T13:31:41.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/cloud-model</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/amazon-web-service</loc>
+    <lastmod>2025-11-04T13:49:51.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/cloud-native-application</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/cncf</loc>
+    <lastmod>2025-11-04T13:29:20.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/cloud-native</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/cloud-model</loc>
+    <lastmod>2025-11-04T13:27:55.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/cloud-service-provider</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/cloud-native-application</loc>
+    <lastmod>2025-11-04T13:28:53.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/cloud</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/</loc>
+    <lastmod>2025-11-04T13:28:18.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/container</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/cloud-service-provider</loc>
+    <lastmod>2025-11-04T13:29:13.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/continuous-integration--and--continuous-deployment</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/cloud</loc>
+    <lastmod>2025-11-04T13:27:06.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/devops</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/google-cloud-platform</loc>
+    <lastmod>2025-11-04T12:57:00.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/docker-cli</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/hybrid-cloud</loc>
+    <lastmod>2025-11-04T12:57:09.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/docker</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/infrastructure-as-a-service</loc>
+    <lastmod>2025-11-04T13:30:17.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/google-cloud-platform</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/platform-as-a-service</loc>
+    <lastmod>2025-11-04T12:38:33.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/hybrid-cloud</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/private-cloud</loc>
+    <lastmod>2025-11-04T13:06:35.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/infrastructure-as-a-service</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/public-cloud</loc>
+    <lastmod>2025-11-04T13:06:45.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/k-paas-%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EC%84%A4%EC%B9%98</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/cloud-native/software-as-a-service</loc>
+    <lastmod>2025-11-04T13:16:51.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/k-paas-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%84%A4%EC%B9%98</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/container/</loc>
+    <lastmod>2025-11-04T13:34:04.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/k-paas-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-%EC%84%A4%EC%B9%98</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/container/docker-cli</loc>
+    <lastmod>2025-11-02T10:32:36.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/k-paas-%ED%8F%AC%ED%84%B8-%EC%84%A4%EC%B9%98</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/container/docker</loc>
+    <lastmod>2025-11-04T12:56:36.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/k-paas</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/container/pod-manager-tool</loc>
+    <lastmod>2025-11-04T12:39:18.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/kubernetes</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/devops/continuous-integration--and--continuous-deployment</loc>
+    <lastmod>2025-11-04T05:05:18.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/micro-service-architecture</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/devops/</loc>
+    <lastmod>2025-11-04T12:55:55.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/nhn-cloud-info</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/devops/pipeline</loc>
+    <lastmod>2025-11-04T05:01:47.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/network-interface</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/k-paas/k-paas-%EC%86%8C%EC%8A%A4-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EC%84%A4%EC%B9%98</loc>
+    <lastmod>2025-11-04T04:45:45.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/pipeline</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/k-paas/k-paas-%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0-%EC%84%A4%EC%B9%98</loc>
+    <lastmod>2025-11-04T12:36:30.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/platform-as-a-service</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/k-paas/k-paas-%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8-%EC%84%A4%EC%B9%98</loc>
+    <lastmod>2025-11-04T04:28:39.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/pod-manager-tool</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/k-paas/k-paas-%ED%8F%AC%ED%84%B8-%EC%84%A4%EC%B9%98</loc>
+    <lastmod>2025-11-04T01:58:16.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/pod</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/k-paas/</loc>
+    <lastmod>2025-11-04T12:57:52.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/private-cloud</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/k-paas/nhn-cloud-info</loc>
+    <lastmod>2025-11-04T13:24:30.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/public-cloud</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/kubernetes/</loc>
+    <lastmod>2025-11-04T13:40:14.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/routing-table</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/kubernetes/pod</loc>
+    <lastmod>2025-11-04T13:05:41.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/scalability</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/kubernetes/kubectl</loc>
+    <lastmod>2025-11-02T13:05:51.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/software-as-a-service</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/networking/network-interface</loc>
+    <lastmod>2025-11-04T13:04:24.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/subnet</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/networking/routing-table</loc>
+    <lastmod>2025-11-04T13:09:11.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/virtual-private-cloud</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/networking/subnet</loc>
+    <lastmod>2025-11-04T13:31:53.000Z</lastmod>
+  </url><url>
+    <loc>https://rapidseo.me/garden/networking/virtual-private-cloud</loc>
+    <lastmod>2025-11-04T13:22:55.000Z</lastmod>
   </url><url>
     <loc>https://rapidseo.me/garden/</loc>
-    <lastmod>2026-07-12T12:48:17.000Z</lastmod>
+    <lastmod>2026-07-12T13:08:04.000Z</lastmod>
   </url><url>
-    <loc>https://rapidseo.me/garden/kubectl</loc>
-    <lastmod>2026-07-12T11:04:01.000Z</lastmod>
+    <loc>https://rapidseo.me/garden/architecture/</loc>
+    <lastmod>2026-07-12T13:13:26.421Z</lastmod>
+  </url><url>
+    <loc>https://rapidseo.me/garden/networking/</loc>
+    <lastmod>2026-07-12T13:13:26.421Z</lastmod>
   </url><url>
     <loc>https://rapidseo.me/garden/tags/</loc>
-    <lastmod>2026-07-12T13:07:58.284Z</lastmod>
+    <lastmod>2026-07-12T13:13:26.421Z</lastmod>
   </url></urlset>
