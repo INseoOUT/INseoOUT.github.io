@@ -10,60 +10,60 @@
     <link>https://rapidseo.me/garden/tags/</link>
     <guid>https://rapidseo.me/garden/tags/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:48:08 GMT</pubDate>
-  </item><item>
-    <title>Hermes</title>
-    <link>https://rapidseo.me/garden/ai-agent/hermes</link>
-    <guid>https://rapidseo.me/garden/ai-agent/hermes</guid>
-    <description><![CDATA[  Hermes란 🌱 채워가는 중 — agent-lab/hermes에서 실험과 함께 정리 에이전트 프레임워크 Hermes를 뜯어보며 배우는 노트. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:47:04 GMT</pubDate>
-  </item><item>
-    <title>LangGraph</title>
-    <link>https://rapidseo.me/garden/ai-agent/langgraph</link>
-    <guid>https://rapidseo.me/garden/ai-agent/langgraph</guid>
-    <description><![CDATA[  LangGraph란 🌱 채워가는 중 — fairy에서 실전으로 썼다. 경험을 개념으로 정리하는 중 에이전트 플로우를 그래프(노드·엣지·상태)로 구성하는 프레임워크. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:47:01 GMT</pubDate>
-  </item><item>
-    <title>Multi Agent System</title>
-    <link>https://rapidseo.me/garden/ai-agent/multi-agent-system</link>
-    <guid>https://rapidseo.me/garden/ai-agent/multi-agent-system</guid>
-    <description><![CDATA[  Multi Agent System이란 🌱 채워가는 중 — fairy를 단일 에이전트에서 멀티 에이전트 계층 구조로 재설계했던 경험이 출발점 하나의 큰 에이전트 대신 역할이 나뉜 여러 에이전트를 엮어 문제를 푸는 구조. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:46:56 GMT</pubDate>
-  </item><item>
-    <title>Model Context Protocol</title>
-    <link>https://rapidseo.me/garden/ai-agent/model-context-protocol</link>
-    <guid>https://rapidseo.me/garden/ai-agent/model-context-protocol</guid>
-    <description><![CDATA[  Model Context Protocol이란 🌱 채워가는 중 — slidesmith에 MCP 서버를 직접 내장해 봤다. 그 경험을 여기에 정리할 것 도구·데이터 소스를 LLM 앱에 표준 방식으로 연결하는 프로토콜. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:46:54 GMT</pubDate>
-  </item><item>
-    <title>Tool Use</title>
-    <link>https://rapidseo.me/garden/ai-agent/tool-use</link>
-    <guid>https://rapidseo.me/garden/ai-agent/tool-use</guid>
-    <description><![CDATA[  Tool Use란 🌱 채워가는 중 LLM이 외부 세계와 상호작용하는 손 — 함수 콜링, 도구 스키마, 결과 해석. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:46:52 GMT</pubDate>
-  </item><item>
-    <title>Agent Loop</title>
-    <link>https://rapidseo.me/garden/ai-agent/agent-loop</link>
-    <guid>https://rapidseo.me/garden/ai-agent/agent-loop</guid>
-    <description><![CDATA[  Agent Loop란 🌱 채워가는 중 관찰 → 판단 → 행동(도구 호출)을 반복하며 목표에 다가가는 에이전트의 기본 사이클. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:46:43 GMT</pubDate>
+    <pubDate>Sun, 12 Jul 2026 13:07:58 GMT</pubDate>
   </item><item>
     <title>AI Agent</title>
     <link>https://rapidseo.me/garden/ai-agent/</link>
     <guid>https://rapidseo.me/garden/ai-agent/</guid>
     <description><![CDATA[  AI Agent LLM이 스스로 판단하고 도구를 사용해 목표를 달성하게 만드는 시스템을 공부하는 파트. 만들면서 배운 것을 여기에 쌓는다. ]]></description>
-    <pubDate>Sun, 12 Jul 2026 12:46:41 GMT</pubDate>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
+  </item><item>
+    <title>Agent Loop</title>
+    <link>https://rapidseo.me/garden/ai-agent/agent-loop</link>
+    <guid>https://rapidseo.me/garden/ai-agent/agent-loop</guid>
+    <description><![CDATA[  Agent Loop란 🌱 채워가는 중 관찰 → 판단 → 행동(도구 호출)을 반복하며 목표에 다가가는 에이전트의 기본 사이클. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
+  </item><item>
+    <title>Hermes</title>
+    <link>https://rapidseo.me/garden/ai-agent/hermes</link>
+    <guid>https://rapidseo.me/garden/ai-agent/hermes</guid>
+    <description><![CDATA[  Hermes란 🌱 채워가는 중 — agent-lab/hermes에서 실험과 함께 정리 에이전트 프레임워크 Hermes를 뜯어보며 배우는 노트. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
+  </item><item>
+    <title>LangGraph</title>
+    <link>https://rapidseo.me/garden/ai-agent/langgraph</link>
+    <guid>https://rapidseo.me/garden/ai-agent/langgraph</guid>
+    <description><![CDATA[  LangGraph란 🌱 채워가는 중 — fairy에서 실전으로 썼다. 경험을 개념으로 정리하는 중 에이전트 플로우를 그래프(노드·엣지·상태)로 구성하는 프레임워크. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
+  </item><item>
+    <title>Model Context Protocol</title>
+    <link>https://rapidseo.me/garden/ai-agent/model-context-protocol</link>
+    <guid>https://rapidseo.me/garden/ai-agent/model-context-protocol</guid>
+    <description><![CDATA[  Model Context Protocol이란 🌱 채워가는 중 — slidesmith에 MCP 서버를 직접 내장해 봤다. 그 경험을 여기에 정리할 것 도구·데이터 소스를 LLM 앱에 표준 방식으로 연결하는 프로토콜. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
+  </item><item>
+    <title>Multi Agent System</title>
+    <link>https://rapidseo.me/garden/ai-agent/multi-agent-system</link>
+    <guid>https://rapidseo.me/garden/ai-agent/multi-agent-system</guid>
+    <description><![CDATA[  Multi Agent System이란 🌱 채워가는 중 — fairy를 단일 에이전트에서 멀티 에이전트 계층 구조로 재설계했던 경험이 출발점 하나의 큰 에이전트 대신 역할이 나뉜 여러 에이전트를 엮어 문제를 푸는 구조. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
+  </item><item>
+    <title>Tool Use</title>
+    <link>https://rapidseo.me/garden/ai-agent/tool-use</link>
+    <guid>https://rapidseo.me/garden/ai-agent/tool-use</guid>
+    <description><![CDATA[  Tool Use란 🌱 채워가는 중 LLM이 외부 세계와 상호작용하는 손 — 함수 콜링, 도구 스키마, 결과 해석. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
+  </item><item>
+    <title>공부 트리</title>
+    <link>https://rapidseo.me/garden/</link>
+    <guid>https://rapidseo.me/garden/</guid>
+    <description><![CDATA[ 만들면서 공부한 것들을 옵시디언 노트 그대로 공개합니다. 노트는 서로 위키링크로 이어져 있어요 — 오른쪽 그래프에서 아무 점이나 눌러 돌아다니거나, 왼쪽 탐색기에서 골라 읽으세요. 파트 AI Agent 🌱 — 지금 채워가는 중. ]]></description>
+    <pubDate>Sun, 12 Jul 2026 12:48:17 GMT</pubDate>
   </item><item>
     <title>2025-2 SSU CloudTrack 중간 고사 대체 과제</title>
     <link>https://rapidseo.me/garden/2025-2-ssu-cloudtrack-%EC%A4%91%EA%B0%84-%EA%B3%A0%EC%82%AC-%EB%8C%80%EC%B2%B4-%EA%B3%BC%EC%A0%9C</link>
     <guid>https://rapidseo.me/garden/2025-2-ssu-cloudtrack-%EC%A4%91%EA%B0%84-%EA%B3%A0%EC%82%AC-%EB%8C%80%EC%B2%B4-%EA%B3%BC%EC%A0%9C</guid>
     <description><![CDATA[  특징 : 이미지가 대부분을 차지하는 실습 내용은 필요한 개념 혹은 흐름만 작성 Obsidian 특징의 문서 연결성을 활용 Github, Jekyll 활용 및 Netlify에 호스팅 link : 2025-ssu-cloudtrack-midterm-report.netlify.app/2025-2-ssu-cloudtrack-%EC%A4%91%EA%B0%84-%EA%B3%A0%EC%82%AC-%EB%8C%80%EC%B2%B4-%EA%B3%BC%EC%A0%9C Table Of Contents Cloud Cloud Model Cloud Nati... ]]></description>
-    <pubDate>Sun, 12 Jul 2026 11:04:01 GMT</pubDate>
-  </item><item>
-    <title>Amazon Web Service</title>
-    <link>https://rapidseo.me/garden/amazon-web-service</link>
-    <guid>https://rapidseo.me/garden/amazon-web-service</guid>
-    <description><![CDATA[  AWS의 책임 AWS Computing Service EC2 Cloud에 위치한 가상 서버 인스턴스 ECS, EKS, Fargate Docker Container를 대규모로 실행하고 관리할 수 있는 서비스 Lambda 이벤트 호출 시 마다 작동하는 서버리스 컴퓨팅 서비스 Simple Storage Service(S3) Web 접근 가능한 객체 저장소 무한 확장성 정적 웹사이트 호스팅 수명 주기 정책 Elastic File System 서버리스 공유 스토리지 ECS Vs. ]]></description>
     <pubDate>Sun, 12 Jul 2026 11:04:01 GMT</pubDate>
   </item>
     </channel>
