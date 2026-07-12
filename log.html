@@ -95,12 +95,18 @@
     .study-row .ds { color: var(--muted); flex: 1; min-width: 220px; }
     .study-row .st { font-family: var(--mono); font-size: 10.5px; color: var(--subtle); }
 
-    /* ===== Obsidian 예고 ===== */
+    /* ===== 공부 트리 ===== */
     .garden-teaser {
-      border: 1.5px dashed var(--border-strong); border-radius: 14px;
+      border: 1px solid var(--border); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow);
       padding: 30px 28px; display: grid; grid-template-columns: minmax(0,1fr) 264px; gap: 24px; align-items: center;
     }
     .gt-t { font-size: 16.5px; font-weight: 800; letter-spacing: -0.01em; }
+    .gt-open {
+      display: inline-flex; align-items: center; gap: 7px; margin-top: 14px;
+      font-size: 13.5px; font-weight: 700; padding: 10px 18px; border-radius: 8px;
+      background: var(--accent); color: #063f31; transition: filter 0.15s, transform 0.15s;
+    }
+    .gt-open:hover { filter: brightness(1.05); transform: translateY(-1px); }
     .gt-badge {
       display: inline-flex; align-items: center; gap: 7px; margin-bottom: 10px;
       font-family: var(--mono); font-size: 11px; font-weight: 600;
@@ -201,16 +207,17 @@
       </div>
     </section>
 
-    <!-- Obsidian 예고 -->
+    <!-- 공부 트리 -->
     <section>
       <div class="sec-head"><h2>공부 트리</h2></div>
       <div class="garden-teaser">
         <div>
-          <span class="gt-badge">Obsidian vault → Quartz · 준비 중</span>
-          <div class="gt-t">노트 트리와 그래프뷰가 들어올 자리</div>
-          <p class="gt-d">옵시디언 공부 노트의 공개 폴더를 <strong>Quartz</strong>로 빌드해 이곳에 연결합니다. 연결되면 노트 트리·위키링크·백링크·<strong>그래프뷰</strong>를 그대로 탐색할 수 있어요.</p>
+          <span class="gt-badge">Obsidian vault → Quartz · 운영 중</span>
+          <div class="gt-t">공부 트리가 열렸어요</div>
+          <p class="gt-d">옵시디언 공부 노트를 <strong>Quartz</strong>로 빌드해 그대로 공개합니다 — 노트 탐색기·위키링크·백링크·<strong>그래프뷰</strong>까지. 클라우드 네이티브·Kubernetes 노트부터 시작해 계속 자랍니다.</p>
+          <a class="gt-open" href="garden/">공부 트리 열기 →</a>
         </div>
-        <div class="graph-box" aria-hidden="true">
+        <a class="graph-box" href="garden/" aria-label="공부 트리 그래프뷰 열기">
           <svg width="264" height="190" viewBox="0 0 264 190">
             <line class="gedge" x1="132" y1="88" x2="62" y2="46"/>
             <line class="gedge" x1="132" y1="88" x2="196" y2="40"/>
@@ -231,8 +238,8 @@
             <g class="gnode"><circle class="gdot dim" cx="118" cy="162" r="4.5"/><text class="glabel" x="118" y="180" text-anchor="middle">aws</text></g>
             <g class="gnode"><circle class="gdot dim" cx="132" cy="24" r="4.5"/><text class="glabel" x="132" y="14" text-anchor="middle">router</text></g>
           </svg>
-          <div class="graph-cap">공부 주제 맵 · 연동 시 실제 노트 그래프로</div>
-        </div>
+          <div class="graph-cap">눌러서 실제 노트 그래프 보기</div>
+        </a>
       </div>
     </section>
 
