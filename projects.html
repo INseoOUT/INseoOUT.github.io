@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프로젝트 — 김인서</title>
+  <meta name="description" content="김인서가 만들고 운영하는 것들 — slidesmith, anby, fairy, Sprintify. 문제·해결·결과 중심으로 정리했습니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="프로젝트 — 김인서" />
+  <meta property="og:description" content="만들고 운영하는 것들 — 문제·해결·결과 중심으로." />
+  <meta property="og:url" content="https://inseout.github.io/projects.html" />
+  <meta property="og:image" content="https://inseout.github.io/images/inseo_image.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2320c997'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23063f31'%3Ein%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #ffffff; --bg-alt: #f8f9fa; --surface: #ffffff;
+      --border: #e9ecef; --border-strong: #dee2e6;
+      --text: #212529; --muted: #495057; --subtle: #868e96;
+      --accent: #20c997; --accent-text: #099268;
+      --accent-soft: rgba(32,201,151,0.10);
+      --radius: 10px; --radius-sm: 6px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      --shadow-lg: 0 10px 28px rgba(0,0,0,0.07);
+      --mono: 'Geist Mono', ui-monospace, Consolas, monospace;
+    }
+    html[data-theme="dark"] {
+      --bg: #121212; --bg-alt: #1a1a1a; --surface: #1e1e1e;
+      --border: #2a2a2a; --border-strong: #383838;
+      --text: #ececec; --muted: #b5b5b5; --subtle: #7e7e7e;
+      --accent: #20c997; --accent-text: #3ddcb0;
+      --accent-soft: rgba(32,201,151,0.13);
+      --shadow: 0 1px 3px rgba(0,0,0,0.5);
+      --shadow-lg: 0 12px 30px rgba(0,0,0,0.6);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    a { color: inherit; text-decoration: none; }
+    .mono { font-family: var(--mono); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+    /* ===== TOP BAR ===== */
+    .topbar { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
+    .topbar-in { max-width: 880px; margin: 0 auto; padding: 13px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; letter-spacing: -0.02em; }
+    .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { font-size: 13.5px; font-weight: 600; color: var(--subtle); padding: 7px 12px; border-radius: var(--radius-sm); transition: color 0.15s, background 0.15s; }
+    .nav-link:hover { color: var(--text); background: var(--bg-alt); }
+    .nav-link.on { color: var(--accent-text); background: var(--accent-soft); }
+    .nav-cta { font-size: 13px; font-weight: 700; padding: 8px 15px; border-radius: var(--radius-sm); background: var(--accent); color: #063f31; transition: filter 0.15s, transform 0.15s; }
+    .nav-cta:hover { filter: brightness(1.05); transform: translateY(-1px); }
+    .theme-btn { width: 33px; height: 33px; border: 1px solid var(--border); border-radius: 50%; background: var(--surface); color: var(--muted); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+    .theme-btn:hover { border-color: var(--border-strong); color: var(--text); }
+
+    /* ===== LAYOUT ===== */
+    .col-wide { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+    .page-head { padding: 46px 0 6px; }
+    .page-head h1 { font-size: 27px; font-weight: 800; letter-spacing: -0.03em; }
+    .page-head .sub { color: var(--subtle); font-size: 14px; margin-top: 6px; max-width: 620px; }
+
+    /* ===== 카드 ===== */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 28px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow);
+      transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s; display: block;
+    }
+    a.card:hover { border-color: var(--border-strong); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .work-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 3px; }
+    .work-name { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
+    .work-period { font-family: var(--mono); font-size: 11px; color: var(--subtle); white-space: nowrap; padding-top: 5px; }
+    .work-badge { font-family: var(--mono); font-size: 10.5px; font-weight: 600; padding: 3px 9px; border-radius: 99px; white-space: nowrap; background: var(--accent-soft); color: var(--accent-text); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); margin-top: 3px; }
+    .work-tagline { font-size: 13px; color: var(--muted); margin-bottom: 15px; }
+    .work-pl { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
+    .work-pl .row { display: grid; grid-template-columns: 52px 1fr; gap: 10px; font-size: 13px; line-height: 1.55; }
+    .work-pl .row .k { font-family: var(--mono); font-size: 10.5px; color: var(--accent-text); padding-top: 3px; }
+    .work-pl .row .v { color: var(--muted); }
+    .work-pl .row .v strong { color: var(--text); font-weight: 600; }
+    .metrics { display: flex; flex-wrap: wrap; gap: 16px; padding: 13px 0 2px; border-top: 1px solid var(--border); margin-bottom: 12px; }
+    .metric .mv { font-size: 16.5px; font-weight: 700; letter-spacing: -0.02em; }
+    .metric .mv .a { color: var(--accent-text); }
+    .metric .ml { font-size: 11px; color: var(--subtle); }
+    .work-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .work-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .mchip { font-family: var(--mono); font-size: 10.5px; color: var(--subtle); background: var(--bg-alt); border: 1px solid var(--border); border-radius: 4px; padding: 1px 7px; }
+    .work-more { font-size: 12.5px; font-weight: 700; color: var(--accent-text); white-space: nowrap; }
+
+    /* ===== 작게 돌아가는 것들 ===== */
+    .mini-head { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--subtle); margin: 34px 0 12px; }
+    .mini-list { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); overflow: hidden; margin-bottom: 40px; }
+    .mini-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 13px 18px; border-bottom: 1px solid var(--border); font-size: 13.5px; transition: background 0.15s; }
+    .mini-row:last-child { border-bottom: none; }
+    a.mini-row:hover { background: var(--bg-alt); }
+    .mini-row .d { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; align-self: center; }
+    .mini-row .nm { font-weight: 600; font-family: var(--mono); font-size: 12.5px; }
+    .mini-row .ds { color: var(--muted); flex: 1; min-width: 200px; }
+    .mini-row .st { font-family: var(--mono); font-size: 10.5px; color: var(--subtle); }
+
+    footer { margin-top: 20px; border-top: 1px solid var(--border); }
+    .foot-in { max-width: 880px; margin: 0 auto; padding: 26px 20px 44px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--subtle); }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .foot-links a:hover { color: var(--text); }
+
+    @media (max-width: 720px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .nav-hide-sm { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-in">
+      <a class="brand" href="index.html"><span class="dot"></span>김인서</a>
+      <nav class="nav-links" aria-label="주 메뉴">
+        <a class="nav-link" href="index.html">프로필</a>
+        <a class="nav-link" href="log.html">학습 로그</a>
+        <a class="nav-link on" href="projects.html">프로젝트</a>
+        <a class="nav-link nav-hide-sm" href="resume.html">이력서</a>
+        <a class="nav-cta" href="index.html#contact">연락하기</a>
+        <button class="theme-btn" id="themeBtn" aria-label="테마 전환">🌙</button>
+      </nav>
+    </div>
+  </div>
+
+  <div class="col-wide">
+
+    <header class="page-head">
+      <h1>프로젝트</h1>
+      <p class="sub">무슨 문제를 풀었고, 무엇을 만들었고, 어떤 결과가 나왔는지로 봐 주세요.</p>
+    </header>
+
+    <div class="grid-2">
+
+      <!-- slidesmith -->
+      <a class="card" href="https://github.com/INseoOUT/slidesmith" target="_blank" rel="noopener">
+        <div class="work-top">
+          <div class="work-name">slidesmith</div>
+          <span class="work-badge">오픈소스</span>
+        </div>
+        <div class="work-tagline">스펙 기반 프레젠테이션 메이커</div>
+        <div class="work-pl">
+          <div class="row"><span class="k">문제</span><span class="v">발표자료는 코드처럼 <strong>버전 관리가 안 되고</strong>, 고칠 때마다 PPT·PDF·웹 버전이 어긋남.</span></div>
+          <div class="row"><span class="k">한 것</span><span class="v">덱 스펙(YAML) 하나에서 세 출력물 생성. <strong>라이브 편집기</strong>, PPTX 역변환, <strong>MCP 서버 내장</strong>.</span></div>
+          <div class="row"><span class="k">결과</span><span class="v">외부 서비스 없이 로컬 완결(의존성 2개). AI 하네스에 <strong>도구로 연결</strong>해 사용.</span></div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="mv">스펙 1 → <span class="a">출력 3</span></div><div class="ml">HTML · PDF · PPTX</div></div>
+          <div class="metric"><div class="mv">9종</div><div class="ml">슬라이드 타입</div></div>
+          <div class="metric"><div class="mv">4종</div><div class="ml">내장 테마</div></div>
+        </div>
+        <div class="work-foot">
+          <div class="work-chips"><span class="mchip">Python</span><span class="mchip">python-pptx</span><span class="mchip">MCP</span></div>
+          <span class="work-more">GitHub ↗</span>
+        </div>
+      </a>
+
+      <!-- anby -->
+      <a class="card" href="anby.html">
+        <div class="work-top">
+          <div class="work-name">anby</div>
+          <span class="work-badge">외주</span>
+        </div>
+        <div class="work-tagline">통합 자원 관리 SaaS</div>
+        <div class="work-pl">
+          <div class="row"><span class="k">문제</span><span class="v">예약·웨이팅·주문을 <strong>제각각 다른 서비스</strong>로 관리하던 불편함.</span></div>
+          <div class="row"><span class="k">한 것</span><span class="v">자원을 하나로 추상화한 통합 대시보드. <strong>Go + ARM 서버리스</strong>, 낙관적 락 동시성 제어.</span></div>
+          <div class="row"><span class="k">결과</span><span class="v">교내 프로젝트가 <strong>실제 외주 의뢰로 이어짐</strong>.</span></div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="mv"><span class="a">-20%</span></div><div class="ml">ARM 람다 비용</div></div>
+          <div class="metric"><div class="mv">FIFO SQS</div><div class="ml">데이터 유실 방지</div></div>
+          <div class="metric"><div class="mv">Grafana</div><div class="ml">실시간 모니터링</div></div>
+        </div>
+        <div class="work-foot">
+          <div class="work-chips"><span class="mchip">Go</span><span class="mchip">AWS Lambda</span><span class="mchip">DynamoDB</span></div>
+          <span class="work-more">자세히 →</span>
+        </div>
+      </a>
+
+      <!-- fairy -->
+      <a class="card" href="fairy.html">
+        <div class="work-top">
+          <div class="work-name">fairy</div>
+        </div>
+        <div class="work-tagline">AI 여행 일정 플래닝 에이전트</div>
+        <div class="work-pl">
+          <div class="row"><span class="k">문제</span><span class="v">여행 정보 수집이 <strong>너무 번거롭고 오래 걸리는</strong> 문제.</span></div>
+          <div class="row"><span class="k">한 것</span><span class="v"><strong>멀티 에이전트 계층 구조(Subgraph)</strong>로 라우팅. 수집을 비동기 병렬로 재설계.</span></div>
+          <div class="row"><span class="k">결과</span><span class="v">일정 생성 속도와 정보 정확도를 함께 개선.</span></div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="mv"><span class="a">-60%</span></div><div class="ml">수집 시간</div></div>
+          <div class="metric"><div class="mv">40 → <span class="a">58%</span></div><div class="ml">정보 정확도</div></div>
+          <div class="metric"><div class="mv">3분 → 2분23초</div><div class="ml">일정 생성</div></div>
+        </div>
+        <div class="work-foot">
+          <div class="work-chips"><span class="mchip">LangGraph</span><span class="mchip">FastAPI</span><span class="mchip">AWS</span></div>
+          <span class="work-more">자세히 →</span>
+        </div>
+      </a>
+
+      <!-- Sprintify -->
+      <div class="card">
+        <div class="work-top">
+          <div class="work-name">Sprintify</div>
+          <span class="work-period">2025.12 –</span>
+        </div>
+        <div class="work-tagline">프로젝트 관리 AI 자동화 SaaS · Enois Lab</div>
+        <div class="work-pl">
+          <div class="row"><span class="k">문제</span><span class="v">작은 팀일수록 프로젝트 관리에 <strong>쓸 사람이 없음</strong>. 관리가 일이 되는 역설.</span></div>
+          <div class="row"><span class="k">한 것</span><span class="v">Enois Lab에서 직접 개발 중 — 공개 시점에 상세를 공유합니다.</span></div>
+        </div>
+        <div class="work-foot">
+          <div class="work-chips"><span class="mchip">SaaS</span><span class="mchip">AI 자동화</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 작게 돌아가는 것들 -->
+    <div class="mini-head">작게 돌아가는 것들</div>
+    <div class="mini-list">
+      <a class="mini-row" href="https://github.com/INseoOUT/agent-lab" target="_blank" rel="noopener">
+        <span class="d"></span><span class="nm">hoyoverse-checkin</span>
+        <span class="ds">게임 일일 출석 자동화 — 매일 새벽 스스로 돌아가는 중</span>
+        <span class="st">agent-lab ↗</span>
+      </a>
+      <a class="mini-row" href="https://github.com/INseoOUT/agent-lab" target="_blank" rel="noopener">
+        <span class="d"></span><span class="nm">hermes</span>
+        <span class="ds">AI 에이전트 프레임워크 학습 노트·실험</span>
+        <span class="st">agent-lab ↗</span>
+      </a>
+      <div class="mini-row">
+        <span class="d"></span><span class="nm">재활용센터 전산화</span>
+        <span class="ds">일하는 현장의 재고·입출고를 직접 전산화 — 실사용자가 있는 프로젝트로 완성 예정</span>
+        <span class="st">만드는 중</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-in">
+      <span>© 2026 김인서</span>
+      <div class="foot-links">
+        <a href="index.html">프로필</a>
+        <a href="log.html">학습 로그</a>
+        <a href="resume.html">이력서</a>
+        <a href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">맨 위로 ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle (persisted)
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('themeBtn');
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      apply(theme);
+      btn.addEventListener('click', function () {
+        theme = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+        apply(theme);
+        localStorage.setItem('theme', theme);
+      });
+      function apply(t) {
+        root.setAttribute('data-theme', t);
+        btn.textContent = (t === 'dark') ? '☀️' : '🌙';
+      }
+    })();
+  </script>
+</body>
+</html>
