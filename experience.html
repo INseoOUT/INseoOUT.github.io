@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>경력기술서 — 김인서</title>
+  <meta name="description" content="김인서의 경력기술서. 상황 → 문제 → 선택 → 결과 순서로, 모든 수치를 측정 조건과 함께 적었습니다." />
+  <meta name="author" content="김인서" />
+  <link rel="canonical" href="https://rapidseo.me/experience.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="김인서 · Software Engineer" />
+  <meta property="og:title" content="경력기술서 — 김인서" />
+  <meta property="og:description" content="상황 → 문제 → 선택 → 결과. 모든 수치를 측정 조건과 함께 적었습니다." />
+  <meta property="og:url" content="https://rapidseo.me/experience.html" />
+  <meta property="og:image" content="https://rapidseo.me/images/inseo_image.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23E0A21B'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='29' font-weight='700' text-anchor='middle' fill='%232A1F06'%3Ein%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<div class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="index.html"><span class="brand__mark"></span>김인서<span class="brand__sub">inseout</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="index.html">프로필</a>
+      <a href="experience.html">경력</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="resume.html">이력서</a>
+      <a class="nav-sm-hide" href="log.html">학습</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="테마 전환">☾</button>
+    </nav>
+  </div>
+</div>
+
+<main id="main" class="wrap">
+
+  <header class="page-head rise rise-1">
+    <span class="kicker">Experience</span>
+    <h1>경력기술서</h1>
+    <p class="lead">
+      상황 → 문제 → 선택 → 결과 순서로 적었습니다.
+      수치는 모두 <strong>측정 조건과 함께</strong>, 검증 상태는 <strong>있는 그대로</strong> 표시했습니다.
+    </p>
+    <div class="callout" style="margin-top:20px;max-width:740px">
+      현직(i3System) 프로젝트는 <strong>제품명·납품명·고객사·센서 도메인을 제외한 일반화된 서술</strong>입니다.
+      각 항목의 상태 칩은 검증이 어디까지 갔는지를 뜻합니다.
+      <ul class="legend__list">
+        <li><span class="chip chip--ok">실기 검증</span><span>실제 기기 검증까지 마친 것</span></li>
+        <li><span class="chip chip--build">빌드 검증</span><span>빌드·테스트는 통과했고 기기 재검증이 남은 것</span></li>
+        <li><span class="chip chip--plan">설계</span><span>설계·결정 단계인 것</span></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= i3System ================= -->
+  <section aria-labelledby="i3">
+    <div class="org rise rise-2">
+      <span class="kicker">01 · Current</span>
+      <h2 class="org__t" id="i3">i3System · 연구원</h2>
+      <div class="org__meta">
+        <span class="mono small subtle">2026.05 — 현재</span>
+        <span class="chip chip--flat">C++17 · OpenCV · FFmpeg · CUDA · Qt6 · MFC</span>
+      </div>
+      <p class="lead" style="margin-top:14px">
+        영상 처리 소프트웨어 R&amp;D. 신규 합성 엔진을 처음부터 설계·구현하는 일과,
+        오래 유지된 산업용 카메라 제어 소프트웨어를 릴리스 가능한 상태로 만드는 일을 함께 맡고 있습니다.
+      </p>
+    </div>
+
+    <!-- ---- 1. 파노라마 엔진 ---- -->
+    <article class="case" id="pano">
+      <div class="case__head">
+        <h3 class="case__t">광각 파노라마 합성 엔진 신규 개발</h3>
+        <span class="chip chip--ok">v0.1.0 · Stage 1–3 완료</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">C++17</span><span class="tag">OpenCV</span><span class="tag">FFmpeg</span>
+        <span class="tag">CUDA</span><span class="tag">Qt6</span><span class="tag">CMake / vcpkg</span>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">상황</div>
+        <div class="beat__v">
+          서로 다른 방향을 향한 고정 카메라 두 대의 동기화된 영상을 하나의 광각 파노라마 영상으로 변환하는
+          데스크톱 소프트웨어를, 요구사항 정의부터 설계·구현까지 담당했습니다.
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">문제</div>
+        <div class="beat__v">
+          <p>세 가지 요구가 서로 충돌했습니다.</p>
+          <ul class="ticks">
+            <li><strong>시간적 안정성</strong> — 프레임마다 정렬·이음매를 다시 계산하면 화면이 미세하게 떨립니다(플리커).</li>
+            <li><strong>속도</strong> — 1080p 두 장을 4K로 합성하면서 실용적인 처리량이 필요했습니다.</li>
+            <li><strong>장시간 안정성</strong> — 입력 길이와 무관하게 메모리가 한정되어야 했습니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">선택</div>
+        <div class="beat__v">
+          <ul class="ticks">
+            <li><strong>“한 번 계산하고 얼린다”를 설계 원칙으로 삼았습니다.</strong> 정렬·이음매·색보정을 대표 구간에서 한 번만 계산해 카메라 프로파일(JSON)에 동결하고, 렌더링은 그 고정 파라미터만 사용합니다. 프레임별 재계산은 플리커의 근원이라 판단해 고품질 모드에서만 선택적으로 열어 두었습니다.</li>
+            <li><strong>왜곡보정·투영·정렬 세 단계를 하나의 픽셀 단위 remap LUT로 합쳤습니다.</strong> 프레임당 remap 연산이 1회로 줄어 속도의 핵심 레버가 되었습니다. 이 불변식(렌더 잡당 LUT 빌드 1회)은 코드에 <code>assert</code>로 못박아 회귀를 막았습니다.</li>
+            <li><strong>스트리밍 파이프라인</strong> — 전체 영상을 메모리에 올리지 않고 디코드 → 처리 → 인코드를 프레임 단위로 연결했습니다.</li>
+            <li><strong>기하 우선, ML은 보정만.</strong> 파노라마의 골격은 카메라 기하로 세우고 ML은 정밀 정렬·국소 워핑만 다듬도록 역할을 제한했습니다. ML이 픽셀을 생성하지 않게 한 것은 산업용 영상의 신뢰성 때문입니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">
+          <p>
+            CPU 스티칭이 remap 연산에 묶여 있어 스레딩만으로는 약 12fps가 천장임을 <strong>먼저 측정으로 확인</strong>하고,
+            GPU가 진짜 레버임을 근거로 CUDA 경로를 구현했습니다.
+          </p>
+          <div class="tablewrap">
+            <table class="t">
+              <caption class="visually-hidden">엔진 경로별 벤치마크</caption>
+              <thead>
+                <tr><th scope="col">엔진 경로</th><th scope="col">FPS</th><th scope="col">Remap</th><th scope="col">Peak Mem</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>CPU 단일 스레드</td><td class="n">10.6</td><td class="n">81.0 ms</td><td class="n">1,736 MB</td></tr>
+                <tr><td>CPU 스레드 파이프라인</td><td class="n">11.6</td><td class="n">84.6 ms</td><td class="n">1,978 MB</td></tr>
+                <tr class="hi"><td><strong>CUDA + 스레드</strong></td><td class="n">68.1</td><td class="n">13.2 ms</td><td class="n">1,831 MB</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small subtle mono">
+            측정 조건: 1080p×2 → 3640×1622, 워밍업 30프레임 후 270프레임 · 목표 기준 30fps
+          </p>
+          <ul class="ticks">
+            <li><strong>remap 81.0ms → 13.2ms (6.2배), 전체 68fps</strong> — 목표 30fps의 2.3배.</li>
+            <li><strong>108,000프레임(60분) 연속 렌더에서 작업 세트 1,802–1,825MB로 평탄</strong>(편차 1.3%) — 입력 길이와 무관한 한정 메모리 확인.</li>
+            <li>오버랩 영역 평균 <strong>재투영 오차 2px 이하</strong>(4K), 고정 파라미터 하에서 프레임 간 합성 결과 <strong>바이트 동일</strong> — 합성 ground-truth 생성기와 골든 테스트로 검증.</li>
+            <li>1단계 인수 기준 <strong>8/8 통과</strong>, 테스트 55/56 통과(1건은 CPU 전용 빌드에서 정상 스킵).</li>
+            <li>이후 GPU/CPU 엔진 런타임 선택, 실시간 프리뷰, 프로젝트 저장·불러오기, CUDA 빌드 통합까지 반영해 <strong>v0.1.0</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="note__k">직접 판단한 것</span>
+        <p>
+          <strong>동기화 방식.</strong> 대상 영상에 유효 오디오가 없다는 사실을 확인하고, 표준적인 오디오 교차상관 동기화 대신
+          <strong>오버랩 영역의 프레임 간 모션 교차상관</strong>을 1급 경로로 채택했습니다. 오디오 방식은 나중에 끼워 넣을 수 있도록 인터페이스만 남겼습니다.
+        </p>
+        <p>
+          <strong>색보정 구조.</strong> 카메라별 스칼라 게인만으로는 오버랩을 맞출 수 없다는 점을 발견했습니다 —
+          센서마다 배율뿐 아니라 DC 오프셋이 다르기 때문입니다. 가중 곱합 구조는 가산 오프셋을 실을 수 없어,
+          <strong>오프셋을 동결된 캔버스 바이어스 이미지로 만들어 프레임당 1회 더하는</strong> 방식으로 풀었습니다.
+          렌더 엔진 변경을 두 줄로 최소화한 설계입니다.
+        </p>
+      </div>
+    </article>
+
+    <!-- ---- 2. 1.0.0 릴리스 ---- -->
+    <article class="case" id="release">
+      <div class="case__head">
+        <h3 class="case__t">산업용 카메라 제어 소프트웨어 1.0.0 릴리스와 안정화</h3>
+        <span class="chip chip--ok">실기 검증 후 태깅</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">C++ / MFC</span><span class="tag">Python / PySide6</span>
+        <span class="tag">Win32</span><span class="tag">OpenSSL</span><span class="tag">RTSP</span>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">상황</div>
+        <div class="beat__v">
+          카메라에 동봉되는 제어 소프트웨어가 버전 체계도 릴리스 기준도 없이 유지되고 있었습니다.
+          C++(MFC)와 Python 두 구현이 병행되는 구조였습니다.
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">한 일</div>
+        <div class="beat__v">
+          <div class="tablewrap">
+            <table class="t">
+              <thead><tr><th scope="col">문제</th><th scope="col">해결</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>버전 문자열이 리소스 파일과 UI 코드 두 곳에 따로 박혀 있고 레거시 표기와 어긋남</td>
+                  <td>헤더 하나로 단일 소스화. SemVer 라인 신설(기기 검증 전 0.x → 최초 검증 성공 시 1.0.0), 버전 정책·변경 이력 문서화</td>
+                </tr>
+                <tr>
+                  <td>Python GUI 프레임워크가 GPL/상용 듀얼 라이선스라 <strong>폐쇄소스 제품 동봉 시 라이선스 비용 또는 카피레프트 의무</strong> 발생</td>
+                  <td>LGPL 프레임워크로 전면 포팅. 36개 소스 전체 컴파일·코어 테스트 44개·헤드리스 스모크 통과, 파일별 API 호환성 검토에서 동작 버그 0건</td>
+                </tr>
+                <tr>
+                  <td>빌드 설정 4개의 툴셋이 불일치해 전환 시 PCH가 깨짐. 지정된 구버전 툴셋은 빌드 머신에 설치조차 불가</td>
+                  <td>현행 툴셋·SDK로 4개 설정 전부 재조정. 정적 링크를 유지해 배포 exe의 독립 실행성은 보존</td>
+                </tr>
+                <tr>
+                  <td>최초 연결 시 로그인 창이 메인 창 뒤에 숨어 앱이 멈춘 것처럼 보임</td>
+                  <td>포그라운드 강제 + 부모 창 null 가드 + 중앙 정렬 폴백</td>
+                </tr>
+                <tr>
+                  <td>최초 연결 후 영상 스트림이 뜨지 않는 케이스</td>
+                  <td>세션 재수립 버튼과 비차단 포트 헬스체크 추가. 처음엔 다른 패널에 버튼을 달았다가, 실제 원인이 영상 패널 쪽임을 확인하고 교체</td>
+                </tr>
+                <tr>
+                  <td>보정 작업 후 결과가 화면에 반영되지 않음</td>
+                  <td>상시 갱신 대신 <strong>이벤트 기반</strong>으로 — 작업 직후 250ms 간격 4회만 프레임을 재요청하고 자동 종료해 유휴 비용 0</td>
+                </tr>
+                <tr>
+                  <td>좌표 스핀으로 포인터만 옮겨도 확대 영역이 따라 재중심됨</td>
+                  <td>재중심 여부를 인자로 분리해 확대 영역 이동과 포인터 이동을 완전 분리</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">
+          실제 기기 검증을 거쳐 <strong>1.0.0 태깅</strong>. 이 과정에서 앞서 수정한 UI 프리즈 버그(확장 스타일 누락)가
+          재현되지 않음도 함께 확인했습니다. 다만 라이선스 포팅분은 <strong>코드 수정과 헤드리스 검증까지만 완료</strong>이고
+          기기 연결 검증은 후속 항목으로 남겼습니다 — 포팅 중 발견한 인증 방식·쿼리 파라미터 표기 불일치 두 건은 원인까지 규명해 두었습니다.
+        </div>
+      </div>
+    </article>
+
+    <!-- ---- 3. 코드 감사 ---- -->
+    <article class="case" id="audit">
+      <div class="case__head">
+        <h3 class="case__t">코드베이스 전수 감사와 치명적 결함 6건 수정</h3>
+        <span class="chip chip--build">클린 빌드 검증 · 실기 재검증 후속</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">C++</span><span class="tag">MFC</span><span class="tag">OpenSSL</span><span class="tag">Win32 Socket</span>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">상황</div>
+        <div class="beat__v">
+          오래 유지된 코드베이스라 죽은 코드와 잠재 결함이 누적되어 있었습니다.
+          전수 감사로 <strong>107건</strong>의 개선 항목을 정리하고 등급을 나눴습니다.
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">한 일</div>
+        <div class="beat__v">
+          <p>
+            <strong>죽은 코드 제거</strong> — 컴파일은 되지만 런타임에 한 번도 인스턴스화되지 않는 탭 4개,
+            어디서도 참조되지 않는 벤더 라이브러리 트리(약 1,436개 파일), 도달 불가능한 레거시 블록(약 320줄)을 제거했습니다.
+            사전에 외부 참조가 없음을 전수 검색으로 확인하고 클린 리빌드로 검증했습니다.
+          </p>
+          <div class="tablewrap">
+            <table class="t">
+              <thead><tr><th scope="col">HIGH 등급 결함</th><th scope="col">원인과 해결</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>연결마다 SSL 객체 2개 누수 + Use-After-Free 가능성</td>
+                  <td>수신 스레드의 무한 루프에 정지 플래그가 없어 연결 해제 후에도 소멸된 객체를 계속 참조 → atomic 정지 플래그 설정 후 스레드 join</td>
+                </tr>
+                <tr>
+                  <td>연결 버튼을 누를 때마다 통신 객체 3종 누수</td>
+                  <td><strong>소멸자를 명시적으로 호출한 뒤 같은 포인터에 <code>new</code></strong> — 소멸자는 돌지만 이전 힙 블록은 그대로 → <code>delete</code>로 전환</td>
+                </tr>
+                <tr>
+                  <td>재연결마다 수신 스레드 블록·소켓 핸들 누수</td>
+                  <td>소멸자가 <strong>실제 사용되는 소켓이 아니라 한 번도 할당되지 않는 다른 멤버</strong>를 닫고 있었음</td>
+                </tr>
+                <tr>
+                  <td>매 아웃바운드 명령마다 메모리 누수</td>
+                  <td>체크섬 버퍼의 <code>new[]</code>가 해제되지 않음</td>
+                </tr>
+                <tr>
+                  <td>스택 오버플로우 가능</td>
+                  <td>송신부가 크기 제한 없이 고정 1024바이트 스택 배열에 복사(페이로드는 2048자 초과 가능), 수신부는 <strong>큐에 쌓인 바이트 수를 목적지 버퍼 크기인 것처럼 전달</strong> → 가변 버퍼화 + 실제 목적지 크기 전달</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="note__k">수정이 만든 2차 문제를 스스로 찾음</span>
+        <p>
+          스택 오버플로우를 막으려 목적지 크기를 고정값으로 넘기면, 256바이트를 넘는 응답이 여러 메시지로 조용히 쪼개져
+          링버퍼에 남았다가 <strong>이후의 무관한 응답 앞에 붙을</strong> 수 있었습니다.
+          수정 직후 재검토에서 이 경로를 발견해, 실제 큐 길이를 크기로 지정하는 방식으로 원래 동작을 오버플로우 없이 복원했습니다.
+        </p>
+        <p>
+          <strong>부수 발견</strong> — 수정 도중, 한글 주석의 인코딩이 저장 왕복 과정에서 깨져 컴파일러의 DBCS 렉서가
+          중괄호 매칭을 잘못 해석했고 그 아래 함수 전체의 빌드가 깨져 있던 것을 찾아 고쳤습니다.
+        </p>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">
+          전 항목 클린 빌드 검증 완료. 장시간 connect/reconnect 반복에 대한
+          <strong>실기기 재검증은 후속 필수 항목으로 문서화</strong>했습니다.
+        </div>
+      </div>
+    </article>
+
+    <!-- ---- 4. 아키텍처 ---- -->
+    <article class="case" id="arch">
+      <div class="case__head">
+        <h3 class="case__t">통합 제어 아키텍처 설계와 드라이버 추상화 리팩터링</h3>
+        <span class="chip chip--build">전 라운드 빌드 통과</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">C++</span><span class="tag">아키텍처 설계</span><span class="tag">점진적 리팩터링</span>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">상황</div>
+        <div class="beat__v">
+          C++·Python 두 구현을 유지하면서 다른 카메라 모델도 교체 가능하게 지원해야 했는데,
+          <strong>카메라 프로토콜 지식이 UI 코드 곳곳에 흩어져</strong> 있어 확장이 어려웠습니다.
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">선택</div>
+        <div class="beat__v">
+          <p>
+            7개 레이어·19개 모듈로 구성된 기술 중립적 통합 제어 아키텍처를 문서화해 양쪽 구현을 동시에 규율하도록 했습니다.
+            그다음 <strong>각 라운드가 “동작 변경 없음”을 목표로 하는 7단계 점진적 리팩터링</strong>으로 이행했습니다.
+            라운드마다 원본 로직과 손으로 대조하고 클린 빌드로 확인했습니다.
+          </p>
+          <ul class="ticks">
+            <li>기존 프로토콜 데이터 테이블을 드라이버 인터페이스 뒤로 감싸 와이어 프레임 조립과 체크섬을 단일 호출로 — <strong>아무도 호출하지 않는 순수 추가</strong>로 시작</li>
+            <li>탭이 부모 창에 메시지로 우회 전달하던 경로를 제거하고 드라이버 콜백으로 직접 전달</li>
+            <li>이름이 제각각이던 전송 계층 3종(TCP·HTTPS·UART)을 공통 인터페이스로 통합 — 매번 새로 쓰던 3-way 분기를 단일화</li>
+            <li>펌웨어 전송 경로와 프리셋 경로의 잔여 인라인 조립부까지 통합 → <strong>체크섬 계산 로직이 앱 전체에서 한 곳</strong></li>
+            <li>가장 위험한 라운드로 로그 프레임 파싱을 드라이버로 이관 — 코드 작성 전 원본 로직을 <strong>독립적으로 재도출해 교차검증</strong>하고, 비대칭 바이트 순서와 중첩 로그 출력 순서 등 7가지 케이스를 라인 단위로 대조</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="note__k">통합 과정에서 발견한 실제 버그</span>
+        <p>
+          Disconnect 버튼이 HTTPS만 정리하고 TCP·UART 세션은 살려 두고 있어,
+          “연결 해제됨” 로그가 두 전송에 대해서는 거짓이었습니다.
+          리셋 블록을 공유 함수로 추출해 Disconnect에서도 호출하도록 고쳤습니다 — 해당 라운드의 유일한 의도적 동작 변경입니다.
+        </p>
+        <p>
+          <strong>의도적으로 남긴 것.</strong> 기존의 비대칭 두 가지(HTTPS 실패 시 SSL 복구 로직,
+          UART의 “포인터 null 아님” 체크가 실제 “연결됨” 체크로 좁혀지는 것)는 동작 변경 위험 때문에 보존하고 문서에 남겼습니다.
+        </p>
+      </div>
+    </article>
+
+    <!-- ---- 5. 레거시 이식 / ABI ---- -->
+    <article class="case" id="abi">
+      <div class="case__head">
+        <h3 class="case__t">레거시 SDK 이식과 ABI 호환성 게이트</h3>
+        <span class="chip chip--build">게이트 통과</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">C++98 / 11 / 17</span><span class="tag">Boost → std</span>
+        <span class="tag">MSVC 툴체인</span><span class="tag">회귀시험</span>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">상황</div>
+        <div class="beat__v">
+          2016년부터 이어진 사내 카메라 SDK와 하부 유틸 라이브러리를 현행 개발 환경으로 옮겨야 했습니다.
+          이미 배포된 바이너리를 쓰는 소비자가 있어 <strong>“옮기되 아무것도 달라지면 안 되는”</strong> 조건이 붙었습니다.
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">선택</div>
+        <div class="beat__v">
+          <p>동작 무변경을 눈으로 확인하는 대신 <strong>통과해야 할 게이트로 만들었습니다.</strong></p>
+          <ul class="ticks">
+            <li><strong>소스 호환 게이트</strong> — 같은 헤더가 C++98·11·17 세 표준에서 모두 컴파일되는지 자동 검증. 하나라도 깨지면 이식분을 받지 않습니다.</li>
+            <li><strong>vtable/ABI 대조 게이트</strong> — 이식 전후의 가상 함수 배치를 대조해 기존 바이너리 소비자가 깨지지 않음을 확인.</li>
+            <li><strong>출력 회귀시험 고정</strong> — 이식 과정에서 드러난 컬러맵 불일치를 회귀시험으로 고정해 재발을 막았습니다.</li>
+            <li>Boost 의존을 C++11 표준 라이브러리로 치환하고, 툴셋·SDK를 현행 버전으로 올렸습니다. 인코딩 혼용과 절대경로 하드코딩도 함께 제거했습니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">
+          영상 처리 모듈(잡음 저감·에지 강화 계열) 이식까지 게이트를 통과한 상태로 완료.
+          더불어 SDK 생태계 전체의 <strong>저장소 지도·브랜치 위상·모듈 의존성·리스크</strong>를 문서로 정리해,
+          이후 누가 들어와도 어디를 건드리면 무엇이 깨지는지 먼저 볼 수 있게 했습니다.
+        </div>
+      </div>
+    </article>
+
+    <!-- ---- 6. 임베디드 / 엣지 ---- -->
+    <article class="case" id="edge">
+      <div class="case__head">
+        <h3 class="case__t">임베디드 영상 파이프라인과 엣지 추론</h3>
+        <span class="chip chip--ok">실기기 검증</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">Python</span><span class="tag">라즈베리파이</span><span class="tag">ESP32</span>
+        <span class="tag">PySide6</span><span class="tag">엣지 AI 가속기</span><span class="tag">OpenCV</span>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">상황</div>
+        <div class="beat__v">
+          싱글보드 컴퓨터에 카메라를 붙여 영상을 수집·전송·표시하는 제어 앱과,
+          <strong>PC → 싱글보드 → 엣지 AI 가속기</strong>로 이어지는 추론 파이프라인을 다뤘습니다.
+          후자는 직무교육(OJT) 과제로 진행한 것입니다.
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">한 일</div>
+        <div class="beat__v">
+          <ul class="ticks">
+            <li><strong>안정성</strong> — 콜드부트 시 화면이 멈추거나 죽는 문제를 수정하고, 파이프라인이 끊겨도 스스로 복구하도록 재시작 내성을 넣었습니다.</li>
+            <li><strong>응답성</strong> — 주변 장치 제어를 UI 스레드 밖으로 빼내 화면이 멈추지 않게 했습니다. GUI 프레임워크도 현행 스택으로 다시 작성했습니다.</li>
+            <li><strong>영상 품질을 수치로 판정</strong> — 컬럼 노이즈·시간 평균 기반 고정 패턴 잡음 보정과 bilateral 디노이즈를 <strong>PSNR/SSIM으로 정량 평가</strong>해 선택했습니다. 눈으로 고르지 않았습니다.</li>
+            <li><strong>메모리 한계 대응</strong> — 전체를 메모리에 올리던 처리에서 OOM이 나자 <strong>스트리밍 구조로 재설계</strong>해 해결했습니다. 파노라마 엔진에서 세운 원칙을 그대로 적용한 사례입니다.</li>
+            <li>객체 검출 모델을 가속기에 올려 5단계 데모까지 실기기에서 동작 확인. 모델 선택지는 Model Zoo를 조사해 정리했습니다.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---- 7. 캘리브레이션 도구 ---- -->
+    <article class="case" id="calib">
+      <div class="case__head">
+        <h3 class="case__t">센서 캘리브레이션 도구 정리</h3>
+        <span class="chip chip--build">진행 중</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">C++ / MFC</span><span class="tag">워커 스레드</span><span class="tag">테스트 스위트</span>
+      </div>
+      <div class="beat">
+        <div class="beat__k">한 일</div>
+        <div class="beat__v">
+          <ul class="ticks">
+            <li>동작하지 않거나 도달 불가능한 다이얼로그·버튼을 대량 제거해, 도구가 실제로 하는 일과 화면에 보이는 것을 일치시켰습니다.</li>
+            <li>대용량 변환 작업을 <strong>워커 스레드로 옮겨</strong> 작업 중에도 UI가 응답하도록 했습니다.</li>
+            <li>캘리브레이션 데이터와 테스트 스위트를 추가하고, 흩어져 있던 문서를 하나로 통합했습니다.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- ---- 8. 불량 화소 ---- -->
+    <article class="case" id="deadpixel">
+      <div class="case__head">
+        <h3 class="case__t">이미지 센서 불량 화소 자동 검출 설계 검토</h3>
+        <span class="chip chip--plan">설계 · 타당성 검토</span>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">알고리즘 설계</span><span class="tag">영상 통계</span>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">상황</div>
+        <div class="beat__v">육안 검사에 의존하던 불량 화소 판정을 자동화하자는 제안을 검토·설계했습니다.</div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">한 일</div>
+        <div class="beat__v">
+          <p><strong>만들기 전에 확인한 것부터 했습니다.</strong></p>
+          <ul class="ticks">
+            <li><strong>“신규 개발인가”부터 확인.</strong> 제안서는 “현재 육안 검사”를 전제했지만, 코드베이스 전수 검색 결과 통계 임계값 판정·국소 비교 판정·클러스터링 등급 판정이 <strong>세 갈래로 이미 흩어져 존재</strong>했습니다. 이 확인이 없었으면 이미 있는 것을 모르고 처음부터 다시 만드는 제안이 될 뻔했습니다.</li>
+            <li><strong>알고리즘의 대전제를 코드로 검증.</strong> 검출 로직 전체가 “보정이 꺼진 raw 프레임”을 전제하는데, 보정된 출력에는 불량 화소가 이미 지워져 있어 전제가 틀리면 알고리즘 자체가 무의미해집니다. SDK 헤더를 직접 확인해 raw 접근 함수의 존재를 확인했고, <strong>일부 인터페이스 경로는 별도 확인이 필요하다는 한계도 함께 남겼습니다.</strong></li>
+            <li><strong>기존 방식 대비 개선 근거를 항목별로 대조.</strong> 평균 대신 중앙값을 쓰면 타일 안에 불량 화소가 섞여도 견디고, 전역 고정 임계값 대신 MAD 기반 적응형 임계값을 쓰면 지역 잡음 수준을 매 윈도우마다 다시 추정할 수 있으며, 큰 비중첩 타일 대신 슬라이딩 윈도우를 쓰면 경계 블록 아티팩트가 사라집니다. 단일 프레임 검사만으로는 단발성 노이즈와 진짜 불량 화소를 구분할 수 없어 시간축 분산 체크도 추가했습니다.</li>
+            <li><strong>자기 알고리즘의 맹점을 스스로 짚었습니다.</strong> 국소 비교는 “주변은 정상”을 전제하므로 행·열 전체나 블록 단위 결함에서는 주변 중앙값 자체가 이미 죽은 값이라 검출되지 않습니다. 절대 기준값 비교를 별도 경로로 병행해 두 검출맵을 합집합으로 합치도록 설계했습니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">
+          “이미 다 있다”도 “완전 신규다”도 아닌 실제 상태를 규명하고,
+          기존 경로를 버리는 대신 <strong>고도화 + 독립 조건 추가</strong>로 확장하는 방향으로 정리했습니다.
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= Belle&Wise ================= -->
+  <section aria-labelledby="bw">
+    <div class="org">
+      <span class="kicker">02</span>
+      <h2 class="org__t" id="bw">Belle&amp;Wise Studio · Software Engineer</h2>
+      <div class="org__meta">
+        <span class="mono small subtle">2025.04 — 2025.12</span>
+        <span class="chip chip--flat">Python · LangGraph · Go · AWS</span>
+      </div>
+    </div>
+
+    <article class="case">
+      <div class="case__head">
+        <h3 class="case__t">AI 여행 일정 플래닝 에이전트</h3>
+        <a class="arrow-link" href="fairy.html">사례 자세히 →</a>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">LangGraph</span><span class="tag">FastAPI</span><span class="tag">AWS</span><span class="tag">DynamoDB</span>
+      </div>
+      <div class="beat">
+        <div class="beat__k">문제</div>
+        <div class="beat__v">단일 에이전트가 모든 작업을 순차 처리해 2박 3일 일정 생성에 평균 3분이 걸렸고, 정보 정확도도 낮았습니다.</div>
+      </div>
+      <div class="beat">
+        <div class="beat__k">선택</div>
+        <div class="beat__v">
+          LangSmith와 자체 구축한 그래프 state 스냅샷 추적으로 병목을 찾아,
+          <strong>데이터 수집 단계의 동기 API 호출이 idle 시간의 대부분</strong>임을 확인했습니다.
+          단일 그래프를 <strong>Subgraph 계층 구조</strong>로 바꿔 관리자 노드의 지시 생성 단계를 없애고,
+          수집을 <strong>비동기 병렬</strong>로 재구성했습니다.
+        </div>
+      </div>
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">
+          <div class="measures" style="margin-top:4px">
+            <div class="meas"><div class="meas__v">−60<span class="u">%</span></div><div class="meas__l">정보 수집 시간</div></div>
+            <div class="meas"><div class="meas__v">40→58<span class="u">%</span></div><div class="meas__l">정보 정확도</div></div>
+            <div class="meas"><div class="meas__v">2:23</div><div class="meas__l">일정 생성 (3:00 → )</div></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case__head">
+        <h3 class="case__t">통합 자원 관리 SaaS</h3>
+        <a class="arrow-link" href="anby.html">사례 자세히 →</a>
+      </div>
+      <div class="tags case__stack">
+        <span class="tag">Go</span><span class="tag">AWS Lambda (ARM)</span>
+        <span class="tag">DynamoDB</span><span class="tag">SQS</span><span class="tag">Grafana</span>
+      </div>
+      <div class="beat">
+        <div class="beat__k">문제</div>
+        <div class="beat__v">같은 자원을 두고 예약·웨이팅·주문을 제각각 다른 서비스로 관리하던 불편함이 출발점이었습니다.</div>
+      </div>
+      <div class="beat">
+        <div class="beat__k">선택</div>
+        <div class="beat__v">
+          세 가지를 하나의 “자원”으로 추상화한 통합 대시보드를 설계했습니다.
+          x86 → ARM 서버리스로 전환해 비용을 낮췄고, 동시 예약 충돌은 <strong>낙관적 락</strong>으로,
+          데이터 유실은 <strong>FIFO 큐</strong>로 막았습니다. Grafana로 실시간 모니터링을 붙였습니다.
+        </div>
+      </div>
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">
+          Lambda 실행 비용 <strong>20% 절감</strong>. 메모리 구성별 실측으로 최저 비용 구성을 골랐습니다.
+          교내 프로젝트로 시작한 것이 <strong>실제 외주 의뢰로 이어졌습니다.</strong>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case__head"><h3 class="case__t">개발 문화 도입</h3></div>
+      <div class="beat">
+        <div class="beat__k">한 일</div>
+        <div class="beat__v">
+          팀에 프로젝트 관리 환경이 없던 상태에서 이슈 템플릿·브랜치 규칙·문서화 기준을 도입해 정착시켰습니다.
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= Enois Lab ================= -->
+  <section aria-labelledby="enois">
+    <div class="org">
+      <span class="kicker">03</span>
+      <h2 class="org__t" id="enois">Enois Lab · 대표</h2>
+      <div class="org__meta">
+        <span class="mono small subtle">2025.12 — 현재</span>
+        <span class="chip chip--flat">SaaS · AI 자동화</span>
+      </div>
+    </div>
+    <article class="case">
+      <div class="case__head">
+        <h3 class="case__t">Sprintify — 프로젝트 관리 AI 자동화 SaaS</h3>
+        <span class="chip chip--build">개발 중</span>
+      </div>
+      <div class="beat">
+        <div class="beat__k">문제</div>
+        <div class="beat__v">작은 팀일수록 프로젝트 관리에 쓸 사람이 없습니다. 관리가 일이 되는 역설을 자동화로 풀고자 창업했습니다.</div>
+      </div>
+      <div class="beat">
+        <div class="beat__k">결과</div>
+        <div class="beat__v">숭실대학교 슈퍼스타 창업경진대회 <strong>우수상</strong>(2025.12). 현재 개발 진행 중입니다.</div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= 방법론 ================= -->
+  <section class="band" aria-labelledby="method" style="margin-top:40px">
+    <div class="band__head">
+      <span class="kicker">Method</span>
+      <h2 id="method">일하는 방식</h2>
+    </div>
+    <div class="rail">
+      <div class="rail__meta">
+        <span class="small subtle">위 사례들에서<br />실제로 지킨 순서</span>
+      </div>
+      <div class="rail__body">
+        <ol class="methods">
+          <li class="method">
+            <h3>검증 장치를 먼저 만든다</h3>
+            <p>합성 ground-truth 생성기와 골든 테스트를 코드보다 먼저 둡니다. 불변식은 <code>assert</code>로 못박습니다 — 렌더 잡당 LUT 빌드는 1회. 이후 결과물은 이 게이트를 통과하는지로 판정합니다.</p>
+          </li>
+          <li class="method">
+            <h3>동작 무변경을 기본 게이트로 둔다</h3>
+            <p>리팩터는 라운드마다 “바이트 동일”을 목표로 하고, 의도적 동작 변경은 라운드당 1건만 허용하며 반드시 명시합니다. 이식에서는 소스 호환·ABI 대조를 자동 게이트로 만들었습니다.</p>
+          </li>
+          <li class="method">
+            <h3>순수 추가로 시작한다</h3>
+            <p>새 추상화는 아무도 호출하지 않는 상태로 먼저 넣고, 배선은 다음 라운드에서 합니다. 되돌릴 수 있는 크기로 자릅니다.</p>
+          </li>
+          <li class="method">
+            <h3>다관점으로 훑고, 반드시 반증한다</h3>
+            <p>여러 관점으로 코드를 훑어 나온 지적을 그대로 믿지 않습니다. 반증 단계와 직접 재현을 통과한 것만 고칩니다 — 보고된 12건 중 6건은 통과하지 못했고, 기각한 2건은 소스에 근거가 적힌 의도된 설계였습니다.</p>
+          </li>
+          <li class="method">
+            <h3>전제를 코드로 확인한다</h3>
+            <p>제안서·문서의 전제를 그대로 받지 않고 코드베이스와 SDK 헤더로 직접 확인합니다. 확인하지 못한 경로는 한계로 적어 둡니다.</p>
+          </li>
+          <li class="method">
+            <h3>측정으로 레버를 고른다</h3>
+            <p>느리다고 바로 GPU를 붙이지 않습니다. CPU 스레딩의 천장을 먼저 측정해 병목이 remap 연산임을 확인한 뒤에 CUDA로 갔습니다. 영상 품질도 눈이 아니라 PSNR/SSIM으로 골랐습니다.</p>
+          </li>
+          <li class="method">
+            <h3>내가 만든 구멍은 내가 만든 구멍이라고 적는다</h3>
+            <p>수정이 만든 2차 문제, 검증하지 못한 경로, 의도적으로 남긴 비대칭 — 전부 문서와 커밋 메시지에 명시합니다. 상태를 정확히 아는 것이 빠른 것보다 중요합니다.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="next">
+    <div class="band__head">
+      <span class="kicker">Next</span>
+      <h2 id="next">이어서 볼 것</h2>
+    </div>
+    <div class="rows">
+      <a class="row" href="projects.html"><span class="row__n">프로젝트 <span class="arw">→</span></span><span class="row__m">오픈소스 · 개인</span><span class="row__d">slidesmith · OshiVerse · anby · fairy · agent-lab</span></a>
+      <a class="row" href="resume.html"><span class="row__n">이력서 <span class="arw">→</span></span><span class="row__m">인적사항 · 학력 · 자격</span><span class="row__d">보유 기술과 수상·대외활동 전체</span></a>
+      <a class="row" href="index.html#contact"><span class="row__n">연락처 <span class="arw">→</span></span><span class="row__m">Email</span><span class="row__d">문의 주시면 보통 하루 안에 답장드립니다</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <span>© 2026 김인서</span>
+    <div class="foot__links">
+      <a href="index.html">프로필</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="resume.html">이력서</a>
+      <a href="log.html">학습 로그</a>
+      <a href="garden/">공부 트리</a>
+      <a href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
