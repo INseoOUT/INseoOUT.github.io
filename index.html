@@ -2,411 +2,348 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>김인서 — Software Engineer</title>
-  <meta name="description" content="AI Agent와 서버리스로 제품을 끝까지 만드는 소프트웨어 엔지니어 김인서. 채용·사업 제안 열려 있습니다." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="C++ 영상 처리와 AI 에이전트·서버리스 백엔드를 함께 다루는 소프트웨어 엔지니어 김인서. 검증 기준을 먼저 세우고 그 게이트로 판정합니다." />
+  <meta name="author" content="김인서" />
+  <link rel="canonical" href="https://rapidseo.me/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="김인서 · Software Engineer" />
   <meta property="og:title" content="김인서 — Software Engineer" />
-  <meta property="og:description" content="AI Agent와 서버리스로 제품을 끝까지 만드는 소프트웨어 엔지니어. 채용·사업 제안 열려 있습니다." />
+  <meta property="og:description" content="C++ 영상 처리와 AI 에이전트·서버리스 백엔드. 검증 기준을 먼저 세우고 그 게이트로 판정합니다." />
   <meta property="og:url" content="https://rapidseo.me/" />
   <meta property="og:image" content="https://rapidseo.me/images/inseo_image.png" />
   <meta name="twitter:card" content="summary" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2320c997'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23063f31'%3Ein%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23E0A21B'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='29' font-weight='700' text-anchor='middle' fill='%232A1F06'%3Ein%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #ffffff; --bg-alt: #f8f9fa; --surface: #ffffff;
-      --border: #e9ecef; --border-strong: #dee2e6;
-      --text: #212529; --muted: #495057; --subtle: #868e96;
-      --accent: #20c997; --accent-text: #099268;
-      --accent-soft: rgba(32,201,151,0.10);
-      --radius: 10px; --radius-sm: 6px;
-      --shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
-      --mono: 'Geist Mono', ui-monospace, Consolas, monospace;
-    }
-    html[data-theme="dark"] {
-      --bg: #121212; --bg-alt: #1a1a1a; --surface: #1e1e1e;
-      --border: #2a2a2a; --border-strong: #383838;
-      --text: #ececec; --muted: #b5b5b5; --subtle: #7e7e7e;
-      --accent: #20c997; --accent-text: #3ddcb0;
-      --accent-soft: rgba(32,201,151,0.13);
-      --shadow: 0 1px 3px rgba(0,0,0,0.5);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Malgun Gothic", sans-serif;
-      background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15.5px;
-      -webkit-font-smoothing: antialiased;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-    a { color: inherit; text-decoration: none; }
-    .mono { font-family: var(--mono); }
-    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
-
-    /* ===== TOP BAR ===== */
-    .topbar { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: saturate(180%) blur(10px); border-bottom: 1px solid var(--border); }
-    .topbar-in { max-width: 880px; margin: 0 auto; padding: 13px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 16px; letter-spacing: -0.02em; }
-    .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
-    .nav-links { display: flex; align-items: center; gap: 2px; }
-    .nav-link {
-      font-size: 13.5px; font-weight: 600; color: var(--subtle);
-      padding: 7px 12px; border-radius: var(--radius-sm); transition: color 0.15s, background 0.15s;
-    }
-    .nav-link:hover { color: var(--text); background: var(--bg-alt); }
-    .nav-link.on { color: var(--accent-text); background: var(--accent-soft); }
-    .nav-cta {
-      font-size: 13px; font-weight: 700; padding: 8px 15px; border-radius: var(--radius-sm);
-      background: var(--accent); color: #063f31; transition: filter 0.15s, transform 0.15s;
-    }
-    .nav-cta:hover { filter: brightness(1.05); transform: translateY(-1px); }
-    .theme-btn {
-      width: 33px; height: 33px; border: 1px solid var(--border); border-radius: 50%;
-      background: var(--surface); color: var(--muted); cursor: pointer;
-      display: inline-flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;
-    }
-    .theme-btn:hover { border-color: var(--border-strong); color: var(--text); }
-
-    /* ===== LAYOUT ===== */
-    .col { max-width: 720px; margin: 0 auto; padding: 0 20px; }
-    section { padding: 46px 0 6px; }
-    .kicker { font-family: var(--mono); font-size: 11.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 14px; }
-
-    /* ===== HERO ===== */
-    .hero { display: flex; gap: 28px; align-items: flex-start; padding: 54px 0 10px; }
-    .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 1px solid var(--border); flex-shrink: 0; }
-    .h-name { font-size: 29px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.25; }
-    .h-role { font-size: 15px; color: var(--muted); font-weight: 600; margin-top: 2px; }
-    .h-ints { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
-    .h-ints .lbl { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--subtle); margin-right: 3px; }
-    .ichip { font-size: 12px; font-weight: 600; color: var(--accent-text); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); border-radius: 99px; padding: 3px 12px; }
-    .h-open {
-      display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
-      font-family: var(--mono); font-size: 12px; color: var(--muted);
-      background: var(--surface); border: 1px solid var(--border); border-radius: 99px; padding: 5px 13px;
-    }
-    .h-open .live { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); animation: pulse 2.4s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
-    .h-bio { color: var(--muted); font-size: 15px; margin-top: 16px; max-width: 540px; }
-    .h-bio strong { color: var(--text); }
-    .h-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
-
-    .btn {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 13.5px; font-weight: 700; padding: 10px 18px; border-radius: var(--radius);
-      border: 1px solid var(--border); background: var(--surface); color: var(--text);
-      cursor: pointer; transition: all 0.15s; font-family: inherit;
-    }
-    .btn:hover { border-color: var(--accent); color: var(--accent-text); transform: translateY(-1px); }
-    .btn-solid { background: var(--accent); border-color: var(--accent); color: #063f31; }
-    .btn-solid:hover { filter: brightness(1.05); color: #063f31; }
-
-    /* ===== HIGHLIGHTS ===== */
-    .hl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .hl { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 17px 16px 14px; box-shadow: var(--shadow); }
-    .hl .v { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; }
-    .hl .v .a { color: var(--accent-text); }
-    .hl .l { font-size: 12px; color: var(--subtle); margin-top: 2px; }
-
-    /* ===== EXPERIENCE ===== */
-    .tl { position: relative; padding-left: 24px; }
-    .tl::before { content: ''; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--border); border-radius: 2px; }
-    .tl-item { position: relative; padding: 0 0 26px; }
-    .tl-item::before { content: ''; position: absolute; left: -23px; top: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-    .tl-date { font-family: var(--mono); font-size: 11.5px; color: var(--accent-text); font-weight: 600; }
-    .tl-t { font-size: 15.5px; font-weight: 700; margin-top: 2px; }
-    .tl-d { font-size: 13.5px; color: var(--muted); margin-top: 3px; max-width: 560px; }
-    .tl-d strong { color: var(--text); }
-    .tl ul { padding-left: 17px; margin-top: 6px; display: flex; flex-direction: column; gap: 4px; }
-    .tl li { font-size: 13px; color: var(--muted); }
-    .tl li strong { color: var(--text); }
-
-    /* ===== SELECTED WORK ===== */
-    .sw-list { border-top: 1px solid var(--border); }
-    .sw-row {
-      display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2px 14px;
-      padding: 16px 2px; border-bottom: 1px solid var(--border); transition: background 0.15s;
-    }
-    .sw-row:hover { background: var(--bg-alt); }
-    .sw-n { font-weight: 700; font-size: 15px; }
-    .sw-n .arrow { color: var(--accent-text); font-size: 13px; display: inline-block; transition: transform 0.15s; margin-left: 6px; }
-    .sw-row:hover .arrow { transform: translateX(3px); }
-    .sw-d { grid-column: 1; color: var(--muted); font-size: 13px; }
-    .sw-m { grid-row: span 2; align-self: center; font-family: var(--mono); font-size: 11.5px; color: var(--accent-text); font-weight: 600; white-space: nowrap; }
-    .more-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13.5px; font-weight: 700; color: var(--accent-text); }
-    .more-link:hover { text-decoration: underline; }
-
-    /* ===== LEARNING ===== */
-    .learn-teaser { display: grid; grid-template-columns: minmax(0,1fr) 264px; gap: 24px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; box-shadow: var(--shadow); }
-    .lt-title { font-size: 16.5px; font-weight: 800; letter-spacing: -0.01em; }
-    .lt-d { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
-    .lt-posts { margin-top: 14px; display: flex; flex-direction: column; gap: 7px; }
-    .lt-post { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: baseline; }
-    .lt-post .d { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; transform: translateY(-2px); }
-    .graph-box { position: relative; }
-    .graph-cap { position: absolute; bottom: 6px; left: 0; right: 0; text-align: center; font-family: var(--mono); font-size: 10px; color: var(--subtle); }
-    .gnode { transition: transform 0.15s; transform-box: fill-box; transform-origin: center; cursor: default; }
-    .gnode:hover { transform: scale(1.25); }
-    .gedge { stroke: var(--border-strong); stroke-width: 1; }
-    .gdot { fill: var(--accent); opacity: 0.85; }
-    .gdot.dim { fill: var(--subtle); opacity: 0.5; }
-    .glabel { font-family: var(--mono); font-size: 8.5px; fill: var(--subtle); }
-
-    /* ===== CREDENTIALS ===== */
-    .cred-row { display: flex; flex-wrap: wrap; gap: 8px; }
-    .cred { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: 99px; padding: 5px 13px; }
-    .cred .d { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
-
-    /* ===== CONTACT ===== */
-    #contact { scroll-margin-top: 70px; }
-    .contact { margin: 52px 0 0; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-alt); padding: 36px 30px; text-align: center; }
-    .contact h2 { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
-    .contact p { color: var(--muted); font-size: 14px; margin-bottom: 20px; max-width: 460px; margin-inline: auto; }
-    .contact .row { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
-    .contact .mail { font-family: var(--mono); font-size: 13px; color: var(--subtle); margin-top: 18px; }
-    .contact .mail a { color: var(--muted); border-bottom: 1px solid var(--border-strong); }
-
-    footer { margin-top: 60px; border-top: 1px solid var(--border); }
-    .foot-in { max-width: 880px; margin: 0 auto; padding: 26px 20px 44px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--subtle); }
-    .foot-links { display: flex; flex-wrap: wrap; gap: 16px; }
-    .foot-links a:hover { color: var(--text); }
-
-    @media (max-width: 720px) {
-      .hero { flex-direction: column; align-items: center; text-align: center; }
-      .h-bio { margin-inline: auto; }
-      .h-actions, .h-ints { justify-content: center; }
-      .hl-grid { grid-template-columns: 1fr; }
-      .learn-teaser { grid-template-columns: 1fr; }
-      .graph-box { justify-self: center; }
-      .nav-hide-sm { display: none; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .h-open .live { animation: none; } }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
 
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="topbar-in">
-      <a class="brand" href="index.html"><span class="dot"></span>김인서</a>
-      <nav class="nav-links" aria-label="주 메뉴">
-        <a class="nav-link on" href="index.html">프로필</a>
-        <a class="nav-link" href="log.html">학습 로그</a>
-        <a class="nav-link" href="projects.html">프로젝트</a>
-        <a class="nav-link nav-hide-sm" href="resume.html">이력서</a>
-        <a class="nav-cta" href="#contact">연락하기</a>
-        <button class="theme-btn" id="themeBtn" aria-label="테마 전환">🌙</button>
-      </nav>
-    </div>
+<div class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="index.html"><span class="brand__mark"></span>김인서<span class="brand__sub">inseout</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="index.html">프로필</a>
+      <a href="experience.html">경력</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="resume.html">이력서</a>
+      <a class="nav-sm-hide" href="log.html">학습</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="테마 전환">☾</button>
+    </nav>
   </div>
+</div>
 
-  <div class="col">
+<main id="main" class="wrap">
 
-    <!-- HERO -->
-    <header class="hero">
-      <img class="avatar" src="images/inseo_image.png" alt="김인서" />
-      <div>
-        <h1 class="h-name">김인서</h1>
-        <div class="h-role">Software Engineer</div>
-        <div class="h-ints">
-          <span class="lbl">Interests</span>
-          <span class="ichip">AI Agent</span>
-          <span class="ichip">Serverless</span>
-          <span class="ichip">Infrastructure</span>
-        </div>
-        <div class="h-open"><span class="live"></span>i3System 연구원 · Enois Lab 운영</div>
-        <p class="h-bio">
-          낮에는 <strong>i3System</strong>에서 연구원으로 영상 처리 파이프라인을 만들고,
-          밖에서는 <strong>Enois Lab</strong>을 운영하며 오픈소스와 SaaS를 만듭니다.
-          기획부터 개발·운영까지, 제품이 실제로 굴러갈 때까지 책임집니다.
+  <!-- ===== HERO ===== -->
+  <header class="hero rail rise rise-1">
+    <div class="rail__meta">
+      <img class="portrait" src="images/inseo_image.png" alt="김인서 프로필 사진" width="96" height="116" />
+      <span class="kicker">Software Engineer</span>
+      <span class="chip chip--sig">C++ · Vision</span>
+      <span class="chip chip--flat">AI Agent · Serverless</span>
+    </div>
+    <div class="rail__body">
+      <h1 class="hero__name">김인서</h1>
+      <p class="lead">
+        기하와 성능 제약이 분명한 <strong>C++ 영상 처리</strong>와,
+        <strong>AI 에이전트·서버리스 백엔드</strong>를 함께 다룹니다.
+      </p>
+      <p class="hero__bio">
+        코드를 한 줄씩 읽어 확인하는 대신, <strong>옳은지 판정하는 게이트를 먼저 만들고</strong> 그 게이트로 판정합니다.
+        골든 테스트, 불변식 assert, 동작 무변경 게이트 — 결과를 신뢰할 수 있게 만드는 조건을 설계하는 것이
+        제가 하는 일입니다.
+      </p>
+      <p class="status-line">
+        <span class="live" aria-hidden="true"></span>
+        <span>i3System 연구원 재직 중 · Enois Lab 운영</span>
+      </p>
+      <div class="btns">
+        <a class="btn btn--solid" href="experience.html">경력기술서 보기</a>
+        <a class="btn" href="resume.html">이력서</a>
+        <a class="btn" href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== 계측값 ===== -->
+  <section class="band band--open rise rise-2" aria-labelledby="measured">
+    <div class="band__head">
+      <span class="kicker" id="measured">Measured</span>
+      <p class="small subtle">모든 수치는 측정 조건과 함께 적었습니다.</p>
+    </div>
+    <div class="measures">
+      <div class="meas">
+        <div class="meas__v">68.1<span class="u">fps</span></div>
+        <div class="meas__l">파노라마 합성 처리량</div>
+        <div class="meas__c">1080p×2 → 4K · GPU 경로<br />목표 30fps의 2.3배</div>
+      </div>
+      <div class="meas">
+        <div class="meas__v">6<span class="u">건</span></div>
+        <div class="meas__l">HIGH 등급 결함 수정</div>
+        <div class="meas__c">코드베이스 전수 감사 107건 중<br />누수·UAF·스택 오버플로우</div>
+      </div>
+      <div class="meas">
+        <div class="meas__v">−20<span class="u">%</span></div>
+        <div class="meas__l">서버리스 실행 비용</div>
+        <div class="meas__c">x86 → ARM Lambda 전환<br />동일 성능 기준</div>
+      </div>
+      <div class="meas">
+        <div class="meas__v">40→58<span class="u">%</span></div>
+        <div class="meas__l">에이전트 정보 정확도</div>
+        <div class="meas__c">수집 시간 60% 단축과 함께<br />일정 생성 3분 → 2분 23초</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 지금 하는 일 ===== -->
+  <section class="band" aria-labelledby="now">
+    <div class="band__head">
+      <span class="kicker">Currently</span>
+      <h2 id="now">지금 하는 일</h2>
+    </div>
+    <div class="rail">
+      <div class="rail__meta">
+        <strong class="small">i3System</strong>
+        <span class="small subtle">연구원<br />2026.05 —</span>
+      </div>
+      <div class="rail__body">
+        <p class="muted">
+          영상 처리 소프트웨어 R&amp;D. 신규 합성 엔진 개발과, 기존 산업용 카메라 제어 소프트웨어의
+          릴리스·안정화·구조 개선을 함께 담당합니다.
         </p>
-        <div class="h-actions">
-          <a class="btn btn-solid" href="#" data-mail>메일 보내기</a>
-          <a class="btn" href="resume.html">이력서</a>
-          <a class="btn" href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub</a>
+        <div class="rows">
+          <a class="row" href="experience.html#pano">
+            <span class="row__n">광각 파노라마 합성 엔진 <span class="arw">→</span></span>
+            <span class="row__m"><span class="chip chip--ok">Stage 1–3 · v0.1.0</span></span>
+            <span class="row__d">고정 카메라 두 대의 영상을 하나의 광각 영상으로. 왜곡보정·투영·정렬을 단일 remap LUT로 통합해 프레임당 연산 1회 — CUDA 경로 68fps</span>
+          </a>
+          <a class="row" href="experience.html#release">
+            <span class="row__n">카메라 제어 SW 1.0.0 릴리스 <span class="arw">→</span></span>
+            <span class="row__m"><span class="chip chip--ok">실기 검증</span></span>
+            <span class="row__d">버전 체계 수립, 라이선스 대응 전면 포팅, 툴셋 현행화 — 실제 기기 검증을 거쳐 1.0.0 태깅</span>
+          </a>
+          <a class="row" href="experience.html#audit">
+            <span class="row__n">코드베이스 감사와 결함 수정 <span class="arw">→</span></span>
+            <span class="row__m"><span class="chip chip--build">클린 빌드</span></span>
+            <span class="row__d">전수 감사 107건 정리 후 HIGH 6건 수정. 수정이 만든 2차 문제까지 스스로 찾아 다시 수정</span>
+          </a>
+          <a class="row" href="experience.html#abi">
+            <span class="row__n">레거시 이식과 ABI 호환성 게이트 <span class="arw">→</span></span>
+            <span class="row__m"><span class="chip chip--build">게이트 통과</span></span>
+            <span class="row__d">Boost 의존 제거·툴체인 현행화를 C++98/11/17 소스호환 게이트와 vtable/ABI 대조 게이트로 검증</span>
+          </a>
         </div>
-      </div>
-    </header>
-
-    <!-- HIGHLIGHTS -->
-    <section>
-      <div class="kicker">Highlights</div>
-      <div class="hl-grid">
-        <div class="hl"><div class="v">특허 <span class="a">1건</span></div><div class="l">3D 알고리즘 출원 (2024)</div></div>
-        <div class="hl"><div class="v">우수상 <span class="a">×2</span></div><div class="l">창업·SW 경진대회</div></div>
-        <div class="hl"><div class="v">SaaS <span class="a">2</span></div><div class="l">실서비스 개발·운영 경험</div></div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-      <div class="kicker">Experience</div>
-      <div class="tl">
-        <div class="tl-item">
-          <div class="tl-date">2026.05 — 현재</div>
-          <div class="tl-t">i3System · 연구원</div>
-          <ul>
-            <li>두 대의 고정 카메라 영상을 광각 파노라마로 합성하는 <strong>영상 처리 파이프라인</strong> 설계·구현 (C++17 · OpenCV · FFmpeg · CUDA)</li>
-            <li>왜곡보정·투영·정렬을 <strong>단일 remap LUT</strong>로 통합해 프레임당 연산 1회로 — CUDA 경로 <strong>68fps</strong>, 목표(30fps)의 2.3배</li>
-            <li>1시간 영상을 <strong>고정 메모리(~1.8GB)</strong>로 무중단 스트리밍 렌더 — 골든 테스트로 프레임 간 안정성 검증</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">2025.12 — 현재</div>
-          <div class="tl-t">Enois Lab · 대표</div>
-          <div class="tl-d">프로젝트 관리 AI 자동화 SaaS <strong>Sprintify</strong> 개발. 슈퍼스타 창업경진대회 우수상(2025.12).</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">2025.04 — 2025.12</div>
-          <div class="tl-t">Belle&amp;Wise Studio · Software Engineer</div>
-          <ul>
-            <li>LangGraph 기반 <strong>AI Agent</strong>와 AWS <strong>서버리스</strong> 아키텍처로 서비스 개발·운영</li>
-            <li>프로젝트 관리 환경·개발 문화 도입 — 이슈 템플릿·브랜치 규칙·문서화 기준 정착</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">2020.03 — 2026.08</div>
-          <div class="tl-t">숭실대학교 소프트웨어학부</div>
-          <div class="tl-d">정보보호 및 소프트웨어 세부전공 · GPA 4.0/4.5 · 졸업 예정</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SELECTED WORK -->
-    <section>
-      <div class="kicker">Selected Work</div>
-      <div class="sw-list">
-        <a class="sw-row" href="projects.html">
-          <span class="sw-n">slidesmith <span class="arrow">→</span></span>
-          <span class="sw-m">스펙 1 → 출력 3</span>
-          <span class="sw-d">스펙 기반 프레젠테이션 메이커 — YAML 하나로 HTML·PDF·PPTX, MCP 서버 내장 오픈소스</span>
-        </a>
-        <a class="sw-row" href="projects.html">
-          <span class="sw-n">anby <span class="arrow">→</span></span>
-          <span class="sw-m">람다 비용 -20%</span>
-          <span class="sw-d">통합 자원 관리 SaaS(외주) — Go + ARM 서버리스, 낙관적 락 동시성 제어</span>
-        </a>
-        <a class="sw-row" href="projects.html">
-          <span class="sw-n">fairy <span class="arrow">→</span></span>
-          <span class="sw-m">정확도 40→58%</span>
-          <span class="sw-d">AI 여행 플래닝 에이전트 — Subgraph 라우팅, 수집 시간 -60%</span>
-        </a>
-      </div>
-      <a class="more-link" href="projects.html">모든 프로젝트 보기 →</a>
-    </section>
-
-    <!-- LEARNING -->
-    <section>
-      <div class="kicker">Learning in Public</div>
-      <div class="learn-teaser">
-        <div>
-          <div class="lt-title">무엇을 공부하는지도 공개합니다</div>
-          <p class="lt-d">옵시디언 공부 노트를 그대로 공개합니다 — 그래프뷰로 돌아다녀 보세요. 요즘 파는 것들:</p>
-          <div class="lt-posts">
-            <span class="lt-post"><span class="d"></span>에이전트 프레임워크 스터디 — agent-lab에서 hermes 실험 중</span>
-            <span class="lt-post"><span class="d"></span>서버리스 비용 최적화 — ARM Lambda 전환을 anby 운영에서 검증</span>
-          </div>
-          <a class="more-link" href="garden/">공부 트리 열기 →</a>&nbsp;&nbsp;<a class="more-link" href="log.html">학습 로그 →</a>
-        </div>
-        <a class="graph-box" href="garden/" aria-label="공부 트리 그래프뷰 열기">
-          <svg width="264" height="190" viewBox="0 0 264 190">
-            <line class="gedge" x1="132" y1="88" x2="62" y2="46"/>
-            <line class="gedge" x1="132" y1="88" x2="196" y2="40"/>
-            <line class="gedge" x1="132" y1="88" x2="210" y2="120"/>
-            <line class="gedge" x1="132" y1="88" x2="70" y2="140"/>
-            <line class="gedge" x1="62" y1="46" x2="30" y2="88"/>
-            <line class="gedge" x1="196" y1="40" x2="236" y2="76"/>
-            <line class="gedge" x1="210" y1="120" x2="236" y2="76"/>
-            <line class="gedge" x1="70" y1="140" x2="118" y2="162"/>
-            <line class="gedge" x1="196" y1="40" x2="132" y2="24"/>
-            <g class="gnode"><circle class="gdot" cx="132" cy="88" r="9"/><text class="glabel" x="132" y="106" text-anchor="middle">agents</text></g>
-            <g class="gnode"><circle class="gdot" cx="62" cy="46" r="6"/><text class="glabel" x="62" y="34" text-anchor="middle">hermes</text></g>
-            <g class="gnode"><circle class="gdot" cx="196" cy="40" r="7"/><text class="glabel" x="196" y="28" text-anchor="middle">langgraph</text></g>
-            <g class="gnode"><circle class="gdot" cx="210" cy="120" r="6"/><text class="glabel" x="210" y="138" text-anchor="middle">fairy</text></g>
-            <g class="gnode"><circle class="gdot dim" cx="70" cy="140" r="6"/><text class="glabel" x="70" y="158" text-anchor="middle">infra</text></g>
-            <g class="gnode"><circle class="gdot dim" cx="30" cy="88" r="4.5"/><text class="glabel" x="30" y="76" text-anchor="middle">mcp</text></g>
-            <g class="gnode"><circle class="gdot dim" cx="236" cy="76" r="4.5"/><text class="glabel" x="236" y="62" text-anchor="middle">subgraph</text></g>
-            <g class="gnode"><circle class="gdot dim" cx="118" cy="162" r="4.5"/><text class="glabel" x="118" y="180" text-anchor="middle">aws</text></g>
-            <g class="gnode"><circle class="gdot dim" cx="132" cy="24" r="4.5"/><text class="glabel" x="132" y="14" text-anchor="middle">router</text></g>
-          </svg>
-          <div class="graph-cap">눌러서 실제 노트 그래프 보기</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- CREDENTIALS -->
-    <section>
-      <div class="kicker">Credentials</div>
-      <div class="cred-row">
-        <span class="cred"><span class="d"></span>정보처리기사 (2025)</span>
-        <span class="cred"><span class="d"></span>TOPCIT Lv.3 (2024)</span>
-        <span class="cred"><span class="d"></span>특허 출원 10-2024-0111576</span>
-        <span class="cred"><span class="d"></span>슈퍼스타 창업경진대회 우수상</span>
-        <span class="cred"><span class="d"></span>SW/DT SeSAC 경진대회 우수상</span>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="contact">
-        <h2>제안을 기다립니다</h2>
-        <p>채용·헤드헌팅, 사업·외주 제안, 협업 모두 환영해요. 보통 하루 안에 답장드립니다.</p>
-        <div class="row">
-          <a class="btn btn-solid" href="#" data-mail>메일 보내기</a>
-          <a class="btn" href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub</a>
-        </div>
-        <div class="mail"><a href="#" id="mailText"></a></div>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="foot-in">
-      <span>© 2026 김인서</span>
-      <div class="foot-links">
-        <a href="log.html">학습 로그</a>
-        <a href="projects.html">프로젝트</a>
-        <a href="resume.html">이력서</a>
-        <a href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub</a>
-        <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">맨 위로 ↑</a>
+        <a class="arrow-link" href="experience.html">경력기술서에서 전부 보기 →</a>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Email (obfuscated)
-    (function () {
-      var e = atob('a2ltaW4wMHNlb0BnbWFpbC5jb20=');
-      var href = 'mailto:' + e + '?subject=' + encodeURIComponent('[제안/문의] ');
-      document.querySelectorAll('[data-mail]').forEach(function (el) { el.href = href; });
-      var t = document.getElementById('mailText');
-      if (t) { t.textContent = e; t.href = href; }
-    })();
+  <!-- ===== 경력 ===== -->
+  <section class="band" aria-labelledby="exp">
+    <div class="band__head">
+      <span class="kicker">Experience</span>
+      <h2 id="exp">경력</h2>
+    </div>
+    <div class="rail">
+      <div class="rail__meta"></div>
+      <div class="rail__body">
+        <div class="tl">
+          <div class="tl__i">
+            <div class="tl__d">2026.05 — 현재</div>
+            <div class="tl__t">i3System · 연구원</div>
+            <div class="tl__s">영상 처리 소프트웨어 R&amp;D — 합성 엔진 신규 개발, 제어 소프트웨어 릴리스·구조 개선</div>
+          </div>
+          <div class="tl__i">
+            <div class="tl__d">2025.12 — 현재</div>
+            <div class="tl__t">Enois Lab · 대표</div>
+            <div class="tl__s">프로젝트 관리 AI 자동화 SaaS <strong>Sprintify</strong> 기획·개발. 슈퍼스타 창업경진대회 우수상</div>
+          </div>
+          <div class="tl__i is-past">
+            <div class="tl__d">2025.04 — 2025.12</div>
+            <div class="tl__t">Belle&amp;Wise Studio · Software Engineer</div>
+            <div class="tl__s">LangGraph 기반 AI Agent와 AWS 서버리스로 서비스 개발·운영. 이슈 템플릿·브랜치 규칙·문서화 기준 정착</div>
+          </div>
+          <div class="tl__i is-past">
+            <div class="tl__d">2020.03 — 2026.08</div>
+            <div class="tl__t">숭실대학교 IT대학 소프트웨어학부</div>
+            <div class="tl__s">정보보호 및 소프트웨어 세부전공 · 학점 4.0 / 4.5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Theme toggle (persisted)
-    (function () {
-      var root = document.documentElement;
-      var btn = document.getElementById('themeBtn');
-      var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var theme = saved || (prefersDark ? 'dark' : 'light');
-      apply(theme);
-      btn.addEventListener('click', function () {
-        theme = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
-        apply(theme);
-        localStorage.setItem('theme', theme);
-      });
-      function apply(t) {
-        root.setAttribute('data-theme', t);
-        btn.textContent = (t === 'dark') ? '☀️' : '🌙';
-      }
-    })();
-  </script>
+  <!-- ===== 만든 것 ===== -->
+  <section class="band" aria-labelledby="work">
+    <div class="band__head">
+      <span class="kicker">Selected Work</span>
+      <h2 id="work">만든 것</h2>
+    </div>
+    <div class="rows">
+      <a class="row" href="https://github.com/INseoOUT/slidesmith" target="_blank" rel="noopener">
+        <span class="row__n">slidesmith <span class="arw">↗</span></span>
+        <span class="row__m">스펙 1 → 출력 3</span>
+        <span class="row__d">스펙 기반 프레젠테이션 메이커 — YAML 하나로 HTML·PDF·PPTX. MCP 서버 내장 오픈소스</span>
+      </a>
+      <a class="row" href="projects.html#oshiverse">
+        <span class="row__n">OshiVerse <span class="arw">→</span></span>
+        <span class="row__m">Cloud Run 실배포</span>
+        <span class="row__d">캐릭터 일관성 AI 생성 플랫폼 — 정체성을 버전으로 잠그는 구조. 배포 단계에서 Celery·Redis를 걷어낸 판단</span>
+      </a>
+      <a class="row" href="anby.html">
+        <span class="row__n">anby <span class="arw">→</span></span>
+        <span class="row__m">람다 비용 −20%</span>
+        <span class="row__d">통합 자원 관리 SaaS — Go + ARM 서버리스, 낙관적 락으로 중복 예약 차단. 교내 프로젝트가 외주로</span>
+      </a>
+      <a class="row" href="fairy.html">
+        <span class="row__n">fairy <span class="arw">→</span></span>
+        <span class="row__m">정확도 40 → 58%</span>
+        <span class="row__d">AI 여행 플래닝 에이전트 — Subgraph 계층 라우팅과 비동기 병렬 수집으로 수집 시간 60% 단축</span>
+      </a>
+    </div>
+    <a class="arrow-link" href="projects.html">모든 프로젝트 보기 →</a>
+  </section>
+
+  <!-- ===== 일하는 방식 ===== -->
+  <section class="band" aria-labelledby="how">
+    <div class="band__head">
+      <span class="kicker">Method</span>
+      <h2 id="how">일하는 방식</h2>
+    </div>
+    <div class="rail">
+      <div class="rail__meta">
+        <span class="small subtle">아래 네 가지는<br />실제 작업에서<br />지킨 순서입니다</span>
+      </div>
+      <div class="rail__body">
+        <ol class="methods">
+          <li class="method">
+            <h3>검증 장치를 먼저 만든다</h3>
+            <p>합성 ground-truth 생성기와 골든 테스트를 코드보다 먼저 둡니다. 불변식은 assert로 못박습니다 — 렌더 잡당 LUT 빌드는 1회. 이후 결과물은 이 게이트를 통과하는지로 판정합니다.</p>
+          </li>
+          <li class="method">
+            <h3>동작 무변경을 기본 게이트로 둔다</h3>
+            <p>리팩터는 라운드마다 “동작이 바뀌지 않았다”를 목표로 하고, 의도적 동작 변경은 라운드당 1건만 허용하며 반드시 명시합니다. 7라운드 중 실제 버그를 발견한 1건이 그 예외였습니다.</p>
+          </li>
+          <li class="method">
+            <h3>순수 추가로 시작한다</h3>
+            <p>새 추상화는 아무도 호출하지 않는 상태로 먼저 넣고, 배선은 다음 라운드에서 합니다. 되돌릴 수 있는 크기로 자릅니다.</p>
+          </li>
+          <li class="method">
+            <h3>전제를 코드로 확인한다</h3>
+            <p>제안서의 전제를 그대로 받지 않고 코드베이스와 SDK 헤더로 직접 확인합니다. 확인하지 못한 경로는 한계로 적어 둡니다.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 공부 ===== -->
+  <section class="band" aria-labelledby="learn">
+    <div class="band__head">
+      <span class="kicker">Learning in Public</span>
+      <h2 id="learn">공부한 것도 공개합니다</h2>
+    </div>
+    <div class="teaser">
+      <div>
+        <p class="muted">
+          옵시디언 학습 노트를 <strong>Quartz</strong>로 빌드해 그대로 공개합니다 — 노트 탐색기·위키링크·백링크·그래프뷰까지.
+          클라우드 네이티브·컨테이너·Kubernetes·네트워킹·AI Agent 노트가 쌓여 있습니다.
+        </p>
+        <ul class="ticks">
+          <li>에이전트 프레임워크 — 그래프형 에이전트와 비교하며 <code>agent-lab</code>에서 실험</li>
+          <li>영상 스티칭 — 캘리브레이션·remap LUT·CUDA 가속을 회사 프로젝트에서 학습</li>
+          <li>서버리스 비용 최적화 — ARM 전환과 메모리 구성 튜닝을 실제 운영에서 검증</li>
+        </ul>
+        <div class="btns">
+          <a class="btn btn--solid" href="garden/">공부 트리 열기</a>
+          <a class="btn" href="log.html">학습 로그</a>
+        </div>
+      </div>
+      <a class="graph" href="garden/" aria-label="공부 트리 그래프뷰 열기">
+        <svg width="264" height="190" viewBox="0 0 264 190" role="img" aria-label="학습 노트 그래프 미리보기">
+          <line class="gedge" x1="132" y1="88" x2="62" y2="46" />
+          <line class="gedge" x1="132" y1="88" x2="196" y2="40" />
+          <line class="gedge" x1="132" y1="88" x2="210" y2="120" />
+          <line class="gedge" x1="132" y1="88" x2="70" y2="140" />
+          <line class="gedge" x1="62" y1="46" x2="30" y2="88" />
+          <line class="gedge" x1="196" y1="40" x2="236" y2="76" />
+          <line class="gedge" x1="210" y1="120" x2="236" y2="76" />
+          <line class="gedge" x1="70" y1="140" x2="118" y2="162" />
+          <line class="gedge" x1="196" y1="40" x2="132" y2="24" />
+          <g class="gnode"><circle class="gdot" cx="132" cy="88" r="9" /><text class="glabel" x="132" y="107" text-anchor="middle">agents</text></g>
+          <g class="gnode"><circle class="gdot" cx="62" cy="46" r="6" /><text class="glabel" x="62" y="34" text-anchor="middle">hermes</text></g>
+          <g class="gnode"><circle class="gdot" cx="196" cy="40" r="7" /><text class="glabel" x="196" y="28" text-anchor="middle">langgraph</text></g>
+          <g class="gnode"><circle class="gdot" cx="210" cy="120" r="6" /><text class="glabel" x="210" y="139" text-anchor="middle">k8s</text></g>
+          <g class="gnode"><circle class="gdot dim" cx="70" cy="140" r="6" /><text class="glabel" x="70" y="159" text-anchor="middle">infra</text></g>
+          <g class="gnode"><circle class="gdot dim" cx="30" cy="88" r="4.5" /><text class="glabel" x="30" y="76" text-anchor="middle">mcp</text></g>
+          <g class="gnode"><circle class="gdot dim" cx="236" cy="76" r="4.5" /><text class="glabel" x="236" y="62" text-anchor="middle">subgraph</text></g>
+          <g class="gnode"><circle class="gdot dim" cx="118" cy="162" r="4.5" /><text class="glabel" x="118" y="181" text-anchor="middle">container</text></g>
+          <g class="gnode"><circle class="gdot dim" cx="132" cy="24" r="4.5" /><text class="glabel" x="132" y="14" text-anchor="middle">router</text></g>
+        </svg>
+        <span class="graph__cap">눌러서 실제 노트 그래프 보기</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 자격·수상 ===== -->
+  <section class="band" aria-labelledby="cred">
+    <div class="band__head">
+      <span class="kicker">Credentials</span>
+      <h2 id="cred">자격과 수상</h2>
+    </div>
+    <div class="tags tags--lg">
+      <span class="tag">정보처리기사 · 2025.12</span>
+      <span class="tag">TOPCIT Lv.3 · 2024.12</span>
+      <span class="tag">특허 출원 10-2024-0111576</span>
+      <span class="tag">슈퍼스타 창업경진대회 우수상</span>
+      <span class="tag">SW/DT SeSAC 경진대회 우수상</span>
+      <span class="tag">해성문화재단 전액장학금</span>
+      <span class="tag">백마성적우수장학금</span>
+    </div>
+  </section>
+
+  <!-- ===== 연락 ===== -->
+  <section class="band" id="contact" aria-labelledby="contact-h">
+    <div class="band__head">
+      <span class="kicker">Contact</span>
+      <h2 id="contact-h">연락처</h2>
+    </div>
+    <div class="rail">
+      <div class="rail__meta"></div>
+      <div class="rail__body">
+        <p class="muted">문의는 메일로 주시면 보통 하루 안에 답장드립니다.</p>
+        <dl class="contact-list">
+          <div><dt>Email</dt><dd><a href="#" data-mail data-mail-text>&nbsp;</a></dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/INseoOUT" target="_blank" rel="noopener">github.com/INseoOUT ↗</a></dd></div>
+          <div><dt>Site</dt><dd><a href="https://rapidseo.me">rapidseo.me</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <span>© 2026 김인서</span>
+    <div class="foot__links">
+      <a href="experience.html">경력기술서</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="resume.html">이력서</a>
+      <a href="log.html">학습 로그</a>
+      <a href="garden/">공부 트리</a>
+      <a href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
 </body>
 </html>
