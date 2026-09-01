@@ -104,7 +104,7 @@
 /* ---------- 2. 기본 ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
 
 body {
   font-family: var(--sans);
@@ -578,6 +578,7 @@ code {
   .nav-sm-hide { display: none; }
 }
 @media (max-width: 640px) {
+  html { scroll-padding-top: 68px; }
   body { font-size: 15px; }
   .band { padding: 40px 0; }
   .beat { grid-template-columns: 1fr; gap: 2px; }
