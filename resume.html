@@ -2,412 +2,294 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>김인서 — 이력서</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>이력서 — 김인서</title>
+  <meta name="description" content="김인서 이력서 — 인적사항, 학력, 경력, 보유 기술, 자격, 수상 및 대외활동." />
+  <meta name="author" content="김인서" />
+  <link rel="canonical" href="https://rapidseo.me/resume.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="김인서 · Software Engineer" />
+  <meta property="og:title" content="이력서 — 김인서" />
+  <meta property="og:description" content="인적사항, 학력, 경력, 보유 기술, 자격, 수상 및 대외활동." />
+  <meta property="og:url" content="https://rapidseo.me/resume.html" />
+  <meta property="og:image" content="https://rapidseo.me/images/inseo_image.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23E0A21B'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='29' font-weight='700' text-anchor='middle' fill='%232A1F06'%3Ein%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #fafafa;
-      --surface: #ffffff;
-      --border: #e4e4e7;
-      --text: #09090b;
-      --text-muted: #71717a;
-      --text-subtle: #a1a1aa;
-      --badge-bg: #f4f4f5;
-      --badge-text: #3f3f46;
-      --radius: 8px;
-      --radius-sm: 6px;
-      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    /* TOP BAR */
-    .topbar { max-width: 860px; margin: 0 auto; padding: 20px 24px 0; }
-    .back-link {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--text-muted); text-decoration: none; font-size: 13px;
-      font-family: 'Geist Mono', monospace;
-    }
-    .back-link:hover { color: var(--text); }
-
-    /* CONTAINER */
-    .container { max-width: 860px; margin: 0 auto; padding: 24px 24px 80px; }
-
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 32px;
-      align-items: start;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
-      box-shadow: var(--shadow);
-      margin-bottom: 24px;
-    }
-    .hero-photo {
-      width: 180px;
-      height: 224px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      display: block;
-    }
-    .hero-info { display: flex; flex-direction: column; gap: 18px; }
-    .hero-name {
-      font-size: 34px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-    .hero-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-    .tag {
-      padding: 3px 10px;
-      background: var(--badge-bg);
-      color: var(--badge-text);
-      border-radius: 99px;
-      font-size: 12px;
-      font-weight: 500;
-      border: 1px solid var(--border);
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px 20px;
-    }
-    .ci {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-    .ci .lbl {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--text-subtle);
-      font-family: 'Geist Mono', monospace;
-      min-width: 50px;
-      flex-shrink: 0;
-    }
-    .ci a { color: var(--text-muted); text-decoration: none; }
-    .ci a:hover { color: var(--text); text-decoration: underline; }
-    .edu-card {
-      background: var(--badge-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 12px 14px;
-    }
-    .edu-card .school { font-size: 13px; font-weight: 600; }
-    .edu-card .detail { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
-
-    /* SECTION */
-    .section { margin-bottom: 24px; }
-    .sec-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .sec-title {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-subtle);
-      font-family: 'Geist Mono', monospace;
-      white-space: nowrap;
-    }
-    .sec-line { flex: 1; height: 1px; background: var(--border); }
-
-    /* PHILOSOPHY */
-    .phil-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-    .phil-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-      box-shadow: var(--shadow);
-    }
-    .phil-card .ico { font-size: 20px; margin-bottom: 10px; }
-    .phil-card .ttl { font-size: 13px; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
-    .phil-card .dsc { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
-
-    /* SKILLS */
-    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .skill-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 12px 14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .sk-lbl {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--text-subtle);
-      font-family: 'Geist Mono', monospace;
-      min-width: 76px;
-      padding-top: 2px;
-    }
-    .sk-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-    .sk-tag {
-      padding: 2px 8px;
-      background: var(--badge-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      font-size: 12px;
-      color: var(--badge-text);
-      font-weight: 500;
-    }
-
-    /* CERTS */
-    .cert-list { display: flex; flex-direction: column; gap: 4px; }
-    .cert-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-    }
-    .cert-name { font-size: 13px; font-weight: 600; }
-    .cert-date { font-size: 11px; font-family: 'Geist Mono', monospace; color: var(--text-subtle); }
-
-    /* TIMELINE */
-    .timeline { display: flex; flex-direction: column; gap: 6px; }
-    .tl-item {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 16px;
-      align-items: start;
-      padding: 14px 16px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: border-color 0.15s;
-    }
-    .tl-item:hover { border-color: #71717a; }
-    .tl-title { font-size: 14px; font-weight: 600; }
-    .tl-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
-    .tl-date { font-size: 11px; font-family: 'Geist Mono', monospace; color: var(--text-subtle); white-space: nowrap; padding-top: 2px; }
-
-    /* ACHIEVEMENTS */
-    .achv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-    .achv-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      padding: 10px 14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-size: 13px;
-    }
-    .achv-dot {
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--text-subtle);
-      flex-shrink: 0;
-      margin-top: 7px;
-    }
-
-    @media (max-width: 640px) {
-      .hero { grid-template-columns: 1fr; }
-      .phil-grid, .skills-grid, .achv-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
 
 <div class="topbar">
-  <a href="index.html" class="back-link">← 홈으로</a>
+  <div class="topbar__in">
+    <a class="brand" href="index.html"><span class="brand__mark"></span>김인서<span class="brand__sub">inseout</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="index.html">프로필</a>
+      <a href="experience.html">경력</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="resume.html">이력서</a>
+      <a class="nav-sm-hide" href="log.html">학습</a>
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="테마 전환">☾</button>
+    </nav>
+  </div>
 </div>
 
-<div class="container">
+<main id="main" class="wrap">
 
-  <!-- HERO -->
-  <div class="hero">
-    <img class="hero-photo" src="images/inseo_image.png" alt="김인서" />
-    <div class="hero-info">
-      <div>
-        <div class="hero-name">김인서</div>
-        <div class="hero-tags">
-          <span class="tag">Software Engineer</span>
-          <span class="tag">Backend</span>
-          <span class="tag">AI Agent</span>
-          <span class="tag">AWS Serverless</span>
-        </div>
-      </div>
-      <div class="contact-grid">
-        <div class="ci"><span class="lbl">생년월일</span><span>2000.08.06</span></div>
-        <div class="ci"><span class="lbl">Mobile</span><span id="ci-phone"></span></div>
-        <div class="ci"><span class="lbl">Email</span><a id="ci-email" href="#"></a></div>
-        <div class="ci"><span class="lbl">GitHub</span><a href="https://github.com/INseoOUT" target="_blank">INseoOUT</a></div>
-        <div class="ci" style="grid-column:span 2"><span class="lbl">주소</span><span>안산, 경기도</span></div>
-      </div>
-      <div class="edu-card">
-        <div class="school">숭실대학교 IT대학 소프트웨어학부</div>
-        <div class="detail">정보보호 및 소프트웨어 세부전공 &nbsp;·&nbsp; 2020.03 – 2026.08 (예정) &nbsp;·&nbsp; GPA 4.0 / 4.5</div>
+  <!-- ===== 머리 ===== -->
+  <header class="hero rail rise rise-1">
+    <div class="rail__meta">
+      <img class="portrait" src="images/inseo_image.png" alt="김인서 프로필 사진" width="96" height="116" />
+      <span class="kicker">Résumé</span>
+      <span class="small subtle mono">2026.09 기준</span>
+    </div>
+    <div class="rail__body">
+      <h1 class="hero__name" style="font-size:clamp(32px,5vw,44px)">김인서</h1>
+      <p class="lead">
+        기하·성능 제약이 분명한 <strong>C++ 영상 처리</strong>와, <strong>AI 에이전트·서버리스 백엔드</strong>를
+        함께 다루는 소프트웨어 엔지니어. 기획부터 배포·운영까지 제품이 실제로 굴러갈 때까지 책임집니다.
+      </p>
+      <dl class="contact-list">
+        <div><dt>생년월일</dt><dd>2000.08.06</dd></div>
+        <div><dt>Email</dt><dd><a href="#" data-mail data-mail-text>&nbsp;</a></dd></div>
+        <div><dt>Mobile</dt><dd><a href="#" data-tel>&nbsp;</a></dd></div>
+        <div><dt>주소</dt><dd>경기도 안산시</dd></div>
+        <div><dt>GitHub</dt><dd><a href="https://github.com/INseoOUT" target="_blank" rel="noopener">github.com/INseoOUT ↗</a></dd></div>
+        <div><dt>포트폴리오</dt><dd><a href="https://rapidseo.me">rapidseo.me</a></dd></div>
+      </dl>
+      <div class="btns no-print">
+        <button class="btn btn--solid" type="button" id="printBtn">PDF로 저장 · 인쇄</button>
+        <a class="btn" href="experience.html">경력기술서</a>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- PHILOSOPHY -->
-  <div class="section">
-    <div class="sec-header"><span class="sec-title">Philosophy</span><div class="sec-line"></div></div>
-    <div class="phil-grid">
-      <div class="phil-card">
-        <div class="ico">🎯</div>
-        <div class="ttl">Software Engineer를 목표로 합니다</div>
-        <div class="dsc">모든 과정을 이해하고 해결할 수 있는 역량을 갖기 위해 노력합니다. 단순히 맡은 일만 해내는 사람이 아니라 계속해서 배움을 넓혀 나아가겠습니다.</div>
-      </div>
-      <div class="phil-card">
-        <div class="ico">🧩</div>
-        <div class="ttl">맥락을 이해하는 개발자가 되겠습니다</div>
-        <div class="dsc">단순히 기능을 구현하는 것을 넘어, 의도와 맥락을 파악하고 꿈과 아이디어를 현실 세계로 만들어내는 개발자가 되겠습니다.</div>
-      </div>
-      <div class="phil-card">
-        <div class="ico">⚖️</div>
-        <div class="ttl">Trade-off를 생각할 수 있는 사람</div>
-        <div class="dsc">기회비용을 평가하고 저울질하며 맥락에 맞는 최선의 선택을 추구합니다. 단순히 정답을 찾는 개발자가 아닌, 최선을 고르는 개발자가 되겠습니다.</div>
+  <!-- ===== 학력 ===== -->
+  <section class="band" aria-labelledby="edu">
+    <div class="band__head"><span class="kicker">Education</span><h2 id="edu">학력</h2></div>
+    <div class="rail">
+      <div class="rail__meta"><span class="mono small subtle">2020.03 — 2026.08</span></div>
+      <div class="rail__body">
+        <div class="tl__t">숭실대학교 IT대학 소프트웨어학부</div>
+        <div class="tl__s">정보보호 및 소프트웨어 세부전공 · 학점 4.0 / 4.5</div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- SKILLS -->
-  <div class="section">
-    <div class="sec-header"><span class="sec-title">Skills</span><div class="sec-line"></div></div>
-    <div class="skills-grid">
-      <div class="skill-row">
-        <span class="sk-lbl">Languages</span>
-        <div class="sk-tags">
-          <span class="sk-tag">Python</span><span class="sk-tag">Java</span><span class="sk-tag">Kotlin</span><span class="sk-tag">C/C++</span><span class="sk-tag">Go</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-lbl">Frameworks</span>
-        <div class="sk-tags">
-          <span class="sk-tag">FastAPI</span><span class="sk-tag">LangChain</span><span class="sk-tag">LangGraph</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-lbl">Platforms</span>
-        <div class="sk-tags">
-          <span class="sk-tag">AWS</span><span class="sk-tag">Git</span><span class="sk-tag">GCP</span>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-lbl">Databases</span>
-        <div class="sk-tags">
-          <span class="sk-tag">DynamoDB</span><span class="sk-tag">MySQL</span><span class="sk-tag">PostgreSQL</span>
-        </div>
-      </div>
-      <div class="skill-row" style="grid-column:span 2">
-        <span class="sk-lbl">Tools</span>
-        <div class="sk-tags">
-          <span class="sk-tag">Notion</span><span class="sk-tag">Figma</span>
+  <!-- ===== 경력 ===== -->
+  <section class="band" aria-labelledby="career">
+    <div class="band__head">
+      <span class="kicker">Career</span><h2 id="career">경력</h2>
+      <a class="arrow-link no-print" href="experience.html">경력기술서에서 자세히 →</a>
+    </div>
+    <div class="rail">
+      <div class="rail__meta"></div>
+      <div class="rail__body">
+        <div class="tl">
+          <div class="tl__i">
+            <div class="tl__d">2026.05 — 현재</div>
+            <div class="tl__t">i3System · 연구원</div>
+            <div class="tl__s">
+              영상 처리 소프트웨어 R&amp;D. 광각 파노라마 합성 엔진 신규 개발(C++17 · OpenCV · FFmpeg · CUDA · Qt6),
+              산업용 카메라 제어 소프트웨어 1.0.0 릴리스, 코드베이스 감사·구조 개선, 레거시 SDK 이식과 ABI 호환성 검증.
+            </div>
+          </div>
+          <div class="tl__i">
+            <div class="tl__d">2025.12 — 현재</div>
+            <div class="tl__t">Enois Lab · 대표</div>
+            <div class="tl__s">프로젝트 관리 AI 자동화 SaaS <strong>Sprintify</strong> 기획·개발. 슈퍼스타 창업경진대회 우수상(2025.12).</div>
+          </div>
+          <div class="tl__i">
+            <div class="tl__d">2026.03 — 현재</div>
+            <div class="tl__t">이동 재활용 센터</div>
+            <div class="tl__s">재고 관리·사무 처리. 현장 재고·입출고 전산화를 병행하고 있습니다.</div>
+          </div>
+          <div class="tl__i is-past">
+            <div class="tl__d">2025.04 — 2025.12</div>
+            <div class="tl__t">Belle&amp;Wise Studio · Software Engineer</div>
+            <div class="tl__s">
+              LangGraph 기반 AI Agent와 AWS 서버리스 아키텍처로 서비스 개발·운영.
+              AI 여행 플래닝 에이전트(정보 수집 시간 60% 단축, 정확도 40%→58%), 통합 자원 관리 SaaS(Lambda 비용 20% 절감).
+              이슈 템플릿·브랜치 규칙·문서화 기준 정착.
+            </div>
+          </div>
+          <div class="tl__i is-past">
+            <div class="tl__d">2024.01 — 2024.02</div>
+            <div class="tl__t">숭실대학교 평생교육원 · 국가근로</div>
+            <div class="tl__s">행정 처리 보조</div>
+          </div>
+          <div class="tl__i is-past">
+            <div class="tl__d">2023.03 — 2023.08</div>
+            <div class="tl__t">숭실대학교 입학사정관팀 · 국가근로</div>
+            <div class="tl__s">행정 보조</div>
+          </div>
+          <div class="tl__i is-past">
+            <div class="tl__d">2020.12 — 2021.03</div>
+            <div class="tl__t">김선희 어학원 · 고등반 수학 보조 강사</div>
+            <div class="tl__s">고등부 수학 보조 강의</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- CERTIFICATIONS -->
-  <div class="section">
-    <div class="sec-header"><span class="sec-title">Certifications</span><div class="sec-line"></div></div>
-    <div class="cert-list">
-      <div class="cert-row"><span class="cert-name">정보처리기사</span><span class="cert-date">2025.12</span></div>
-      <div class="cert-row"><span class="cert-name">TOPCIT Lv.3</span><span class="cert-date">2024.12</span></div>
-      <div class="cert-row"><span class="cert-name">자동차운전면허 보통 1종</span><span class="cert-date">2019.02</span></div>
+  <!-- ===== 보유 기술 ===== -->
+  <section class="band" aria-labelledby="skills">
+    <div class="band__head"><span class="kicker">Skills</span><h2 id="skills">보유 기술</h2></div>
+    <div class="rail">
+      <div class="rail__meta"><span class="small subtle">실제 프로젝트에서<br />사용한 것만</span></div>
+      <div class="rail__body">
+        <div class="skillrow">
+          <span class="skillrow__k">Languages</span>
+          <div class="tags">
+            <span class="tag">C++17</span><span class="tag">C</span><span class="tag">Python</span>
+            <span class="tag">Go</span><span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">TypeScript</span>
+          </div>
+        </div>
+        <div class="skillrow">
+          <span class="skillrow__k">Vision / Media</span>
+          <div class="tags">
+            <span class="tag">OpenCV</span><span class="tag">FFmpeg</span><span class="tag">CUDA</span>
+            <span class="tag">RTSP</span><span class="tag">PSNR / SSIM 평가</span>
+          </div>
+        </div>
+        <div class="skillrow">
+          <span class="skillrow__k">Frameworks</span>
+          <div class="tags">
+            <span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">LangGraph</span>
+            <span class="tag">Qt6 / PySide6</span><span class="tag">MFC</span><span class="tag">React</span><span class="tag">SQLAlchemy</span>
+          </div>
+        </div>
+        <div class="skillrow">
+          <span class="skillrow__k">Platforms</span>
+          <div class="tags">
+            <span class="tag">AWS (Lambda · SQS · Cognito)</span><span class="tag">GCP Cloud Run</span>
+            <span class="tag">Docker</span><span class="tag">Git</span><span class="tag">CMake / vcpkg</span>
+            <span class="tag">Grafana</span><span class="tag">MCP</span>
+          </div>
+        </div>
+        <div class="skillrow">
+          <span class="skillrow__k">Databases</span>
+          <div class="tags">
+            <span class="tag">DynamoDB</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skillrow">
+          <span class="skillrow__k">Tools</span>
+          <div class="tags">
+            <span class="tag">Notion</span><span class="tag">Figma</span><span class="tag">Obsidian</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 자격 ===== -->
+  <section class="band" aria-labelledby="cert">
+    <div class="band__head"><span class="kicker">Certifications</span><h2 id="cert">자격</h2></div>
+    <div class="rail">
+      <div class="rail__meta"></div>
+      <div class="rail__body">
+        <div class="awards">
+          <div class="award"><span class="award__d">2025.12</span><span>정보처리기사</span></div>
+          <div class="award"><span class="award__d">2024.12</span><span>TOPCIT Lv.3</span></div>
+          <div class="award"><span class="award__d">2019.02</span><span>자동차운전면허 1종 보통</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 수상·대외활동 ===== -->
+  <section class="band" aria-labelledby="awards">
+    <div class="band__head"><span class="kicker">Awards &amp; Activities</span><h2 id="awards">수상 및 대외활동</h2></div>
+    <div class="rail">
+      <div class="rail__meta"></div>
+      <div class="rail__body">
+        <div class="awards">
+          <div class="award"><span class="award__d">2025.12</span><span>숭실대학교 슈퍼스타 창업경진대회 <strong>우수상</strong></span></div>
+          <div class="award"><span class="award__d">2025.08</span><span>숭실대학교 Unithon 2025 참가</span></div>
+          <div class="award"><span class="award__d">2025.01</span><span>숭실대학교 IT 단기 어학연수 CES 2025 선발</span></div>
+          <div class="award"><span class="award__d">2024.12</span><span>숭실대학교 IT 대학생 프로그래밍경진대회 ICPC 참가</span></div>
+          <div class="award"><span class="award__d">2024.11</span><span>2024 창의적 종합설계 경진대회 학생 심사위원</span></div>
+          <div class="award"><span class="award__d">2024.09–12</span><span>캡스톤디자인 경진대회 학생 심사위원</span></div>
+          <div class="award"><span class="award__d">2024.08</span><span><strong>특허 출원</strong> 3D 절차적 맵 생성 알고리즘 (10-2024-0111576)</span></div>
+          <div class="award"><span class="award__d">2024.03</span><span>해성문화재단 전액장학금</span></div>
+          <div class="award"><span class="award__d">2024.03</span><span>숭실대학교 백마성적우수장학금</span></div>
+          <div class="award"><span class="award__d">2023.12 —</span><span>숭실대학교 게임제작 동아리 겜마루</span></div>
+          <div class="award"><span class="award__d">2023.07</span><span>숭실대학교 캠퍼스투어 소프트웨어학부 멘토</span></div>
+          <div class="award"><span class="award__d">2023.06</span><span>SW/DT SeSAC 경진대회 <strong>우수상</strong></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 개인 프로젝트 ===== -->
+  <section class="band" aria-labelledby="side">
+    <div class="band__head">
+      <span class="kicker">Open Source</span><h2 id="side">개인 프로젝트</h2>
+      <a class="arrow-link no-print" href="projects.html">프로젝트 페이지 →</a>
+    </div>
+    <div class="rail">
+      <div class="rail__meta"></div>
+      <div class="rail__body">
+        <div class="awards">
+          <div class="award"><span class="award__d">slidesmith</span><span>YAML 덱 스펙 하나로 HTML·PDF·PPTX 생성. MCP 서버 내장 프레젠테이션 메이커</span></div>
+          <div class="award"><span class="award__d">OshiVerse</span><span>캐릭터 일관성 유지 AI 생성 플랫폼. FastAPI·React·PostgreSQL, GCP Cloud Run 배포</span></div>
+          <div class="award"><span class="award__d">agent-lab</span><span>AI 에이전트 학습·실험 모노레포. 프레임워크 실험, 출석 자동화 운영 중</span></div>
+          <div class="award"><span class="award__d">inseos-keyboard</span><span>스플릿 커스텀 키보드 자작 — 요구사항 정의부터 전장 설계·BOM까지</span></div>
+          <div class="award"><span class="award__d">garden</span><span>Obsidian 학습 노트 공개 위키(Quartz) — 클라우드 네이티브·K8s·AI Agent</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 철학 ===== -->
+  <section class="band" aria-labelledby="phil">
+    <div class="band__head"><span class="kicker">Philosophy</span><h2 id="phil">나의 철학</h2></div>
+    <div class="rail">
+      <div class="rail__meta"></div>
+      <div class="rail__body">
+        <ol class="methods">
+          <li class="method">
+            <h3>Software Engineer를 목표로 합니다</h3>
+            <p>프로젝트에서 모든 과정을 이해하고 해결할 수 있는 사람들을 보며 존경심이 들었고, 그런 역량을 갖기 위해 노력했습니다. 단순히 맡은 일만 해낼 수 있는 사람으로 끝나는 것이 아니라 계속해서 배움을 넓혀 나아가겠습니다.</p>
+          </li>
+          <li class="method">
+            <h3>맥락을 이해하는 개발자가 되겠습니다</h3>
+            <p>단순하게 기능을 구현하고 서비스를 개발하는 것이 아닌, 의도와 맥락을 파악하고 꿈과 아이디어를 현실 세계로 만들어내는 개발자가 되겠습니다.</p>
+          </li>
+          <li class="method">
+            <h3>Trade-off를 생각할 수 있는 사람이 되겠습니다</h3>
+            <p>작업 중 발생하는 기회비용을 평가하고 저울질하며, 맥락에 맞는 최선의 선택을 추구합니다. 정답을 찾는 개발자가 아닌, 최선을 고르는 개발자가 되겠습니다.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <span>© 2026 김인서</span>
+    <div class="foot__links">
+      <a href="index.html">프로필</a>
+      <a href="experience.html">경력기술서</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="log.html">학습 로그</a>
+      <a href="https://github.com/INseoOUT" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </div>
+</footer>
 
-  <!-- EXPERIENCE -->
-  <div class="section">
-    <div class="sec-header"><span class="sec-title">Experience</span><div class="sec-line"></div></div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div><div class="tl-title">i3System - 연구원</div><div class="tl-desc">영상 처리 파이프라인 개발 (C++ · OpenCV · FFmpeg · CUDA)</div></div>
-        <div class="tl-date">2026.05 ~</div>
-      </div>
-      <div class="tl-item">
-        <div><div class="tl-title">이동 재활용 센터 아르바이트</div><div class="tl-desc">재고 관리 및 사무 처리</div></div>
-        <div class="tl-date">2026.03 ~</div>
-      </div>
-      <div class="tl-item">
-        <div><div class="tl-title">Enois Lab - 대표</div><div class="tl-desc">프로젝트 관리 AI 자동화 SaaS, Sprintify</div></div>
-        <div class="tl-date">2025.12 ~</div>
-      </div>
-      <div class="tl-item">
-        <div><div class="tl-title">Belle&amp;Wise Studio - Software Engineer</div><div class="tl-desc">AI Agent 및 서버리스 아키텍처 기반 서비스 개발 · 프로젝트 관리 환경 및 개발 문화 도입</div></div>
-        <div class="tl-date">2025.04 – 2025.12</div>
-      </div>
-      <div class="tl-item">
-        <div><div class="tl-title">숭실대학교 평생교육원 국가근로</div><div class="tl-desc">평생교육원 행정 처리 보조</div></div>
-        <div class="tl-date">2024.01 – 2024.02</div>
-      </div>
-      <div class="tl-item">
-        <div><div class="tl-title">숭실대학교 입학사정관팀 국가근로</div><div class="tl-desc">입학사정관팀 행정 보조</div></div>
-        <div class="tl-date">2023.03 – 2023.08</div>
-      </div>
-      <div class="tl-item">
-        <div><div class="tl-title">김선희 어학원 - 고등반 수학 보조 강사</div><div class="tl-desc">고등반 수학 보조 강사</div></div>
-        <div class="tl-date">2020.12 – 2021.03</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ACTIVITIES & AWARDS -->
-  <div class="section">
-    <div class="sec-header"><span class="sec-title">Activities &amp; Awards</span><div class="sec-line"></div></div>
-    <div class="achv-grid">
-      <div class="achv-item"><div class="achv-dot"></div><div>숭실대학교 슈퍼스타 창업경진대회 우수상 (2025.12)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>숭실대학교 Unithon 2025 참가 (2025.08)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>숭실대학교 IT 단기 어학연수 CES 2025 선발 (2025.01)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>숭실대학교 IT 대학생 프로그래밍경진대회 ICPC 참가 (2024.12)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>2024 창의적 종합설계 경진대회 학생 심사위원 (2024.11)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>3D 절차적 맵 생성 알고리즘 특허 출원 10-2024-0111576 (2024.08)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>해성문화재단 전액장학금 (2024.03)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>숭실대학교 백마성적우수장학금 (2024.03)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>캡스톤디자인 경진대회 학생 심사위원 (2024.09 – 2024.12)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>숭실대학교 게임제작 동아리 겜마루 회원 (2023.12 ~)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>숭실대학교 캠퍼스투어 소프트웨어학부 멘토 (2023.07)</div></div>
-      <div class="achv-item"><div class="achv-dot"></div><div>SW/DT SeSAC 경진대회 우수상</div></div>
-    </div>
-  </div>
-
-</div>
+<script src="assets/site.js"></script>
 <script>
-  (function() {
-    var p = atob('KzgyIDEwLTMzNjUtNjQwMg==');
-    var e = atob('a2ltaW4wMHNlb0BnbWFpbC5jb20=');
-    document.getElementById('ci-phone').textContent = p;
-    var a = document.getElementById('ci-email');
-    a.textContent = e;
-    a.href = 'mailto:' + e;
-  })();
+  document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
 </script>
 </body>
 </html>
