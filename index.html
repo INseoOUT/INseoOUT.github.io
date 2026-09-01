@@ -80,14 +80,14 @@
     </div>
     <div class="measures">
       <div class="meas">
+        <div class="meas__v">3<span class="u">개월</span></div>
+        <div class="meas__l">영상처리 무경험 → 엔진 구현</div>
+        <div class="meas__c">카메라 기하·투영·CUDA를<br />학습과 병행해 설계·구현</div>
+      </div>
+      <div class="meas">
         <div class="meas__v">68.1<span class="u">fps</span></div>
         <div class="meas__l">파노라마 합성 처리량</div>
         <div class="meas__c">1080p×2 → 4K · GPU 경로<br />목표 30fps의 2.3배</div>
-      </div>
-      <div class="meas">
-        <div class="meas__v">6<span class="u">건</span></div>
-        <div class="meas__l">HIGH 등급 결함 수정</div>
-        <div class="meas__c">코드베이스 전수 감사 107건 중<br />누수·UAF·스택 오버플로우</div>
       </div>
       <div class="meas">
         <div class="meas__v">−20<span class="u">%</span></div>
@@ -115,29 +115,24 @@
       </div>
       <div class="rail__body">
         <p class="muted">
-          영상 처리 소프트웨어 R&amp;D. 신규 합성 엔진 개발과, 기존 산업용 카메라 제어 소프트웨어의
-          릴리스·안정화·구조 개선을 함께 담당합니다.
+          영상 처리 소프트웨어 R&amp;D. 신규 엔진 개발부터 오래된 SDK 유지보수,
+          차량에 올라가는 임베디드 앱까지 세 가지를 맡고 있습니다.
         </p>
         <div class="rows">
           <a class="row" href="experience.html#pano">
-            <span class="row__n">광각 파노라마 합성 엔진 <span class="arw">→</span></span>
-            <span class="row__m"><span class="chip chip--ok">Stage 1–3 · v0.1.0</span></span>
+            <span class="row__n">파노라마 스티칭 엔진 개발 <span class="arw">→</span></span>
+            <span class="row__m"><span class="chip chip--ok">v0.1.0</span></span>
             <span class="row__d">고정 카메라 두 대의 영상을 하나의 광각 영상으로. 왜곡보정·투영·정렬을 단일 remap LUT로 통합해 프레임당 연산 1회 — CUDA 경로 68fps</span>
           </a>
-          <a class="row" href="experience.html#release">
-            <span class="row__n">카메라 제어 SW 1.0.0 릴리스 <span class="arw">→</span></span>
-            <span class="row__m"><span class="chip chip--ok">실기 검증</span></span>
-            <span class="row__d">버전 체계 수립, 라이선스 대응 전면 포팅, 툴셋 현행화 — 실제 기기 검증을 거쳐 1.0.0 태깅</span>
-          </a>
-          <a class="row" href="experience.html#audit">
-            <span class="row__n">코드베이스 감사와 결함 수정 <span class="arw">→</span></span>
-            <span class="row__m"><span class="chip chip--build">클린 빌드</span></span>
-            <span class="row__d">전수 감사 107건 정리 후 HIGH 6건 수정. 수정이 만든 2차 문제까지 스스로 찾아 다시 수정</span>
-          </a>
-          <a class="row" href="experience.html#abi">
-            <span class="row__n">레거시 이식과 ABI 호환성 게이트 <span class="arw">→</span></span>
+          <a class="row" href="experience.html#sdk">
+            <span class="row__n">i3System SDK 기능 개발·유지보수 <span class="arw">→</span></span>
             <span class="row__m"><span class="chip chip--build">게이트 통과</span></span>
-            <span class="row__d">Boost 의존 제거·툴체인 현행화를 C++98/11/17 소스호환 게이트와 vtable/ABI 대조 게이트로 검증</span>
+            <span class="row__d">2016년부터 이어진 SDK를 현행 환경으로. 동작 무변경을 C++98/11/17 소스호환 게이트와 vtable/ABI 대조 게이트로 검증</span>
+          </a>
+          <a class="row" href="experience.html#thermal">
+            <span class="row__n">차량용 WiFi 열상 카메라 <span class="arw">→</span></span>
+            <span class="row__m"><span class="chip chip--ok">실기기 검증</span></span>
+            <span class="row__d">차량에 장착되는 카메라의 제어·표시 앱. 콜드부트 크래시와 파이프라인 재시작 내성 등 현장에서만 드러나는 문제를 수정</span>
           </a>
         </div>
         <a class="arrow-link" href="experience.html">경력기술서에서 전부 보기 →</a>
@@ -158,7 +153,7 @@
           <div class="tl__i">
             <div class="tl__d">2026.05 — 현재</div>
             <div class="tl__t">i3System · 연구원</div>
-            <div class="tl__s">영상 처리 소프트웨어 R&amp;D — 합성 엔진 신규 개발, 제어 소프트웨어 릴리스·구조 개선</div>
+            <div class="tl__s">영상 처리 소프트웨어 R&amp;D — 파노라마 스티칭 엔진 개발, i3System SDK 개발·유지보수, 차량용 WiFi 열상 카메라</div>
           </div>
           <div class="tl__i">
             <div class="tl__d">2025.12 — 현재</div>
@@ -219,25 +214,25 @@
     </div>
     <div class="rail">
       <div class="rail__meta">
-        <span class="small subtle">아래 네 가지는<br />실제 작업에서<br />지킨 순서입니다</span>
+        <span class="small subtle">실제 작업에서<br />지킨 순서입니다</span>
       </div>
       <div class="rail__body">
         <ol class="methods">
           <li class="method">
             <h3>검증 장치를 먼저 만든다</h3>
-            <p>합성 ground-truth 생성기와 골든 테스트를 코드보다 먼저 둡니다. 불변식은 assert로 못박습니다 — 렌더 잡당 LUT 빌드는 1회. 이후 결과물은 이 게이트를 통과하는지로 판정합니다.</p>
+            <p>합성 ground-truth 생성기와 골든 테스트를 코드보다 먼저 둡니다. 불변식은 <code>assert</code>로 못박습니다 — 렌더 잡당 LUT 빌드는 1회. 이후 결과물은 이 게이트를 통과하는지로 판정합니다.</p>
           </li>
           <li class="method">
-            <h3>동작 무변경을 기본 게이트로 둔다</h3>
-            <p>리팩터는 라운드마다 “동작이 바뀌지 않았다”를 목표로 하고, 의도적 동작 변경은 라운드당 1건만 허용하며 반드시 명시합니다. 7라운드 중 실제 버그를 발견한 1건이 그 예외였습니다.</p>
+            <h3>측정으로 레버를 고른다</h3>
+            <p>느리다고 바로 GPU를 붙이지 않습니다. CPU 스레딩의 천장을 먼저 측정해 병목이 remap 연산임을 확인한 뒤에 CUDA로 갔습니다. 짐작으로 고른 최적화는 대체로 틀린 곳을 팝니다.</p>
           </li>
           <li class="method">
-            <h3>순수 추가로 시작한다</h3>
-            <p>새 추상화는 아무도 호출하지 않는 상태로 먼저 넣고, 배선은 다음 라운드에서 합니다. 되돌릴 수 있는 크기로 자릅니다.</p>
+            <h3>현장에서 도는 것만 “된다”고 말한다</h3>
+            <p>빌드 통과와 실기기 동작을 구분해서 씁니다. 콜드부트 크래시나 이동 중 끊기는 연결은 개발 PC에서 재현되지 않습니다. 검증하지 못한 경로는 후속 항목으로 남깁니다.</p>
           </li>
           <li class="method">
-            <h3>전제를 코드로 확인한다</h3>
-            <p>제안서의 전제를 그대로 받지 않고 코드베이스와 SDK 헤더로 직접 확인합니다. 확인하지 못한 경로는 한계로 적어 둡니다.</p>
+            <h3>내가 만든 구멍은 내가 만든 구멍이라고 적는다</h3>
+            <p>수정이 만든 2차 문제, 검증하지 못한 경로, 의도적으로 남긴 비대칭 — 전부 문서와 커밋 메시지에 명시합니다. 상태를 정확히 아는 것이 빠른 것보다 중요합니다.</p>
           </li>
         </ol>
       </div>
